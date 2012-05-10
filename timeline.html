@@ -1,0 +1,525 @@
+<!DOCTYPE HTML>
+ 
+<html>
+ 
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>kougiland.com</title>
+</head>
+ 
+<body>
+<style type="text/css">
+body{
+background: #E7EBF2;
+font-size: 11px;
+font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+color: #333;
+line-height: 1.28;
+text-align: left;
+direction: ltr;
+padding:0px;
+margin:0px;
+}
+ 
+#timeline_tab_content{
+width:1044px;
+margin: 0 auto;
+padding:1px 0px;
+}
+.TimelineTwoColumn{
+margin: 20px 10px 10px 10px;
+padding-bottom:4px;
+position:relative;
+background-color:#ffffff;
+border: 1px solid #C4CDE0;
+background: white;
+min-height:60px;
+text-align:justify;
+word-wrap:break-word;
+z-index:2;
+}
+.TimelineTwoColumn:hover >.TimelineUnitActor .TimelineSelectorButton, .timelineUnitContainer:hover>.TimelineUnitActor .TimelineSelectorButton{
+opacity:1;
+}
+.TimelineTwoColumn:hover{
+border-color: #97A4C2;
+}
+.photoWrap, .TimelineTwoColumn{
+width: 492px;
+}
+.photoWrap{
+padding:0px;
+}
+.photoWrap img{
+width: 484px;
+margin: 20px 10px 10px 4px;
+}
+iframe{
+margin-left:4px;
+width:484px;
+}
+.timelineUnitContainer{
+ float: left;
+clear: both;
+ width:1020px;
+height: auto;
+position:relative;
+margin: 20px 10px 10px 10px;
+background-color:#ffffff;
+border: 1px solid #C4CDE0;
+padding-bottom:4px;
+}
+.timelineUnitContainer:hover:after {
+background:#3B5998;
+}
+.timelineUnitContainer:hover {
+border-color: #97A4C2;
+}
+.photoWrapFull img{
+margin: 20px 10px 10px 4px;
+width:1012px;
+}
+.info{
+margin: 2px 10px 0px 20px;
+width: 980px;
+}
+.timelineUnitContainer:before{
+content:'';
+width: 0;
+height: 0;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-bottom: 10px solid white;
+position:absolute;
+top:-8px;
+margin-left:50%;
+} 
+ 
+.timelineUnitContainer:after{
+content:'';
+width: 0;
+width: 6px;
+height: 6px;
+background:#abb6d2;
+position:absolute;
+top:-20px;
+margin-left:50.8%;
+-webkit-border-radius: 120px;
+-moz-border-radius: 120px;
+border-radius: 120px;
+-moz-box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+-ms-box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+-o-box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+-webkit-box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+}
+.TimelineTwoColumn:nth-child(odd) {
+float: left;
+clear: left;
+}
+.TimelineTwoColumn:nth-child(odd):hover:before, .TimelineTwoColumn:nth-child(even):hover:after {
+background:#3B5998;
+}
+ 
+.TimelineTwoColumn:nth-child(odd):before {
+content:'';
+width: 6px;
+height: 6px;
+background:#abb6d2;
+position: absolute;
+top: 24px;
+right: -22px;
+-webkit-border-radius: 120px;
+-moz-border-radius: 120px;
+border-radius: 120px;
+-moz-box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+-ms-box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+-o-box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+-webkit-box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+}
+.TimelineTwoColumn:nth-child(odd):after {
+content:'';
+width: 0;
+height: 0;
+border-top: 10px solid transparent;
+border-bottom: 10px solid transparent;
+border-left: 10px solid white;
+position: absolute;
+top: 16px;
+right:-10px;
+}
+.TimelineTwoColumn:nth-child(even) {
+float: right;
+clear: right;
+}
+ 
+.TimelineTwoColumn:nth-child(even):before {
+content:'';
+width: 0;
+height: 0;
+border-top: 10px solid transparent;
+border-bottom: 10px solid transparent;
+border-right: 10px solid white;
+position: absolute;
+top: 32px;
+left: -10px;
+z-index: 2;
+}
+.TimelineTwoColumn:nth-child(even):after {
+content:'';
+width: 6px;
+height: 6px;
+background:#abb6d2;
+position: absolute;
+top: 40px;
+left: -22px;
+-webkit-border-radius: 120px;
+-moz-border-radius: 120px;
+border-radius: 120px;
+-moz-box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+-ms-box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+-o-box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+-webkit-box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+box-shadow:0 0 0px 2px rgba(255,255,255,0.9);
+}
+.TimelineUnitActor img{
+width: 32px;
+height: 32px;
+}
+.TimelineUnitActor a{
+cursor: pointer;
+color: #3B5998;
+text-decoration: none;
+font-weight: bold;
+position:absolute;
+top:8px;
+left:40px;
+}
+a:hover{
+text-decoration: underline;
+}
+.TimelineUnitActor span{
+color: gray;
+text-decoration: none;
+font-weight: bold;
+position:absolute;
+top:24px;
+left:40px;
+}
+.TimelineUnitActor{
+border-bottom: 1px solid #E5E5E5;
+padding: 10px 0px 0px;
+margin:10px;
+zoom: 1;
+position:relative;
+}
+.TimelineTwoColumn:nth-child(odd):hover >.TimelineUnitActor:after{
+content: '';
+width: 0;
+height: 0;
+border-top: 12px solid transparent;
+border-bottom: 12px solid transparent;
+border-left: 12px solid #97A4C2;
+position: absolute;
+top: 4px;
+right: -22px;
+}
+.TimelineTwoColumn:nth-child(even):hover >.TimelineUnitActor:after{
+content: '';
+width: 0;
+height: 0;
+border-top: 12px solid transparent;
+border-bottom: 12px solid transparent;
+border-right: 12px solid #97A4C2;
+position: absolute;
+top: 20px;
+left: -22px;
+}
+.TimelineColumn{
+background: #EDEFF4;
+border: 1px solid #D2D9E7;
+list-style:none;
+padding: 5px 13px;
+margin:2px 4px 0px;
+position:relative;
+}
+.TimelineColumn:hover:after{
+opacity:1;
+}
+.TimelineColumn:after{
+content:'x';
+position:absolute;
+right: 15px;
+top: 3px;
+height: 15px;
+width: 15px;
+opacity: 0;
+cursor: pointer;
+font-size: 20px;
+line-height: 10px;
+padding: 0px 0px 0px 4px;
+color:#C8D1E2;
+font-weight: 900;
+border: 1px solid transparent;
+}
+ 
+textarea{
+background: #fff;
+border: 1px solid #D2D9E7;
+list-style:none;
+padding: 5px 13px;
+margin:2px 4px 0px;
+width:454px;
+outline: none;
+resize: none;
+color:silver;
+}
+textarea:focus{
+height:100px;
+}
+.TimelineSpine{
+position:absolute;
+z-index:1;
+margin-left:518px;
+padding:2px;
+width:4px;
+background:#c3ccdf;
+ 
+height:100% !important;
+cursor: pointer;
+}
+header{
+border-bottom: 1px solid #133783;
+-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .52);
+height: 37px;
+position: fixed;
+top:0px;
+left:0px;
+background-color: #3B5998;
+margin:0px;
+width: 100%;
+z-index: 300;
+}
+nav{
+width:1024px;
+margin:0 auto;
+height:40px;
+position:relative;
+}
+section{
+margin-top:40px;
+}
+#menu h1{
+color:white;
+line-height: 10px;
+}
+.mainMenu{
+position: absolute;
+top: 0px;
+right: 0px;
+}
+.mainMenu li a{
+color: #D8DFEA;
+display: inline-block;
+font-weight: bold;
+text-decoration:none;
+padding:0px 10px;
+}
+ul{
+padding:0px;
+margin:0px;
+}
+li{
+list-style:none;
+}
+.TimelineSelectorButton{
+width:64px;
+position:absolute;
+top:0px;
+right:0px;
+opacity:0;
+}
+.TimelineSelectorButton div{
+width:30px;
+background:#f5f6f7;
+border:1px solid #a9aaab;
+float:left;
+}
+.TimelineSelectorButton div:nth-child(1){
+-webkit-border-top-left-radius: 2px;
+-webkit-border-bottom-left-radius: 2px;
+-moz-border-radius-topleft: 2px;
+-moz-border-radius-bottomleft: 2px;
+border-top-left-radius: 2px;
+border-bottom-left-radius: 2px;
+border-right:none;
+border-bottom-width:2px;
+height:24px;
+}
+.TimelineSelectorButton div:nth-child(2){
+-webkit-border-top-right-radius: 2px;
+-webkit-border-bottom-right-radius: 2px;
+-moz-border-radius-topright: 2px;
+-moz-border-radius-bottomright: 2px;
+border-top-right-radius: 2px;
+border-bottom-right-radius: 2px;
+height:25px;
+}
+strong{
+width:104px;
+height:37px;
+cursor: pointer;
+color: #3B5998;
+padding: 6px 10px;
+}
+ 
+</style>
+ 
+        <header>
+ 
+                <nav id="menu">
+                    <h1>PURE CSS3 TIMELINE <i> with auto float</i></h1>
+ 
+                    <ul class="mainMenu">
+                        <li>
+                            <a href="http://kougiland.com">home</a>
+                            <a href="http://kougiland.com/facebook-timeline.html">get it now!</a>
+                            <a href="http://kougiland.com/projects">more projects</a>
+                            <a href="http://kougiland.com/contact">contact me</a>
+                        </li>
+                    </ul>
+                </nav>
+        </header>
+ 
+        <section>
+<div id="timeline_tab_content">
+    <div class="TimelineSpine"></div>
+ 
+<div class="TimelineTwoColumn">
+     <div class="TimelineUnitActor">
+ 
+ <strong>Status</strong><strong>Photo</strong><strong>Place</strong><strong>Life event</strong>
+ 
+</div>
+  <textarea placeholder="What's on your mind?"></textarea> 
+ 
+</div>
+ 
+<div class="TimelineTwoColumn">
+     <div class="TimelineUnitActor"><img class="uiProfilePhoto uiProfilePhotoMedium img" src="http://profile.ak.fbcdn.net/hprofile-ak-ash2/370011_1420576147_980611321_q.jpg" alt=""><a href="http://www.facebook.com/kougiland">Kougi Land</a><span>6 hours ago
+</span>
+<div class="TimelineSelectorButton">
+ <div class="star"></div><div class="save"><a></a></div>
+</div>
+</div>
+    <iframe src="http://player.vimeo.com/video/17116254?title=0&amp;byline=0&amp;portrait=0" width="484" height="272" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    <li class="TimelineColumn">A life on Facebook</li>    
+ 
+</div>
+ 
+<div class="TimelineTwoColumn">
+<div class="TimelineUnitActor"><img class="uiProfilePhoto uiProfilePhotoMedium img" src="http://profile.ak.fbcdn.net/hprofile-ak-ash2/370011_1420576147_980611321_q.jpg" alt=""><a href="http://www.facebook.com/kougiland">Kougi Land shared a link.</a><span>3 December 2011</span>
+    <div class="TimelineSelectorButton">
+ <div></div><div></div>
+</div>
+    </div>
+    <li class="TimelineColumn">add a new post and it will float left or right depending on the number of posts</li>
+    <div class="photoWrap"><img src="http://a1.sphotos.ak.fbcdn.net/hphotos-ak-snc7/394159_215839405167399_210342449050428_465820_527847252_n.jpg" alt=""></div>
+    <li class="TimelineColumn">comments</li>
+    <li class="TimelineColumn"><a href="http://www.facebook.com">inspiration: facebook.com</a></li>
+</div>
+ 
+<div class="TimelineTwoColumn">
+<div class="TimelineUnitActor"><img class="uiProfilePhoto uiProfilePhotoMedium img" src="http://profile.ak.fbcdn.net/hprofile-ak-ash2/370011_1420576147_980611321_q.jpg" alt=""><a href="http://www.facebook.com/kougiland">Kougi Land shared a link.</a><span>3 December 2011</span>
+    <div class="TimelineSelectorButton">
+ <div></div><div></div>
+</div>
+    </div>
+    <li class="TimelineColumn">Create beautiful timelines! wordpress/javascript version  available only upon request!</li>
+    <div class="photoWrap"><img src="http://a3.sphotos.ak.fbcdn.net/hphotos-ak-ash4/406876_220963024655037_210342449050428_477308_1345484421_n.jpg" alt=""></div>
+    <li class="TimelineColumn">comments</li>
+    <li class="TimelineColumn"><a href="http://www.facebook.com">inspiration: facebook.com</a></li>
+</div>
+ 
+<div class="TimelineTwoColumn">
+<div class="TimelineUnitActor"><img class="uiProfilePhoto uiProfilePhotoMedium img" src="http://profile.ak.fbcdn.net/hprofile-ak-ash2/370011_1420576147_980611321_q.jpg" alt=""><a href="http://www.facebook.com/kougiland">Kougi Land shared a link.</a><span>20 December 2011</span>
+    <div class="TimelineSelectorButton">
+ <div></div><div></div>
+</div>
+    </div>
+    <div class="photoWrap"><img src="http://a5.sphotos.ak.fbcdn.net/hphotos-ak-ash4/399534_224793920938614_210342449050428_485805_1398556841_n.jpg" alt=""></div>
+    <li class="TimelineColumn">text3</li>
+</div>
+ 
+<div class="TimelineTwoColumn">
+    <div class="TimelineUnitActor"><img class="uiProfilePhoto uiProfilePhotoMedium img" src="http://profile.ak.fbcdn.net/hprofile-ak-ash2/370011_1420576147_980611321_q.jpg" alt=""><a href="http://www.facebook.com/kougiland">Kougi Land</a><span>16 December 2011
+</span>
+<div class="TimelineSelectorButton">
+ <div></div><div></div>
+</div>
+</div>
+    <div class="photoWrap"><img src="http://a8.sphotos.ak.fbcdn.net/hphotos-ak-snc7/418086_233289586755714_210342449050428_505023_1780849558_n.jpg" alt=""></div>
+    <li class="TimelineColumn">text4</li>
+</div>
+ 
+    <div class="timelineUnitContainer">
+    <div class="TimelineUnitActor"><img class="uiProfilePhoto uiProfilePhotoMedium img" src="http://profile.ak.fbcdn.net/hprofile-ak-ash2/370011_1420576147_980611321_q.jpg" alt=""><a href="http://www.facebook.com/kougiland">Kougi Land shared a link.</a><span>10 December 2011</span>
+    <div class="TimelineSelectorButton">
+ <div></div><div></div>
+</div>
+    </div>
+            <div class="info"> Hrrrrrr... Come closer and I'll bite you! <i>this picture belongs to guru</i> <a href="https://plus.google.com/102865263115020893218/posts">Alex Koloskov</a> </div> 
+ 
+        <div class="photoWrapFull"><img src="https://lh4.googleusercontent.com/-htKi3uGAptk/Tyxc_zNKP0I/AAAAAAAAoiQ/Z3Rv6jyDj4s/s912/I-gonna-bite-you-by-alex-koloskov.jpg"alt="">
+        </div><li class="TimelineColumn">
+       <a>Like</a> <a>. Comment</a> <a>. Share</a>
+    </li>
+    </div>
+ 
+<div class="TimelineTwoColumn">
+<div class="TimelineUnitActor"><img class="uiProfilePhoto uiProfilePhotoMedium img" src="http://profile.ak.fbcdn.net/hprofile-ak-ash2/370011_1420576147_980611321_q.jpg" alt=""><a href="http://www.facebook.com/kougiland">Kougi Land shared a link.</a><span>3 December 2011</span>
+    <div class="TimelineSelectorButton">
+ <div></div><div></div>
+</div>
+    </div>
+    <li class="TimelineColumn">fatou toure</li>
+    <div class="photoWrap"><img src="http://a1.sphotos.ak.fbcdn.net/hphotos-ak-ash4/400424_218501708239635_100002394229770_441266_107457456_n.jpg" alt=""></div>
+    <li class="TimelineColumn">comments</li>
+    <li class="TimelineColumn"><a href="http://www.facebook.com/pages/Les-Kmer-sont-les-plus-beaux-et-les-plus-swag/210342449050428">@ Les Kmer sont les plus beaux et les plus swag</a></li>
+</div>    
+ 
+<div class="TimelineTwoColumn">
+<div class="TimelineUnitActor"><img class="uiProfilePhoto uiProfilePhotoMedium img" src="http://profile.ak.fbcdn.net/hprofile-ak-ash2/370011_1420576147_980611321_q.jpg" alt=""><a href="http://www.facebook.com/kougiland">Kougi Land shared a link.</a><span>3 December 2011</span>
+    <div class="TimelineSelectorButton">
+ <div></div><div></div>
+</div>
+    </div>
+    <li class="TimelineColumn">fatou toure</li>
+    <div class="photoWrap"><img src="https://lh6.googleusercontent.com/-NKsvM6AU8GQ/TzLo9iJhWhI/AAAAAAAAp_A/0A46TFJcw1E/s640/Cancun-118-alex-koloskov.jpg" alt=""></div>
+    <li class="TimelineColumn">comments</li>
+    <li class="TimelineColumn"><a href="https://plus.google.com/102865263115020893218/posts">@ Alex Koloskov</a></li>
+</div>    
+ 
+<div class="TimelineTwoColumn">
+<div class="TimelineUnitActor"><img class="uiProfilePhoto uiProfilePhotoMedium img" src="http://profile.ak.fbcdn.net/hprofile-ak-ash2/370011_1420576147_980611321_q.jpg" alt=""><a href="http://www.facebook.com/kougiland">Kougi Land shared a link.</a><span>3 December 2011</span>
+    <div class="TimelineSelectorButton">
+ <div></div><div></div>
+</div>
+    </div>
+    <li class="TimelineColumn">fatou toure</li>
+    <div class="photoWrap"><img src="http://a1.sphotos.ak.fbcdn.net/hphotos-ak-ash4/409182_210886305662709_210342449050428_451213_547529031_n.jpg" alt=""></div>
+    <li class="TimelineColumn">comments</li>
+    <li class="TimelineColumn"><a href="http://www.facebook.com/pages/Les-Kmer-sont-les-plus-beaux-et-les-plus-swag/210342449050428">@ Les Kmer sont les plus beaux et les plus swag</a></li>
+</div>    
+ 
+</div>
+        </section>
+ 
+        <footer>
+ 
+        </footer>
+ 
+</body>
+ 
+</html>
