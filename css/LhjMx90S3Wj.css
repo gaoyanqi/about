@@ -1,0 +1,11 @@
+/*1332145008,169775558*/
+
+.createdAccountUnit{text-align:center}
+.importantFriend .importantFriendImage{display:inline-block;float:left;margin-right:1px}
+.fbTimelineOneColumn .importantFriendImage{height:150px;width:150px}
+.importantFriend .importantFriendSide{height:86px;overflow:hidden;padding-top:16px;position:relative}
+.fbTimelineOneColumn .importantFriend .importantFriendSide{height:107px;padding-top:45px}
+.importantFriend .importantFriendSide .importantFriendName{font-size: 14px;font-weight:bold;max-height:52px;overflow:hidden}
+.importantFriend .importantFriendSide .importantFriendSub{bottom:0;color:#bbb;position:absolute}
+
+#bootloader_oIKH8 { height: 42px; }
