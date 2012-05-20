@@ -41,7 +41,7 @@ function absoluteTime() {
 function loadNotes() {
 	$.ajax({
 		type: "GET",
-		url: "http://studyandthink.sinaapp.com/about/lifeExperience.json",
+		url: "http://studyandthink.sinaapp.com/about/lifeExperience.php",
 		dataType: "jsonp",
 		jsonp: "jsoncallback",
 		error: function(data) {
