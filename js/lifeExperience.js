@@ -43,6 +43,7 @@ function loadNotes() {
 		type: "POST",
 		url: "http://studyandthink.sinaapp.com/about/lifeExperience.json",
 		dataType: "jsonp",
+		jsonp: "jsoncallback",
 		error: function(data) {
 			
 		},
