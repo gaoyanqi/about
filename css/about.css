@@ -264,7 +264,7 @@ a:hover {
 }
 
 .TimelineColumn:after {
-	content: 'x';
+	content: '';
 	position: absolute;
 	right: 15px;
 	top: 3px;
@@ -278,6 +278,23 @@ a:hover {
 	color: #C8D1E2;
 	font-weight: 900;
 	border: 1px solid transparent;
+}
+
+#timeline_tab_content .TimelineTwoColumn .project-button {
+	background: #EDEFF4;
+	margin-left: 20px;
+	padding: 5px;
+	text-align: center;
+	width: 40px;
+	border-radius: 2px;
+}
+
+#timeline_tab_content .TimelineTwoColumn .project-button:hover {
+	background: #909090;
+}
+
+#timeline_tab_content .TimelineTwoColumn .project-content {
+	display: none;
 }
 
 textarea {
@@ -1025,6 +1042,14 @@ a {
 	outline: none;
 }
 
+.timelineHeader {
+	clear: both;
+	position: relative;
+	z-index: 10;
+	margin: 20px;
+	padding: 20px;
+}
+
 .fbTimelineContentHeader {
 	margin-bottom: 15px;
 	text-align: center;
@@ -1073,7 +1098,7 @@ a {
 	word-wrap: break-word;
 	position: absolute;
 	top: 0px;
-	right: 60px;
+	right: 0px;
 }
 
 #statement {

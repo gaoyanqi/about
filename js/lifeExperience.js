@@ -1,4 +1,4 @@
-var birth = new Date("1986-04-23 04:00:00");
+var birth = new Date("1986/04/23 04:00:00");
 var present = new Date();
 $(document).ready(function() {
 	absoluteTime();
@@ -82,7 +82,7 @@ $.extend({
 		var difference = date2.getTime() - date1.getTime();
 		var times = {
 			years: Math.floor(difference / 1000 / 60 / 60 / 24 / 365),
-			days: Math.floor(difference / 1000 / 60 / 60 / 24),
+			days: parseInt(Math.floor(difference / 1000 / 60 / 60 / 24)),
 			hours: Math.floor(difference / 1000 / 60 / 60),
 			minutes: Math.floor(difference / 1000 / 60),
 			seconds: Math.floor(difference / 1000),
