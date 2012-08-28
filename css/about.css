@@ -134,6 +134,7 @@ iframe {
 	right: -22px;
 	-webkit-border-radius: 120px;
 	-moz-border-radius: 120px;
+	-o-border-radius: 120px;
 	border-radius: 120px;
 	-moz-box-shadow: 0 0 0px 2px rgba(255, 255, 255, 0.9);
 	-ms-box-shadow: 0 0 0px 2px rgba(255, 255, 255, 0.9);
@@ -182,6 +183,7 @@ iframe {
 	left: -22px;
 	-webkit-border-radius: 120px;
 	-moz-border-radius: 120px;
+	-o-border-radius: 120px;
 	border-radius: 120px;
 	-moz-box-shadow: 0 0 0px 2px rgba(255, 255, 255, 0.9);
 	-ms-box-shadow: 0 0 0px 2px rgba(255, 255, 255, 0.9);
@@ -328,6 +330,7 @@ textarea:focus {
 header {
 	border-bottom: 1px solid #133783;
 	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .52);
+	box-shadow: 0 0 2px rgba(0, 0, 0, .52);
 	height: 37px;
 	position: fixed;
 	top: 0px;
@@ -340,7 +343,7 @@ header {
 
 nav {
 	width: 1024px;
-	margin: 0 auto;
+	margin: 0px auto;
 	height: 40px;
 	position: relative;
 }
@@ -404,6 +407,7 @@ section {
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
 }
 
 #technology .left-section {
@@ -448,9 +452,11 @@ p {
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
+	-o-border-radius: 100px;
 	animation: div_rotate 11s linear 2s infinite alternate;
 	-webkit-animation: div_rotate 11s linear 2s infinite alternate;
 	-moz-animation: div_rotate 11s linear 2s infinite alternate;
+	-o-animation: div_rotate 11s linear 2s infinite alternate;
 }
 
 #technology .left-section > div:not(:first-child) {
@@ -482,6 +488,7 @@ p {
 
 #technology .left-section .java-php-skill-content {
 	-webkit-transform: rotate(-180deg);
+	transform: rotate(-180deg);
 }
 
 #technology .left-section .html5-css3-skill {
@@ -505,6 +512,7 @@ p {
 
 #technology .left-section .html5-css3-skill-content {
 	-webkit-transform: rotate(-180deg);
+	transform: rotate(-180deg);
 }
 
 #technology .left-section .js-jquery-skill {
@@ -528,6 +536,7 @@ p {
 
 #technology .left-section .js-jquery-skill-content {
 	-webkit-transform: rotate(-180deg);
+	transform: rotate(-180deg);
 }
 
 #technology .left-section .mysql-oracle-skill {
@@ -551,6 +560,7 @@ p {
 
 #technology .left-section .mysql-oracle-skill-content {
 	-webkit-transform: rotate(-180deg);
+	transform: rotate(-180deg);
 }
 
 #technology .left-section .nosql-skill {
@@ -574,6 +584,7 @@ p {
 
 #technology .left-section .nosql-skill-content {
 	-webkit-transform: rotate(-180deg);
+	transform: rotate(-180deg);
 }
 
 #technology .left-section .hbase-thrift-skill {
@@ -597,6 +608,7 @@ p {
 
 #technology .left-section .hbase-thrift-skill-content {
 	-webkit-transform: rotate(-0deg);
+	transform: rotate(-0deg);
 }
 
 #technology .left-section .hadoop-skill {
@@ -616,6 +628,7 @@ p {
 
 #technology .left-section .hadoop-skill-content {
 	-webkit-transform: rotate(-180deg);
+	transform: rotate(-180deg);
 }
 
 #technology .left-section .nodejs-skill {
@@ -635,6 +648,7 @@ p {
 
 #technology .left-section .nodejs-skill-content {
 	-webkit-transform: rotate(-180deg);
+	transform: rotate(-180deg);
 }
 
 #technology .left-section .core-skills:hover {
@@ -684,99 +698,99 @@ p {
 }
 
 @-keyframes div_java_php_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);}
-	25% {top: 50px;left: 160px;-webkit-transform: rotate(36deg);}
-	50% {top: 30px;left: 160px;-webkit-transform: rotate(72deg);}
-	75% {top: 10px;left: 160px;-webkit-transform: rotate(108deg);}
-	100% {top: -10px;left: 160px;-webkit-transform: rotate(180deg);}
+	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 50px;left: 160px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+	50% {top: 30px;left: 160px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+	75% {top: 10px;left: 160px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+	100% {top: -10px;left: 160px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
 }
 
 @-webkit-keyframes div_java_php_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);}
-	25% {top: 50px;left: 160px;-webkit-transform: rotate(36deg);}
-	50% {top: 30px;left: 160px;-webkit-transform: rotate(72deg);}
-	75% {top: 10px;left: 160px;-webkit-transform: rotate(108deg);}
-	100% {top: -10px;left: 160px;-webkit-transform: rotate(180deg);}
+	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 50px;left: 160px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+	50% {top: 30px;left: 160px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+	75% {top: 10px;left: 160px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+	100% {top: -10px;left: 160px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
 }
 
 @-keyframes div_html5_css3_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);}
-	25% {top: 60px;left: 120px;-webkit-transform: rotate(36deg);}
-	50% {top: 50px;left: 100px;-webkit-transform: rotate(72deg);}
-	75% {top: 45px;left: 80px;-webkit-transform: rotate(108deg);}
-	100% {top: 40px;left: 62px;-webkit-transform: rotate(120deg);}
+	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 60px;left: 120px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+	50% {top: 50px;left: 100px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+	75% {top: 45px;left: 80px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+	100% {top: 40px;left: 62px;-webkit-transform: rotate(120deg);transform: rotate(120deg)}
 }
 
 @-webkit-keyframes div_html5_css3_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);}
-	25% {top: 60px;left: 120px;-webkit-transform: rotate(36deg);}
-	50% {top: 50px;left: 100px;-webkit-transform: rotate(72deg);}
-	75% {top: 45px;left: 80px;-webkit-transform: rotate(108deg);}
-	100% {top: 40px;left: 62px;-webkit-transform: rotate(120deg);}
+	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 60px;left: 120px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+	50% {top: 50px;left: 100px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+	75% {top: 45px;left: 80px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+	100% {top: 40px;left: 62px;-webkit-transform: rotate(120deg);transform: rotate(120deg)}
 }
 
 @-keyframes div_js_jquery_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);}
-	25% {top: 60px;left: 180px;-webkit-transform: rotate(-36deg);}
-	50% {top: 50px;left: 220px;-webkit-transform: rotate(-72deg);}
-	75% {top: 45px;left: 240px;-webkit-transform: rotate(-108deg);}
-	100% {top: 40px;left: 260px;-webkit-transform: rotate(-120deg);}
+	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 60px;left: 180px;-webkit-transform: rotate(-36deg);transform: rotate(-36deg)}
+	50% {top: 50px;left: 220px;-webkit-transform: rotate(-72deg);transform: rotate(-72deg)}
+	75% {top: 45px;left: 240px;-webkit-transform: rotate(-108deg);transform: rotate(-108deg)}
+	100% {top: 40px;left: 260px;-webkit-transform: rotate(-120deg);transform: rotate(-120deg)}
 }
 
 @-webkit-keyframes div_js_jquery_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);}
-	25% {top: 60px;left: 180px;-webkit-transform: rotate(-36deg);}
-	50% {top: 50px;left: 220px;-webkit-transform: rotate(-72deg);}
-	75% {top: 45px;left: 240px;-webkit-transform: rotate(-108deg);}
-	100% {top: 40px;left: 260px;-webkit-transform: rotate(-120deg);}
+	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 60px;left: 180px;-webkit-transform: rotate(-36deg);transform: rotate(-36deg)}
+	50% {top: 50px;left: 220px;-webkit-transform: rotate(-72deg);transform: rotate(-72deg)}
+	75% {top: 45px;left: 240px;-webkit-transform: rotate(-108deg);transform: rotate(-108deg)}
+	100% {top: 40px;left: 260px;-webkit-transform: rotate(-120deg);transform: rotate(-120deg)}
 }
 
 @-keyframes div_mysql_oracle_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);}
-	25% {top: 80px;left: 120px;-webkit-transform: rotate(20deg);}
-	50% {top: 100px;left: 100px;-webkit-transform: rotate(30deg);}
-	75% {top: 120px;left: 80px;-webkit-transform: rotate(40deg);}
-	100% {top: 140px;left: 62px;-webkit-transform: rotate(60deg);}
+	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 80px;left: 120px;-webkit-transform: rotate(20deg);transform: rotate(20deg)}
+	50% {top: 100px;left: 100px;-webkit-transform: rotate(30deg);transform: rotate(30deg)}
+	75% {top: 120px;left: 80px;-webkit-transform: rotate(40deg);transform: rotate(40deg)}
+	100% {top: 140px;left: 62px;-webkit-transform: rotate(60deg);transform: rotate(60deg)}
 }
 
 @-webkit-keyframes div_mysql_oracle_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);}
-	25% {top: 80px;left: 120px;-webkit-transform: rotate(20deg);}
-	50% {top: 100px;left: 100px;-webkit-transform: rotate(30deg);}
-	75% {top: 120px;left: 80px;-webkit-transform: rotate(40deg);}
-	100% {top: 140px;left: 62px;-webkit-transform: rotate(60deg);}
+	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 80px;left: 120px;-webkit-transform: rotate(20deg);transform: rotate(20deg)}
+	50% {top: 100px;left: 100px;-webkit-transform: rotate(30deg);transform: rotate(30deg)}
+	75% {top: 120px;left: 80px;-webkit-transform: rotate(40deg);transform: rotate(40deg)}
+	100% {top: 140px;left: 62px;-webkit-transform: rotate(60deg);transform: rotate(60deg)}
 }
 
 @-keyframes div_nosql_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);}
-	25% {top: 80px;left: 180px;-webkit-transform: rotate(-20deg);}
-	50% {top: 100px;left: 200px;-webkit-transform: rotate(-30deg);}
-	75% {top: 120px;left: 220px;-webkit-transform: rotate(-40deg);}
-	100% {top: 140px;left: 260px;-webkit-transform: rotate(-60deg);}
+	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 80px;left: 180px;-webkit-transform: rotate(-20deg);transform: rotate(-20deg)}
+	50% {top: 100px;left: 200px;-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
+	75% {top: 120px;left: 220px;-webkit-transform: rotate(-40deg);transform: rotate(-40deg)}
+	100% {top: 140px;left: 260px;-webkit-transform: rotate(-60deg);transform: rotate(-60deg)}
 }
 
 @-webkit-keyframes div_nosql_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);}
-	25% {top: 80px;left: 180px;-webkit-transform: rotate(-20deg);}
-	50% {top: 100px;left: 200px;-webkit-transform: rotate(-30deg);}
-	75% {top: 120px;left: 220px;-webkit-transform: rotate(-40deg);}
-	100% {top: 140px;left: 260px;-webkit-transform: rotate(-60deg);}
+	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 80px;left: 180px;-webkit-transform: rotate(-20deg);transform: rotate(-20deg)}
+	50% {top: 100px;left: 200px;-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
+	75% {top: 120px;left: 220px;-webkit-transform: rotate(-40deg);transform: rotate(-40deg)}
+	100% {top: 140px;left: 260px;-webkit-transform: rotate(-60deg);transform: rotate(-60deg)}
 }
 
 @-keyframes div_hbase_thrift_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(180deg);}
-	25% {top: 120px;left: 160px;-webkit-transform: rotate(108deg);}
-	50% {top: 140px;left: 160px;-webkit-transform: rotate(72deg);}
-	75% {top: 170px;left: 160px;-webkit-transform: rotate(36deg);}
-	100% {top: 190px;left: 160px;-webkit-transform: rotate(0deg);}
+	0% {top: 70px;left: 160px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
+	25% {top: 120px;left: 160px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+	50% {top: 140px;left: 160px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+	75% {top: 170px;left: 160px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+	100% {top: 190px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
 }
 
 @-webkit-keyframes div_hbase_thrift_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(180deg);}
-	25% {top: 120px;left: 160px;-webkit-transform: rotate(108deg);}
-	50% {top: 140px;left: 160px;-webkit-transform: rotate(72deg);}
-	75% {top: 170px;left: 160px;-webkit-transform: rotate(36deg);}
-	100% {top: 190px;left: 160px;-webkit-transform: rotate(0deg);}
+	0% {top: 70px;left: 160px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
+	25% {top: 120px;left: 160px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+	50% {top: 140px;left: 160px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+	75% {top: 170px;left: 160px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+	100% {top: 190px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
 }
 
 #technology #progress-bar-container {
