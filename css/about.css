@@ -1195,3 +1195,59 @@ strong {
 	color: #3B5998;
 	padding: 6px 10px;
 }
+
+#social {
+	position: absolute;
+	margin: 0px;
+	top: 40px;
+	left: 15px;
+	width: 40px;
+	height: 160px;
+	z-index: 200;
+}
+
+#social-icons li {
+	margin: 0 0 10px 0;
+	list-style: none;
+	border-radius: 100px;
+}
+
+#social-icons li a {
+	display: block;
+	width: 35px;
+	height: 35px;
+	text-indent: -9999px;
+	background-size:35px 35px;
+}
+
+.weibo {
+	background: url(../images/weibo72x72.png);
+}
+
+.linkedIn {
+	background: url(../images/linked-in.png);
+}
+
+.renren {
+	background: url(../images/renren.png);
+}
+
+.facebook {
+	background: url(../images/facebook.png);
+}
+
+#to-top-button {
+	width: 40px;
+	height: 40px;
+	background: #ccc;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 100px;
+	text-indent: -9999px;
+	z-index: 200;
+	background: url(../images/back-to-top.png) no-repeat;
+}
+#to-top-button:hover {
+	background-position: -40px 0px;
+}
