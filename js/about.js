@@ -40,4 +40,56 @@ $(document).ready(function() {
 			$('html, body').animate({scrollTop: div.offset().top - 100}, 2000);
 		})
 	});
+	
+	var top = 40;
+	var left = 15;
+	$("#social").css({
+		"left": left,
+		"top": top
+	});
+	$(window).scroll(function() {
+		var iconsPosition = parseInt($("social").css("top"));
+		var headerPosition = parseInt($("#menu").css("height"));
+		var offset = $(document).scrollTop();
+		if(offset >= headerPosition) {
+			$("#social").animate({
+				top: (top + offset)
+			}, {
+				duration: 500,
+				queue: false
+			});
+		} else {
+			$("#social").animate({
+				top: (headerPosition + 25)
+			}, {
+				duration: 500,
+				queue: false
+			});
+		}
+	});
+	
+	$("#to-top-button").hide();
+	var offset = $(document).scrollTop();
+	var offsetBottom = offset + ($(window).height() - 60);
+	$("#to-top-button").css({
+		"top": offsetBottom
+	});
+	if(offset > 10) {
+		$("#to-top-button").fadeIn(900);
+	}
+	$(window).scroll(function() {
+		var offset = $(document).scrollTop();
+		offsetBottom = offset + ($(window).height() - 60);
+		if(offset > 1) {
+			$("#to-top-button").fadeIn(900);
+		} else {
+			$("#to-top-button").fadeOut(900);
+		}
+		$("#to-top-button").animate({
+			top: offsetBottom
+		}, {
+			duration: 500,
+			queue: false
+		});
+	});
 });
