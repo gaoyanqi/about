@@ -40,9 +40,10 @@ function absoluteTime() {
 
 function loadNotes() {
 	$.ajax({
-		type: "POST",
-		url: "lifeExperience.json",
-		dataType: "json",
+		type: "GET",
+		url: "http://studyandthink.sinaapp.com/about/lifeExperience.php",
+		dataType: "jsonp",
+		jsonp: "jsoncallback",
 		error: function(data) {
 			
 		},
