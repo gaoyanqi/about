@@ -38,6 +38,7 @@ $(document).ready(function() {
 			var index = $(this).attr("data-index");
 			var div = $("div h3[tabindex=" + index + "]");
 			$('html, body').animate({scrollTop: div.offset().top - 100}, 2000);
+			return false;
 		})
 	});
 	
