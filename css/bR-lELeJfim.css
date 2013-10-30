@@ -1,0 +1,48 @@
+/*1334543057,169775556*/
+
+#platform_dev_reqs{padding:8px}
+html body em.intl-sandbox{font-style:normal}
+.uiStructuredInput{border:1px solid #999;overflow:hidden;position:relative}
+.uiStructuredInput .structuredText,.uiStructuredInput .structuredRich,.uiStructuredInput .structuredHint,.uiStructuredInput .structuredPlaceholder{border:0;color:#333;outline:none;padding:3px;position:relative;z-index:1}
+.uiStructuredInput .structuredRich,.uiStructuredInput .structuredHint,.uiStructuredInput .structuredPlaceholder{overflow:auto;white-space:pre-wrap}
+.uiStructuredInput .structuredHint,.uiStructuredInput .structuredPlaceholder{left:0;position:absolute;right:0;top:0;z-index:0}
+.uiStructuredInput .structuredPlaceholder{color:#777}
+.uiStructuredInput.child_is_focused .structuredPlaceholder{color:#999}
+.uiStructuredInput .structuredHint{color:transparent}
+.uiStructuredInput .structuredHint .hintSuffix{color:#999}
+.uiStructuredInput .structuredRich{cursor:text}
+.uiStructuredInput .structuredText{width:100%}
+.uiStructuredInput.singleline{height:20px}
+.uiStructuredInput.singleline .structuredText,.uiStructuredInput.singleline .structuredRich,.uiStructuredInput.singleline .structuredHint,.uiStructuredInput.singleline .structuredPlaceholder{overflow:hidden;white-space:pre}
+.safari4 .uiStructuredInput.singleline .structuredRich,.safari4 .uiStructuredInput.singleline .structuredHint,.safari4 .uiStructuredInput.singleline .structuredPlaceholder{white-space:nowrap}
+#blueBarHolder .voiceBarToggle .pagesVoiceTab{background-color:#6d84b4;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/y6/r/t9oxC0_7OH6.png);background-repeat:no-repeat;background-position:0 -7px;height:6px;left:10px;position:relative;top:-3px;width:11px;z-index:1}
+#blueBarHolder .voiceBarToggle a:hover .pagesVoiceTab,#blueBarHolder .voiceBarToggle a:focus .pagesVoiceTab,#blueBarHolder .voiceBarToggle a:active .pagesVoiceTab{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/y6/r/t9oxC0_7OH6.png);background-repeat:no-repeat;background-position:0 0}
+.pagesVoiceBar{background-color:#6d84b4;border-bottom:solid #3B5998 1px;border-top:solid #1A356E 1px;color:#fff;display:none;height:26px;position:relative;width:100%}
+.hasVoiceBar .pagesVoiceBar{display:block}
+.pagesVoiceBar #pagesVoiceBarContent{margin:0 auto;padding:3px 0;position:relative;width:981px}
+.sidebarMode .pagesVoiceBar #pagesVoiceBarContent{left:-90px}
+.pagesVoiceBar .pagesVoiceBarAvatar{border:solid 1px #556fa6;border-top:solid 1px #3b5998;height:18px;margin-right:6px;width:18px}
+.pagesVoiceBar .pagesVoiceBarText{line-height:20px}
+.pagesVoiceBar .pagesVoiceBarText .pagesAltVoiceText,.pagesVoiceBar .pagesVoiceBarText .pagesAltVoiceText a{color:#bfccec}
+.pagesVoiceBar #pagesVoiceBarShadow{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/yE/r/lOjysYeBKNU.png) repeat-x;height:4px;position:absolute;top:27px;width:100%}
+.sp_3ue09w{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yo/r/Z08YGnfHR8_.png);background-repeat:no-repeat;display:inline-block;height:16px;width:17px}
+.sx_65d726{background-position:-17px -0px}
+.selected .sx_65d726{background-position:-0px -0px}
+.sx_46701d{width:10px;height:11px;background-position:-0px -17px}
+.sp_7k6lbx{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v1/yv/r/uGyh8EkS5OC.png);background-repeat:no-repeat;display:inline-block;height:30px;width:29px}
+.sx_738c76{background-position:-112px -9px}
+.sx_b9c131{background-position:-142px -9px}
+.sx_1ae0a3{width:8px;height:10px;background-position:-253px -9px}
+.sx_debf21{width:19px;height:15px;background-position:-213px -9px}
+.sx_5407f1{width:19px;height:15px;background-position:-233px -9px}
+.sx_335553{width:15px;height:21px;background-position:-197px -9px}
+.sx_0bca8f{width:24px;height:24px;background-position:-172px -9px}
+.sx_20716b{width:111px;height:74px;background-position:-0px -9px}
+.sx_e4a9b6{width:411px;height:4px;background-position:-0px -107px}
+.sx_2f2108{width:851px;height:4px;background-position:-0px -0px}
+.sx_16da46{width:411px;height:3px;background-position:-412px -107px}
+.sx_0584fe{width:851px;height:3px;background-position:-0px -5px}
+.sx_c8f967{width:500px;height:48px;background-position:-352px -9px}
+.sx_2f49de{width:500px;height:48px;background-position:-352px -58px}
+
+#bootloader_M6lQD { height: 42px; }
