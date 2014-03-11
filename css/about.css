@@ -1236,6 +1236,10 @@ strong {
 	background: url(../images/facebook.png);
 }
 
+.github {
+	background: url(../images/Octocat/Octocat.png);
+}
+
 #to-top-button {
 	width: 40px;
 	height: 40px;
