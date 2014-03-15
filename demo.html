@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>about</title>
+		<style type="text/css">
+			body {
+			background: white;
+			font-size: 11px;
+			font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+			color: #333;
+			line-height: 1.28;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			direction: ltr;
+			unicode-bidi: embed;
+			overflow-y: scroll;
+			}
+			form {
+			margin: 0;
+			padding: 0;
+			}
+			ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			}
+			a {
+			cursor: pointer;
+			color: #3B5998;
+			text-decoration: none;
+			}
+			table[cellspacing=0] {
+			border-spacing: 0px;
+			}
+			td, td.label {
+			font-size: 11px;
+			text-align: left;
+			}
+			.fbTimelineCapsule {
+			background: url(images/N8eF8pLkCCD.png) repeat-y center top;
+			margin: 0;
+			padding: 15px 0;
+			position: relative;
+			list-style: none;
+			}
+			a:hover {
+			text-decoration: underline;
+			}
+			.fbTimelineSpine {
+			cursor: none;
+			display: block;
+			height: 100%;
+			right: 50%;
+			margin-right: -10px;
+			outline: 0;
+			position: absolute;
+			top: 0;
+			width: 21px;
+			}
+			a {
+			cursor: pointer;
+			color: #3B5998;
+			text-decoration: none;
+			}
+			.fbTimelineSpine:hover .spineHoverPlusActive {
+			display: block;
+			}
+			.fbTimelineSpine .spineHoverPlus {
+			display: none;
+			left: 3px;
+			position: absolute;
+			}
+			.sx_d40fde {
+			width: 15px;
+			height: 21px;
+			background-position: -0px -282px;
+			}
+			.sp_1uy27n {
+			background-image: url(images/bQzBviBMCsj.png);
+			background-repeat: no-repeat;
+			display: inline-block;
+			height: 16px;
+			width: 16px;
+			}
+			.fbTimelineUnit[data-side="l"] {
+			clear: left;
+			float: left;
+			}
+			.fbTimelineComposerCapsule {
+			z-index: 4;
+			}
+			.fbTimelineUnit {
+			display: block;
+			margin-bottom: 15px;
+			position: relative;
+			z-index: 2;
+			}
+			.clearfix {
+			zoom: 1;
+			}
+			.clearfix::after {
+			clear: both;
+			content: ".";
+			display: block;
+			font-size: 0;
+			height: 0;
+			line-height: 0;
+			visibility: hidden;
+			}
+			.fbTimelineCapsule .topBorder {
+			background-image: url(images/uGyh8EkS5OC.png);
+			background-repeat: no-repeat;
+			background-position: -412px -107px;
+			height: 3px;
+			width: 411px;
+			}
+			.fbTimelineCapsule div.fbTimelineComposerUnit {
+			padding: 0 5px 4px 5px;
+			width: 399px;
+			}
+			.fbTimelineTwoColumn .timelineUnitContainer {
+			width: 379px;
+			}
+			.fbTimelineCapsule .timelineUnitContainer {
+			background: white;
+			border-left: 1px solid #C4CDE0;
+			border-right: 1px solid #C4CDE0;
+			padding: 13px 15px;
+			}
+			.timelineUnitContainer {
+			position: relative;
+			}
+			.fbTimelineTwoColumn[data-side="l"] .spinePointer {
+			background-image: url(images/uGyh8EkS5OC.png);
+			background-repeat: no-repeat;
+			background-position: -213px -9px;
+			left: auto;
+			right: -18px;
+			}
+			.fbTimelineCapsule .spinePointer {
+			background-image: url(images/uGyh8EkS5OC.png);
+			background-repeat: no-repeat;
+			background-position: -233px -9px;
+			height: 15px;
+			left: -18px;
+			position: absolute;
+			top: 20px;
+			width: 19px;
+			z-index: 3;
+			}
+			.fbTimelineCapsule .bottomBorder {
+			background-image: url(images/uGyh8EkS5OC.png);
+			background-repeat: no-repeat;
+			background-position: 0 -107px;
+			height: 4px;
+			width: 411px;
+			}
+			div.fbTimelineComposer {
+			border-bottom: 0;
+			}
+			.uiComposerOpen, .no_js .uiComposer {
+			border-bottom: none;
+			}
+			.uiComposer {
+			border-bottom: 1px solid #CCC;
+			}
+			.fbTimelineComposer div.focus_target {
+			padding-bottom: 0;
+			}
+			.uiComposerOpen .focus_target {
+			padding-bottom: 10px;
+			}
+			.clearfix::after {
+			clear: both;
+			content: ".";
+			display: block;
+			font-size: 0;
+			height: 0;
+			line-height: 0;
+			visibility: hidden;
+			}
+			.uiComposerOpen .showWhenOpen, .no_js .uiComposer .showWhenOpen, .uiComposerInteracted .showOnceInteracted, .uiComposer .child_was_focused .showOnceInteracted {
+			display: block !important;
+			}
+			.uiComposer .showWhenOpen, .uiComposer .showOnceInteracted {
+			display: none !important;
+			}
+			.uiComposerMetaContainer {
+			background-color: white;
+			border: 1px solid #B4BBCD;
+			position: relative;
+			z-index: 1;
+			}
+			ul.fbTimelineComposerAttachments, .uiComposerOpen ul.fbTimelineComposerAttachments {
+			padding: 0;
+			}
+			.uiComposerOpen .uiComposerAttachments {
+			padding-bottom: 6px;
+			}
+			.uiComposerAttachments {
+			line-height: 22px;
+			padding: 3px 0 4px;
+			position: relative;
+			z-index: 2;
+			}
+			#facebook .hidden_elem {
+			display: none !important;
+			}
+			.fbTimelineComposerAttachments .uiListItem:first-child {
+			border: 0;
+			}
+			.fbTimelineComposerAttachments .uiListItem {
+			border-left: 1px solid #E5E5E5;
+			height: 31px;
+			margin: 3px 0;
+			padding: 0;
+			}
+			.uiListItem:first-child {
+			border-width: 0;
+			}
+			.uiListHorizontalItemBorder {
+			border-width: 0 0 0 1px;
+			}
+			.uiListHorizontalItem {
+			float: left;
+			}
+			.uiListItem {
+			display: block;
+			}
+			.plm {
+			padding-left: 10px;
+			}
+			div.fbTimelineComposer .attachmentLoader {
+			border-left: 0;
+			margin-top: 3px;
+			}
+			.uiComposer .attachmentLoader {
+			line-height: normal;
+			position: absolute;
+			right: 2px;
+			top: 9px;
+			}
+			span.uiComposerAttachment {
+			color: #333;
+			display: inline-block;
+			}
+			.fbTimelineComposerAttachments .uiComposerAttachmentSelected .normal {
+			display: none;
+			}
+			.fbTimelineComposerAttachments .attachmentLink {
+			display: block;
+			}
+			.fbTimelineComposerAttachments .attachmentLink, .fbTimelineComposer .uiComposerAttachment .selected {
+			margin: 0 3px;
+			padding: 3px 7px 5px !important;
+			}
+			.uiComposerAttachment .selected, .uiComposerAttachmentSelected .normal {
+			display: none;
+			}
+			.uiComposerAttachment .attachmentLink {
+			outline: none;
+			}
+			.uiIconText {
+			padding-left: 21px;
+			position: relative;
+			}
+			.fbTimelineComposer .uiComposerAttachment .selected {
+			top: 3px;
+			}
+			.uiComposerAttachmentSelected .selected {
+			display: inline;
+			}
+			.fbTimelineComposerAttachments .attachmentLink .img, .fbTimelineComposer .uiComposerAttachment .selected .img {
+			margin-right: 4px;
+			position: static;
+			vertical-align: middle;
+			}
+			.uiIconText .img {
+			left: 0;
+			position: absolute;
+			top: -1px;
+			vertical-align: middle;
+			}
+			.sx_c0836d {
+			background-position: -19px -304px;
+			}
+			.sp_1uy27n {
+			background-image: url(images/bQzBviBMCsj.png);
+			background-repeat: no-repeat;
+			display: inline-block;
+			height: 16px;
+			width: 16px;
+			}
+			.fbTimelineComposerAttachments .attachmentLink .attachmentName, .fbTimelineComposer .uiComposerAttachment .selected .attachmentName {
+			vertical-align: middle;
+			}
+			.uiLoadingIndicatorAsync {
+			display: none;
+			}
+			.uiComposerOpen .showWhenOpen, .no_js .uiComposer .showWhenOpen, .uiComposerInteracted .showOnceInteracted, .uiComposer .child_was_focused .showOnceInteracted {
+			display: block !important;
+			}
+			.uiComposer .showWhenOpen, .uiComposer .showOnceInteracted {
+			display: none !important;
+			}
+			.uiComposerMetaContainer {
+			background-color: white;
+			border: 1px solid #B4BBCD;
+			position: relative;
+			z-index: 1;
+			}
+			.uiMetaComposer .uiComposerMetaContainer .attachmentFrame {
+			border: 0;
+			}
+			.uiComposerHideContent .attachmentFrame {
+			display: none;
+			}
+			.uiComposer .attachmentFrame {
+			border: 1px solid #B4BBCD;
+			border-bottom-color: #CCC;
+			}
+			.uiMetaComposerMessageBoxTable {
+			border-spacing: 0;
+			table-layout: fixed;
+			width: 100%;
+			}
+			.uiMetaComposerMessageBoxShelf {
+			background-color: #F2F2F2;
+			border-top: 1px solid #E6E6E6;
+			}
+			.uiMetaComposerMessageBoxTable td {
+			padding: 0;
+			vertical-align: top;
+			word-wrap: break-word;
+			}
+			.uiMetaComposerMessageBox .inputContainer {
+			background-color: white;
+			zoom: 1;
+			}
+			.uiMentionsInput {
+			position: relative;
+			}
+			.uiMetaComposerMessageBox .attachmentMetaArea {
+			position: relative;
+			}
+			.uiMetaComposerMessageBox .uiMentionsInput .highlighter {
+			font-size: 13px;
+			left: 1px;
+			top: 1px;
+			}
+			.uiMentionsInput .highlighter {
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			padding: 4px;
+			top: 0;
+			}
+			.uiMetaComposerMessageBox .composerTypeahead {
+			border: 0;
+			}
+			.uiMentionsInput .mentionsTextarea, .uiMentionsInput .mentionsTypeahead {
+			background: transparent;
+			zoom: 1;
+			}
+			.uiTypeahead {
+			background: white;
+			border: solid #BDC7D8;
+			cursor: default;
+			position: relative;
+			border-width: 1px 0;
+			}
+			.uiMetaComposerMessageBox .attachmentMetaArea {
+			position: relative;
+			}
+			.uiMentionsInput .highlighter div {
+			color: transparent;
+			line-height: 1.28;
+			white-space: pre-wrap;
+			width: 100%;
+			word-wrap: break-word;
+			}
+			#facebook .hidden_elem {
+			display: none !important;
+			}
+			.uiMentionsInput .highlighterContent {
+			display: inline-block;
+			max-width: 100%;
+			}
+			.uiMentionsInput .highlighter div {
+			color: transparent;
+			line-height: 1.28;
+			white-space: pre-wrap;
+			}
+			.uiMetaComposerMessageBox .composerTypeahead .wrap {
+			padding: 5px !important;
+			border: 0;
+			}
+			.uiTypeahead .wrap {
+			border: solid #BDC7D8;
+			border-width: 0 1px;
+			}
+			.uiTypeahead {
+			cursor: default;
+			}
+			.uiMetaComposerMessageBox .input {
+			background: transparent;
+			border-width: 0;
+			font-size: 13px;
+			height: 16px;
+			margin: 0;
+			outline: none;
+			padding: 0;
+			resize: none;
+			vertical-align: bottom;
+			width: 100%;
+			}
+			.uiTypeahead .textInput {
+			background-color: transparent;
+			border: 0;
+			-webkit-box-sizing: border-box;
+			outline: 0;
+			width: 100%;
+			}
+			.uiMentionsInput .mentionsTextarea {
+			line-height: 1.28;
+			}
+			.uiMentionsInput .mentionsTextarea, .uiMentionsInput .mentionsTypeahead {
+			background: transparent;
+			zoom: 1;
+			}
+			.uiTextareaAutogrow {
+			overflow: hidden;
+			}
+			.uiTextareaAutogrow {
+			overflow: hidden;
+			}
+			textarea, .inputtext, .inputpassword {
+			border: 1px solid #BDC7D8;
+			font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+			font-size: 11px;
+			margin: 0;
+			padding: 3px;
+			-webkit-appearance: none;
+			-webkit-border-radius: 0;
+			}
+			.uiMetaComposerMessageBoxTable {
+			border-spacing: 0;
+			}
+			.uiMetaComposerMessageBox .uiComposerMessageBoxControls {
+			height: 30px;
+			margin: 0;
+			}
+			.uiMetaComposerMessageBox .uiComposerBarRightArea {
+			margin: 4px;
+			}
+			.rfloat {
+			float: right;
+			}
+			.uiListItem:first-child {
+			border-width: 0;
+			}
+			.uiListHorizontalItem {
+			float: left;
+			}
+			.uiListItem {
+			display: block;
+			}
+			.pls {
+			padding-left: 5px;
+			}
+			.uiListHorizontalItemBorder {
+			border-width: 0 0 0 1px;
+			}
+			.uiListHorizontalItem {
+			float: left;
+			}
+			.uiListItem {
+			display: block;
+			}
+			.timelineUnitContainer .composerAudienceSelector {
+			margin-top: 0;
+			}
+			.uiSelector {
+			max-width: 200px;
+			vertical-align: top;
+			}
+			.audienceSelectorNoTruncate, .audienceSelectorNoTruncate .uiSelectorButton, .audienceSelectorNoTruncate .uiSelectorButton:active, .audienceSelectorNoTruncate .uiSelectorButton:focus .audienceSelectorNoTruncate .uiSelectorButton:hover, .audienceSelectorNoTruncate .uiButtonSuppressed:active, .audienceSelectorNoTruncate .uiButtonSuppressed:focus, .audienceSelectorNoTruncate .uiButtonSuppressed:hover, .audienceSelectorNoTruncate .uiSelectorButton .uiButtonText {
+			max-width: none !important;
+			}
+			.audienceSelector {
+			text-align: left;
+			}
+			.audienceSelector {
+			text-align: left;
+			}
+			.uiSelector .wrap {
+			position: relative;
+			}
+			.uiSelector select, .uiSelector .submitButton, .no_js form .uiSelectorButton {
+			display: none;
+			}
+			select {
+			border: 1px solid #BDC7D8;
+			font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+			font-size: 11px;
+			padding: 2px;
+			}
+			.uiSelectorNormal .uiButtonOverlay, .uiSelectorNormal .uiButtonOverlay:active, .uiSelectorNormal .uiButtonOverlay:focus, .uiSelectorNormal .uiButtonOverlay:hover, .uiSelectorNormal .uiSelectorButton:active, .uiSelectorNormal .uiButtonSuppressed {
+			background-image: url(images/wPWUfETd_cS.png);
+			background-repeat: no-repeat;
+			background-position: right -300px;
+			}
+			.uiSelectorNormal .uiSelectorButton, .uiSelectorNormal .uiSelectorButton:active, .uiSelectorNormal .uiSelectorButton:focus, .uiSelectorNormal .uiSelectorButton:hover, .uiSelectorNormal .uiButtonSuppressed:active, .uiSelectorNormal .uiButtonSuppressed:focus, .uiSelectorNormal .uiButtonSuppressed:hover {
+			background-image: url(images/wPWUfETd_cS.png);
+			background-repeat: no-repeat;
+			background-position: right -5px;
+			max-width: 169px;
+			padding-right: 23px;
+			}
+			.uiSelector .uiSelectorButton {
+			vertical-align: top;
+			}
+			.uiSelector .uiButton, .uiSelector .uiButton:active, .uiSelector .uiButton:focus, .uiSelector .uiButton:hover {
+			background-image: none;
+			}
+			.audienceSelectorNoTruncate, .audienceSelectorNoTruncate .uiSelectorButton, .audienceSelectorNoTruncate .uiSelectorButton:active, .audienceSelectorNoTruncate .uiSelectorButton:focus .audienceSelectorNoTruncate .uiSelectorButton:hover, .audienceSelectorNoTruncate .uiButtonSuppressed:active, .audienceSelectorNoTruncate .uiButtonSuppressed:focus, .audienceSelectorNoTruncate .uiButtonSuppressed:hover, .audienceSelectorNoTruncate .uiSelectorButton .uiButtonText {
+			max-width: none !important;
+			}
+			.audienceSelectorNoTruncate, .audienceSelectorNoTruncate .uiSelectorButton, .audienceSelectorNoTruncate .uiSelectorButton:active, .audienceSelectorNoTruncate .uiSelectorButton:focus .audienceSelectorNoTruncate .uiSelectorButton:hover, .audienceSelectorNoTruncate .uiButtonSuppressed:active, .audienceSelectorNoTruncate .uiButtonSuppressed:focus, .audienceSelectorNoTruncate .uiButtonSuppressed:hover, .audienceSelectorNoTruncate .uiSelectorButton .uiButtonText {
+			max-width: none !important;
+			}
+			.uiButton, .uiButtonSuppressed:active, .uiButtonSuppressed:focus, .uiButtonSuppressed:hover {
+			background-image: url(images/wPWUfETd_cS.png);
+			background-repeat: no-repeat;
+			background-position: -352px -103px;
+			background-color: #EEE;
+			border: 1px solid #999;
+			border-bottom-color: #888;
+			-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+			}
+			.uiButton, .uiButtonSuppressed:active, .uiButtonSuppressed:focus, .uiButtonSuppressed:hover {
+			background-image: url(images/wPWUfETd_cS.png);
+			background-repeat: no-repeat;
+			background-position: -352px -103px;
+			background-color: #EEE;
+			border: 1px solid #999;
+			border-bottom-color: #888;
+			-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+			}
+			.uiSelectorRight .uiSelectorMenuWrapper {
+			left: auto;
+			right: 0;
+			}
+			.uiSelectorMenuWrapper {
+			bottom: auto;
+			left: 0;
+			margin: -1px 0 30px;
+			max-width: 340px;
+			min-width: 100%;
+			position: absolute;
+			right: auto;
+			top: 100%;
+			z-index: -1;
+			}
+			.uiToggleFlyout, .toggleTargetClosed, .openToggler .uiToggleFlyout .uiToggleFlyout {
+			display: none;
+			}
+			.audienceSelector {
+			text-align: left;
+			}
+			.composerAudienceWrapper .audienceSelector .uiSelectorButton .customimg {
+			opacity: .5;
+			}
+			.audienceSelector .uiSelectorButton .customimg {
+			margin-left: -2px;
+			margin-right: 2px;
+			}
+			.uiButton .customimg {
+			margin-top: 0;
+			}
+			.uiButton .img {
+			margin-top: 2px;
+			vertical-align: top;
+			}
+			.sx_519028 {
+			width: 17px;
+			background-position: -17px -53px;
+			}
+			.sp_1uy27n {
+			background-image: url(images/bQzBviBMCsj.png);
+			background-repeat: no-repeat;
+			display: inline-block;
+			height: 16px;
+			width: 16px;
+			}
+			.fbTimelineComposerUnit .audienceSelector .uiSelectorButton .uiButtonText {
+			max-width: 113px !important;
+			}
+			.uiSelectorNormal .uiSelectorButton .uiButtonText {
+			max-width: 169px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			vertical-align: top;
+			}
+			.audienceSelectorNoTruncate, .audienceSelectorNoTruncate .uiSelectorButton, .audienceSelectorNoTruncate .uiSelectorButton:active, .audienceSelectorNoTruncate .uiSelectorButton:focus .audienceSelectorNoTruncate .uiSelectorButton:hover, .audienceSelectorNoTruncate .uiButtonSuppressed:active, .audienceSelectorNoTruncate .uiButtonSuppressed:focus, .audienceSelectorNoTruncate .uiButtonSuppressed:hover, .audienceSelectorNoTruncate .uiSelectorButton .uiButtonText {
+			max-width: none !important;
+			}
+			.composerAudienceWrapper .uiButton .uiButtonText {
+			color: gray;
+			font-weight: normal;
+			}
+			.uiButton .uiButtonText, .uiButton input {
+			background: none;
+			border: 0;
+			color: #333;
+			cursor: pointer;
+			display: inline-block;
+			font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+			font-size: 11px;
+			font-weight: bold;
+			margin: 0;
+			padding: 1px 0 2px;
+			white-space: nowrap;
+			}
+			.uiButton {
+			cursor: pointer;
+			font-size: 11px;
+			font-weight: bold;
+			line-height: 13px;
+			text-align: center;
+			white-space: nowrap;
+			}
+			#pagelet_timeline_recent .fbTimelineCompactSection {
+			padding: 0;
+			}
+			.fbTimelineSectionTransparent {
+			background: none;
+			border: none;
+			-webkit-border-radius: 0;
+			-webkit-box-shadow: none;
+			padding-top: 75px;
+			}
+			.fbTimelineCompactSection {
+			padding: 0 0 15px 0;
+			}
+			.fbTimelineSection {
+			background: white;
+			border: 1px solid #C4CDE0;
+			border-bottom-width: 2px;
+			-webkit-border-radius: 3px;
+			padding: 20px 35px 10px;
+			}
+			.timelineLayout #contentArea {
+			position: relative;
+			width: 851px !important;
+			}
+			.hasRightCol #contentArea {
+			width: 714px;
+			}
+			.hasLeftCol #contentArea, .hasRightCol #contentArea {
+			float: left;
+			margin-right: 0;
+			}
+			#contentArea {
+			margin-right: -1px;
+			padding-left: 1px;
+			word-wrap: break-word;
+			}
+			.timelineLayout #contentCol {
+			background: none;
+			padding-top: 0;
+			}
+			#contentCol {
+			background-color: white;
+			padding-top: 15px;
+			}
+			#mainContainer {
+			margin-left: -1px;
+			display: block;
+			width: 100%;
+			}
+			.fbx #globalContainer #content {
+			min-height: inherit;
+			}
+			#content {
+			width: auto;
+			padding: 0;
+			margin: 0;
+			}
+			.fbx .fb_content {
+			padding-bottom: 0;
+			}
+			.fb_content {
+			padding-bottom: 20px;
+			}
+			.widePage div#globalContainer {
+			padding-right: 122px;
+			}
+			.timelineLayout #globalContainer {
+			clear: both;
+			}
+			.fbx #globalContainer {
+			width: 981px;
+			}
+			#globalContainer {
+			margin: 0 auto;
+			position: relative;
+			zoom: 1;
+			}
+			.uiContextualLayerParent {
+			position: relative;
+			}
+			.timelineLayout {
+			background: #E7EBF2;
+			}
+			.fbTimelineTwoColumn[data-side="r"] {
+			clear: right;
+			float: right;
+			}
+			.clearfix::after {
+			clear: both;
+			content: ".";
+			display: block;
+			font-size: 0;
+			height: 0;
+			line-height: 0;
+			visibility: hidden;
+			}
+			.fbTimelineTwoColumn[data-side="l"] + .fbTimelineTwoColumn[data-side="r"] .spinePointer {
+			top: 40px;
+			}
+		</style>
+	</head>
+	<body class="timelineLayout fbTimelineViewingSelf fbx hideBanner hasSlimHeader safari4 win Locale_en_US">
+		<div id="globalContainer" class="uiContextualLayerParent">
+			<div id="content" class="fb_content clearfix" style="min-height: 100px; " data-referrer="content">
+				<div itemscope="itemscope" itemtype="http://data-vocabulary.org/person">
+					<div id="mainContainer">
+						<div id="contentCol" class="clearfix hasRightCol">
+							<div id="contentArea" role="main">
+								<div id="pagelet_timeline_main_column" data-referrer="pagelet_timeline_main_column" data-gt="{&quot;profile_owner&quot;:&quot;1200584315&quot;,&quot;ref&quot;:&quot;timeline:timeline&quot;}">
+									<div id="pagelet_main_column_personal" data-referrer="pagelet_main_column_personal_timeline">
+										<div id="timeline_tab_content" style="padding-bottom: 393px; ">
+											<div id="pagelet_timeline_recent" data-referrer="pagelet_timeline_recent">
+												<div class="fbTimelineSection fbTimelineCompactSection fbTimelineSectionTransparent" id="ur4hju_53">
+													<ol class="clearfix fbTimelineCapsule balancingCapsule" id="ubgma0_68" data-referrer="pagelet_timeline_recent" data-start="1333263600" data-end="1335855599" data-layout="fixed">
+														<li aria-hidden="true" data-spine="1">
+															<a href="#" class="fbTimelineSpine" id="ubgma0_108">
+															<i class="spineHoverPlus img sp_1uy27n sx_d40fde spineHoverPlusActive" style="top: 237px; "></i>
+															</a>
+														</li>
+														<li class="fbTimelineUnit lastCapsule fbTimelineTwoColumn clearfix fbTimelineComposerCapsule" data-side="l" data-fixed="1" data-size="1" id="udz3mk_71">
+															<div class="topBorder"></div>
+															<div class="timelineUnitContainer fbTimelineComposerUnit">
+																<div class="uiComposer uiComposerHideContent stat_elem uiMetaComposer fbTimelineComposer uiComposerOpen uiComposerHideContent uiComposerWhiteMessageBox" onclick="Bootloader.loadComponents([&quot;Composer&quot;,&quot;DataSource&quot;], function() { JSCC.get('jHc3EOFp9DKEzX2xvU1') });" id="udz3mk_72" data-referrer="timeline_composer">
+																	<div class="focus_target">
+																		<form rel="async" class="attachmentSelectForm clearfix" action="/" method="get" onsubmit="return Event.__inlineSubmit(this,event)" id="udz3mk_80">
+																			<ul class="uiList uiListHorizontal clearfix fbTimelineComposerAttachments uiComposerAttachments" onclick="var el = (event.target || event.srcElement), a = Parent.byClass(el, &quot;uiComposerAttachment&quot;); if (!a) { return; } var b = window.DOM &amp;&amp; DOM.find(a, &quot;a&quot;), f = Parent.byTag(a,&quot;form&quot;); f.action = a.getAttribute(&quot;data-endpoint&quot;); b &amp;&amp; f.setAttribute(&quot;data-gt&quot;, b.getAttribute(&quot;data-gt&quot;)); f.xhpc.value = a.id; f.xhpc.click();">
+																				<li class="uiListItem  uiListHorizontalItemBorder uiListHorizontalItem"><span class="uiComposerAttachment statusAttachment uiComposerAttachmentSelected attachmentAcceptsLink" id="composerTourStart" onclick="var c; var root = Parent.byClass(this, &quot;uiComposer&quot;);if (window.Composer &amp;&amp; (c = Composer.getInstance(this)) &amp;&amp; !CSS.hasClass(this, &quot;uiComposerAttachmentSelected&quot;)) {c.reset(true);}CSS.addClass(this, &quot;uiComposerAttachmentSelected&quot;);CSS.addClass(root, &quot;uiComposerOpen&quot;);Bootloader.loadComponents(&quot;dom&quot;,function(){DOM.find(root,&quot;textarea.mentionsTextarea&quot;).focus();});CSS.removeClass.curry(root, &quot;async_saving&quot;).defer();" data-endpoint="/ajax/metacomposer/attachment/timeline/status.php"><a class="uiIconText attachmentLink normal" tabindex="0" href="#"><i class="img sp_1uy27n sx_c0836d"></i><strong class="attachmentName">Status</strong></a><span class="uiIconText selected"><i class="img sp_1uy27n sx_c0836d"></i><strong class="attachmentName">Status<i class="nub"></i></strong></span></span></li>
+																				<li class="plm uiListItem  uiListHorizontalItemBorder uiListHorizontalItem"><span class="uiComposerAttachment photoAttachment" id="udz3mk_74" data-endpoint="/ajax/metacomposer/attachment/timeline/photo/photo.php"><a class="uiIconText attachmentLink normal" tabindex="0" href="#"><i class="img sp_7b7xx5 sx_ced0b4"></i><strong class="attachmentName">Photo</strong></a><span class="uiIconText selected"><i class="img sp_7b7xx5 sx_ced0b4"></i><strong class="attachmentName">Photo<i class="nub"></i></strong></span></span></li>
+																				<li class="plm uiListItem  uiListHorizontalItemBorder uiListHorizontalItem"><span class="uiComposerAttachment placeAttachment" id="udz3mk_75" data-endpoint="/ajax/metacomposer/attachment/timeline/status.php"><a class="uiIconText attachmentLink normal" style="padding-left: 20px;" tabindex="0" href="#"><i class="img sp_bows6p sx_78787c"></i><strong class="attachmentName">Place</strong></a><span style="padding-left: 20px;" class="uiIconText selected"><i class="img sp_bows6p sx_78787c"></i><strong class="attachmentName">Place<i class="nub"></i></strong></span></span></li>
+																				<li class="plm uiListItem  uiListHorizontalItemBorder uiListHorizontalItem"><span class="uiComposerAttachment lifeEventAttachment" id="udz3mk_76" data-endpoint="/ajax/metacomposer/attachment/timeline/life_event.php?profile_id=1200584315&amp;location=composer"><a class="uiIconText attachmentLink normal" tabindex="0" href="#"><i class="img sp_bows6p sx_8ad5ca"></i><strong class="attachmentName">Life Event</strong></a><span class="uiIconText selected"><i class="img sp_bows6p sx_8ad5ca"></i><strong class="attachmentName">Life Event<i class="nub"></i></strong></span></span></li>
+																				<li class="attachmentLoader plm uiListItem  uiListHorizontalItemBorder uiListHorizontalItem"><img class="uiLoadingIndicatorAsync img" src="http://static.ak.fbcdn.net/rsrc.php/v1/yb/r/GsNJNwuI-UM.gif" alt="" width="16" height="11" /></li>
+																			</ul>
+																			<input type="hidden" autocomplete="off" name="targetid" value="1200584315" /><input class="hidden_elem" type="submit" name="xhpc" />
+																		</form>
+																		<div class="showWhenOpen mutableContent uiComposerMetaContainer">
+																			<form rel="async" class="attachmentForm" action="/ajax/updatestatus.php" method="post" onsubmit="return Event.__inlineSubmit(this,event)" id="udz3mk_81">
+																				<input type="hidden" name="fb_dtsg" value="AQDfmsr7" autocomplete="off" /><input type="hidden" autocomplete="off" name="xhpc_composerid" value="udz3mk_72" /><input type="hidden" autocomplete="off" name="xhpc_targetid" value="1200584315" /><input type="hidden" autocomplete="off" name="xhpc_context" value="profile" /><input type="hidden" autocomplete="off" name="xhpc_fbx" value="" /><input type="hidden" autocomplete="off" name="xhpc_timeline" value="1" /><input type="hidden" autocomplete="off" name="xhpc_ismeta" value="1" />
+																				<div class="attachmentFrame">
+																					<div class="attachmentContent"></div>
+																				</div>
+																				<div class="uiMetaComposerMessageBox uiComposerMessageBoxMentions" id="udz3mk_77">
+																					<table class="uiMetaComposerMessageBoxTable" cellspacing="0" cellpadding="0">
+																						<tbody>
+																							<tr>
+																								<td>
+																									<div class="inputContainer">
+																										<div class="uiMentionsInput" id="udz3mk_73">
+																											<div class="highlighter">
+																												<div><span class="highlighterContent"></span></div>
+																											</div>
+																											<div class="uiTypeahead composerTypeahead mentionsTypeahead" id="udz3mk_78">
+																												<div class="wrap">
+																													<input type="hidden" autocomplete="off" class="hiddenInput" />
+																													<div class="innerWrap"><textarea class="DOMControl_placeholder uiTextareaAutogrow input mentionsTextarea textInput" title="What's on your mind?" name="xhpc_message" placeholder="What's on your mind?" onfocus="return wait_for_load(this, event, function() {JSCC.get('jHc3EOFp9DKEzX2xvU4').init(JSCC.get('jHc3EOFp9DKEzX2xvU5'));;JSCC.get('jHc3EOFp9DKEzX2xvU5').init([&quot;buildBestAvailableNames&quot;,&quot;hoistFriends&quot;]);JSCC.get('jHc3EOFp9DKEzX2xvU2').init({&quot;max&quot;:10}, null, JSCC.get('jHc3EOFp9DKEzX2xvU4'));;;});" autocomplete="off" aria-autocomplete="list" aria-expanded="false" aria-invalid="false" aria-owns="typeahead_list_udz3mk_78" role="textbox" onkeydown="Bootloader.loadComponents([&quot;control-textarea&quot;], function() { TextAreaControl.getInstance(this) }.bind(this)); ">What's on your mind?</textarea></div>
+																												</div>
+																											</div>
+																											<input type="hidden" autocomplete="off" class="mentionsHidden" />
+																										</div>
+																										<div class="attachmentMetaArea"></div>
+																									</div>
+																								</td>
+																							</tr>
+																							<tr>
+																								<td>
+																									<div class="attachmentBottomArea"></div>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					<div class="showOnceInteracted uiMetaComposerMessageBoxShelf">
+																						<div class="clearfix uiComposerMessageBoxControls" id="uiComposerMessageBoxControls">
+																							<ul class="uiList uiListHorizontal clearfix uiComposerBarRightArea rfloat">
+																								<li class="privacyWidget uiListItem  uiListHorizontalItemBorder uiListHorizontalItem" id="composerTourAudience" data-gt="{&quot;composer&quot;:{&quot;comp&quot;:&quot;audience&quot;,&quot;ua_id&quot;:&quot;composer:post&quot;}}">
+																									<div id="pagelet_privacy_widget" data-referrer="pagelet_privacy_widget">
+																										<div class="composerAudienceWrapper stat_elem widget">
+																											<div class="uiSelector inlineBlock audienceSelector composerAudienceSelector audienceSelectorNoTruncate dynamicIconSelector uiSelectorRight uiSelectorNormal uiSelectorDynamicLabel uiSelectorDynamicTooltip" data-name="audience[0][value]">
+																												<div class="wrap">
+																													<a data-hover="tooltip" tooltip-alignh="right" class="uiSelectorButton uiButton uiButtonSuppressed" role="button" href="#" aria-haspopup="1" data-label="" data-length="30" rel="toggle"><i class="mrs defaultIcon customimg img sp_1uy27n sx_519028"></i><span class="uiButtonText">Friends</span></a>
+																													<div class="uiSelectorMenuWrapper uiToggleFlyout">
+																														<div role="menu" class="uiMenu uiSelectorMenu">
+																															<ul class="uiMenuInner">
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption" data-label="Public"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="0" aria-checked="false" href="#" rel="async-post" ajaxify="/ajax/privacy/simple_save.php?id=0&amp;audience_json=%5B%7B%22value%22%3A%2280%22%7D%5D"><i class="mrs itemIcon img sp_1uy27n sx_4c8813"></i><span class="itemLabel fsm">Public</span></a></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption checked" data-label="Friends" id="udz3mk_156"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="-1" aria-checked="true" href="#" rel="async-post" ajaxify="/ajax/privacy/simple_save.php?id=0&amp;audience_json=%5B%7B%22value%22%3A%2240%22%7D%5D"><i class="mrs itemIcon img sp_1uy27n sx_519028"></i><span class="itemLabel fsm">Friends<span class="plusLabel hidden_elem fcg"> (+)</span></span></a></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption" data-label="Only Me" id="udz3mk_157"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="-1" aria-checked="false" href="#" rel="async-post" ajaxify="/ajax/privacy/simple_save.php?id=0&amp;audience_json=%5B%7B%22value%22%3A%2210%22%7D%5D"><i class="mrs itemIcon img sp_1uy27n sx_a4c5e0"></i><span class="itemLabel fsm">Only Me</span></a></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption" data-label="Custom" id="udz3mk_155"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="-1" aria-checked="false" href="#" rel="ignore"><i class="mrs itemIcon img sp_1uy27n sx_887cbb"></i><span class="itemLabel fsm">Custom<span class="customPrivacyInputs"></span></span></a></li>
+																																<li class="uiMenuSeparator"></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption friendListOption specialOption primaryOption" data-label="Close Friends" id="udz3mk_158"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="-1" aria-checked="false" data-flid="2850192812857" href="#" rel="async-post" ajaxify="/ajax/privacy/simple_save.php?id=0&amp;audience_json=%5B%7B%22value%22%3A%222850192812857%22%7D%5D"><i class="mrs itemIcon img sp_1uy27n sx_1926e4"></i><span class="itemLabel fsm">Close Friends</span></a></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption friendListOption specialOption primaryOption" data-label="Finstone" id="udz3mk_153"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="-1" aria-checked="false" data-flid="2948726716143" data-dynamic="1" href="#" rel="async-post" ajaxify="/ajax/privacy/simple_save.php?id=0&amp;audience_json=%5B%7B%22value%22%3A%222948726716143%22%7D%5D"><i class="mrs itemIcon img sp_1uy27n sx_b10189"></i><span class="itemLabel fsm">Finstone</span></a></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption moreOption specialOption" data-label="See all lists..."><a class="itemAnchor" role="menuitemradio" tabindex="-1" aria-checked="false" data-type="friendList" href="#" rel="ignore"><span class="itemLabel fsm">See all lists...</span></a></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption friendListOption specialOption secondaryOption" data-label="hakuna" id="udz3mk_160"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="-1" aria-checked="false" data-flid="2948726476137" data-dynamic="1" href="#" rel="async-post" ajaxify="/ajax/privacy/simple_save.php?id=0&amp;audience_json=%5B%7B%22value%22%3A%222948726476137%22%7D%5D"><i class="mrs itemIcon img sp_1uy27n sx_b10189"></i><span class="itemLabel fsm">hakuna</span></a></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption friendListOption specialOption secondaryOption" data-label="Xuzhou No.2 Middle School" id="udz3mk_161"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="-1" aria-checked="false" data-flid="2948705195605" data-dynamic="1" href="#" rel="async-post" ajaxify="/ajax/privacy/simple_save.php?id=0&amp;audience_json=%5B%7B%22value%22%3A%222948705195605%22%7D%5D"><i class="mrs itemIcon img sp_1uy27n sx_d5056c"></i><span class="itemLabel fsm">Xuzhou No.2 Middle School</span></a></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption friendListOption specialOption secondaryOption" data-label="zhangyue" id="udz3mk_162"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="-1" aria-checked="false" data-flid="2948705155604" data-dynamic="1" href="#" rel="async-post" ajaxify="/ajax/privacy/simple_save.php?id=0&amp;audience_json=%5B%7B%22value%22%3A%222948705155604%22%7D%5D"><i class="mrs itemIcon img sp_1uy27n sx_b10189"></i><span class="itemLabel fsm">zhangyue</span></a></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption friendListOption specialOption secondaryOption" data-label="Beijing Area" id="udz3mk_163"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="-1" aria-checked="false" data-flid="2948705235606" data-dynamic="1" href="#" rel="async-post" ajaxify="/ajax/privacy/simple_save.php?id=0&amp;audience_json=%5B%7B%22value%22%3A%222948705235606%22%7D%5D"><i class="mrs itemIcon img sp_1uy27n sx_9bcc8a"></i><span class="itemLabel fsm">Beijing Area</span></a></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption friendListOption specialOption secondaryOption" data-label="ChangZhou College of Information Technology" id="udz3mk_164"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="-1" aria-checked="false" data-flid="2850200013037" data-dynamic="1" href="#" rel="async-post" ajaxify="/ajax/privacy/simple_save.php?id=0&amp;audience_json=%5B%7B%22value%22%3A%222850200013037%22%7D%5D"><i class="mrs itemIcon img sp_1uy27n sx_d5056c"></i><span class="itemLabel fsm">ChangZhou College of Information Technology</span></a></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption friendListOption specialOption secondaryOption" data-label="Family" id="udz3mk_165"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="-1" aria-checked="false" href="#" rel="async-post" ajaxify="/ajax/privacy/simple_save.php?id=0&amp;audience_json=%5B%7B%22value%22%3A%222850192892859%22%7D%5D"><i class="mrs itemIcon img sp_1uy27n sx_f36df5"></i><span class="itemLabel fsm">Family</span></a></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption fbPrivacyAudienceSelectorOption friendListOption specialOption secondaryOption" data-label="Acquaintances" id="udz3mk_166"><a class="itemAnchor itemWithIcon" role="menuitemradio" tabindex="-1" aria-checked="false" data-flid="2948721476012" href="#" rel="async-post" ajaxify="/ajax/privacy/simple_save.php?id=0&amp;audience_json=%5B%7B%22value%22%3A%222948721476012%22%7D%5D"><i class="mrs itemIcon img sp_1uy27n sx_8365ac"></i><span class="itemLabel fsm">Acquaintances</span></a></li>
+																																<li class="uiMenuSeparator secondaryOption"></li>
+																																<li class="uiMenuItem uiMenuItemRadio uiSelectorOption returnOption secondaryOption specialOption" data-label="Go Back"><a class="itemAnchor" role="menuitemradio" tabindex="-1" aria-checked="false" href="#" rel="ignore"><span class="itemLabel fsm">Go Back</span></a></li>
+																															</ul>
+																														</div>
+																													</div>
+																												</div>
+																												<select name="audience[0][value]">
+																													<option value=""></option>
+																													<option value="80">Public</option>
+																													<option value="40" selected="1">Friends</option>
+																													<option value="10">Only Me</option>
+																													<option value="111">Custom</option>
+																													<option value="2850192812857">Close Friends</option>
+																													<option value="2948726716143">Finstone</option>
+																													<option value="See all lists...">See all lists...</option>
+																													<option value="2948726476137">hakuna</option>
+																													<option value="2948705195605">Xuzhou No.2 Middle School</option>
+																													<option value="2948705155604">zhangyue</option>
+																													<option value="2948705235606">Beijing Area</option>
+																													<option value="2850200013037">ChangZhou College of Information Technology</option>
+																													<option value="2850192892859">Family</option>
+																													<option value="2948721476012">Acquaintances</option>
+																													<option value="Go Back">Go Back</option>
+																												</select>
+																											</div>
+																										</div>
+																									</div>
+																								</li>
+																								<li class="pls uiListItem  uiListHorizontalItemBorder uiListHorizontalItem"><label class="submitBtn uiButton uiButtonConfirm" for="udz3mk_79"><input value="Post" type="submit" id="udz3mk_79" /></label></li>
+																							</ul>
+																							<div>
+																								<div class="pls textBlurb fsm fwn fcg"></div>
+																								<div class="attachmentBarArea"><span class="uiComposerTagControls friendTaggerIcon"></span><span class="uiComposerTagControls timeTaggerIcon"></span><span class="uiComposerTagControls placeTaggerIcon"></span></div>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</form>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<i class="spinePointer"></i>
+															<div class="bottomBorder"></div>
+														</li>
+														<li class="fbTimelineUnit lastCapsule fbTimelineTwoColumn clearfix" data-side="r" data-fixed="1" data-size="1" id="tl_unit_2909786290479726370">
+															<div class="topBorder"></div>
+															<div class="timelineUnitContainer" id="ur4hju_82" data-gt="{&quot;eventtime&quot;:&quot;1335924786&quot;,&quot;viewerid&quot;:&quot;1200584315&quot;,&quot;profileownerid&quot;:&quot;1200584315&quot;,&quot;unitimpressionid&quot;:&quot;406e883d&quot;,&quot;contentid&quot;:&quot;2909786290479726370&quot;,&quot;timeline_unit_type&quot;:&quot;BestPostedLinkUnit&quot;,&quot;timewindowsize&quot;:&quot;2&quot;,&quot;contextwindowstart&quot;:&quot;1335855600&quot;,&quot;contextwindowend&quot;:&quot;1338533999&quot;,&quot;queryid&quot;:&quot;5309320384772407596&quot;,&quot;likedbyviewer&quot;:&quot;0&quot;,&quot;features&quot;:{&quot;number_of_likes&quot;:&quot;0&quot;,&quot;number_of_comments&quot;:&quot;0&quot;,&quot;number_of_shares&quot;:&quot;0&quot;}}" data-time="1335853448">
+																test
+																<p>
+																	test
+															</div>
+															<i class="spinePointer"></i>
+															<div class="bottomBorder"></div>
+														</li>
+													</ol>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
