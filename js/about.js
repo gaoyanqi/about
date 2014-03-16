@@ -9,6 +9,7 @@ $(document).ready(function() {
 			$("#nav_year").removeClass("fixed_elem");
 		}
 	});
+
 	$("#menu a").each(function() {
 		$(this).bind("click", function() {
 			var id = $(this).attr("data-href");
@@ -16,6 +17,7 @@ $(document).ready(function() {
 			$('html, body').animate({scrollTop: obj.offset().top}, 2000);
 		});
 	});
+
 	$(".project-button").each(function() {
 		$(this).bind("click", function() {
 			var id = $(this).attr("data-projectId");//dataset[""]
@@ -33,6 +35,7 @@ $(document).ready(function() {
 			}
 		});
 	});
+
 	$("#nav_year li").each(function() {
 		$(this).bind("click", function() {
 			var index = $(this).attr("data-index");
@@ -48,6 +51,7 @@ $(document).ready(function() {
 		"left": left,
 		"top": top
 	});
+
 	$(window).scroll(function() {
 		var iconsPosition = parseInt($("social").css("top"));
 		var headerPosition = parseInt($("#menu").css("height"));
@@ -75,9 +79,11 @@ $(document).ready(function() {
 	$("#to-top-button").css({
 		"top": offsetBottom
 	});
+
 	if(offset > 10) {
 		$("#to-top-button").fadeIn(900);
 	}
+	
 	$(window).scroll(function() {
 		var offset = $(document).scrollTop();
 		offsetBottom = offset + ($(window).height() - 60);
