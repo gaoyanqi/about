@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 		<meta name="description" content="我的个人简历，使用html5开发" />
-		<meta name="keywords" content="Chunsheng, Zhang, Chunsheng Zhang, HTML5, Node, Nodejs, Webkit, Chrome, Firefox, Safari, Google Glass, Android, Java, Redis, HBase, Hadoop, Mysql, MongoDB, PHP, Python, javascript, 关于我, 全栈工程师, 软件开发工程师" />
+		<meta name="keywords" content="张春生, Chunsheng, Zhang, Zhang Chunsheng, Chunsheng Zhang, HTML5, Node, Nodejs, Webkit, Chrome, Firefox, Safari, Google Glass, Android, Java, Redis, HBase, Hadoop, Mysql, MongoDB, PHP, Python, Golang, javascript, 关于我, 全栈工程师, 软件开发工程师" />
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link rel="apple-touch-icon" href="GoLang.jpg" />
 		<link rel="stylesheet" type="text/css" href="css/about.css" media="all" />
@@ -19,7 +19,9 @@
 		<![endif]-->
 		<!--[if IE 7]>
 		<![endif]-->
-		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/init.js"></script>
+		<script type="text/javascript" src="js/timeline.js"></script>
 		<script type="text/javascript" src="js/about.js"></script>
 		<script type="text/javascript" src="js/lifeExperience.js"></script>
 		<script type="text/javascript">
@@ -71,7 +73,7 @@
 		
 		<section id="introduction">
 			<h1 class="introduction">我是张春生</h1>
-			<h2 class="strapline">全栈工程师，java&php开发工程师，越来越喜欢python，喜欢学习和研究新的技术：html5,webGL,nodejs,nosql,redis,hbase,thrift，对游戏开发和物理引擎感兴趣</h2>
+			<h2 class="strapline">全栈工程师，html5&php开发工程师，喜欢python，喜欢iOS，喜欢学习和研究新的技术：html5,GoLang,webGL,nodejs,nosql,redis,hbase,thrift，技术应该和艺术结合在一起</h2>
 			<h4 class="strapline">
 				Email:1097692918@qq.com<br />
 				phone:13439174818
@@ -170,6 +172,93 @@
 							</div>
 							<li class="TimelineColumn">所任职位：游戏服务器端开发</li>
 							<li class="TimelineColumn">职责描述：服务器端架构，开发服务器端</li>
+						</div>
+						<div class="TimelineTwoColumn">
+							<div class="TimelineUnitActor">
+								项目十四 手游RPG游戏服务器端
+							</div>
+							<div data-projectId="14" class="project-button">展开</div>
+							<div id="project_content_14" class="project-content">
+								<li class="TimelineColumn">时间：2013.06 - 2014.03</li>
+								<li class="TimelineColumn">开发环境：windows、centos、OS X</li>
+								<li class="TimelineColumn">数据库：redis、mysql</li>
+								<li class="TimelineColumn">应用服务器： nginx、express</li>
+								<li class="TimelineColumn">开发工具：webstorm、nodepad++</li>
+								<li class="TimelineColumn">开发人数：2</li>
+								<li class="TimelineColumn">担任角色：系统架构、设计数据库、编写代码</li>
+								<li class="TimelineColumn">
+									项目描述：手游RPG游戏服务器端，包括角色属性，装备、背包、副本、战斗等功能，确定使用redis、mysql作为数据存储，记录用户所选角色数据
+								</li>
+								<li class="TimelineColumn">
+									项目技术：项目使用javascript编写服务器端代码，使用express、async、connect-redis、generic-pool、log4js、mocha、mongoskin、mysql、redis、should、urlrouter等packages，MVC架构；数据传输使用json格式
+								</li>
+							</div>
+						</div>
+						<div class="TimelineTwoColumn">
+							<div class="TimelineUnitActor">
+								项目十三 45度角RPG
+							</div>
+							<div data-projectId="13" class="project-button">展开</div>
+							<div id="project_content_13" class="project-content">
+								<li class="TimelineColumn">时间：2013.12 - 2013.06</li>
+								<li class="TimelineColumn">开发环境：windows</li>
+								<li class="TimelineColumn">应用服务器： apache</li>
+								<li class="TimelineColumn">开发工具：nodepad++</li>
+								<li class="TimelineColumn">开发人数：1</li>
+								<li class="TimelineColumn">担任角色：系统设计、编写客户端代码、编写服务器端代码</li>
+								<li class="TimelineColumn">
+									项目描述：一款海盗船类的RPG游戏，场景为45度角
+									<br />
+									体验地址：<a href="http://zhangchunsheng.github.io/pirateBoatIsometricRPGClient/index_dev.html">pirateBoatIsometricRPGClient</a>
+								</li>
+								<li class="TimelineColumn">
+									项目技术：项目使用javascript编写游戏代码
+								</li>
+							</div>
+						</div>
+						<div class="TimelineTwoColumn">
+							<div class="TimelineUnitActor">
+								项目十二 横版RPG
+							</div>
+							<div data-projectId="12" class="project-button">展开</div>
+							<div id="project_content_12" class="project-content">
+								<li class="TimelineColumn">时间：2012.11 - 2013.12</li>
+								<li class="TimelineColumn">开发环境：windows</li>
+								<li class="TimelineColumn">应用服务器： apache</li>
+								<li class="TimelineColumn">开发工具：nodepad++</li>
+								<li class="TimelineColumn">开发人数：1</li>
+								<li class="TimelineColumn">担任角色：系统设计、编写客户端代码、编写服务器端代码</li>
+								<li class="TimelineColumn">
+									项目描述：一款海盗船类的RPG游戏，主角在场景中跑动，使用海盗船战斗
+									<br />
+									体验地址：<a href="http://zhangchunsheng.github.io/pirateBoatRPGClient/index.html">pirateBoatRPGClient</a>
+								</li>
+								<li class="TimelineColumn">
+									项目技术：项目使用javascript编写游戏代码
+								</li>
+							</div>
+						</div>
+						<div class="TimelineTwoColumn">
+							<div class="TimelineUnitActor">
+								项目十一 塔防游戏
+							</div>
+							<div data-projectId="11" class="project-button">展开</div>
+							<div id="project_content_11" class="project-content">
+								<li class="TimelineColumn">时间：2012.10 - 2012.11</li>
+								<li class="TimelineColumn">开发环境：windows</li>
+								<li class="TimelineColumn">应用服务器： apache</li>
+								<li class="TimelineColumn">开发工具：nodepad++</li>
+								<li class="TimelineColumn">开发人数：1</li>
+								<li class="TimelineColumn">担任角色：系统设计、编写代码</li>
+								<li class="TimelineColumn">
+									项目描述：一款海盗船类的塔防
+									<br />
+									体验地址：<a href="http://zhangchunsheng.github.io/pirateBoatDefense/indexDev.html">pirateBoatDefense</a>
+								</li>
+								<li class="TimelineColumn">
+									项目技术：项目使用javascript编写游戏代码
+								</li>
+							</div>
 						</div>
 						<div class="uiHeader fbTimelineContentHeader timelineHeader">
 							<div class="clearfix uiHeaderTop">
@@ -281,21 +370,21 @@
 									参加html5 Code Jam北京场-第二期<br />
 									时间：2011-11-26 11:20 - 2011-11-27<br />
 									地点：乐元素北京总部<br />
-									体验地址：<a href="http://magicpiano.sinaapp.com/index.html">http://magicpiano.sinaapp.com/index.html</a>
+									体验地址：<a href="http://zhangchunsheng.github.io/html5codejam/magicpiano/index.html">http://zhangchunsheng.github.io/html5codejam/magicpiano/index.html</a>
 								</li>
 								<li class="TimelineColumn">
 									参加html5 Code Jam北京场-第三期<br />
 									时间：2012-02-25 09:00 - 2012-02-26 18:30<br />
 									地点：新浪微游戏<br />
-									ppt：<a href="http://zreader.sinaapp.com/beijixing/doc/index.html">http://zreader.sinaapp.com/beijixing/doc/index.html</a><br />
+									ppt：<a href="http://zhangchunsheng.github.io/html5codejam/zreader/beijixing/doc/index.html">http://zhangchunsheng.github.io/html5codejam/zreader/beijixing/doc/index.html#1</a><br />
 									源码地址：<a href="http://code.google.com/p/beijixing">http://code.google.com/p/beijixing</a><br />
-									体验地址：<a href="http://zreader.sinaapp.com/beijixing/demo/reader.html">http://zreader.sinaapp.com/beijixing/demo/reader.html</a><br />
+									体验地址：<a href="http://zhangchunsheng.github.io/html5codejam/zreader/beijixing/demo/reader.html">http://zhangchunsheng.github.io/html5codejam/zreader/beijixing/demo/reader.html</a><br />
 									作品集结：<a href="http://www.mhtml5.com/events/cj02-works">http://www.mhtml5.com/events/cj02-works</a>
 								</li>
 								<li class="TimelineColumn">
 									参加盛大cloudJam<br />
 									时间：2012-04-07 09:00 - 2012-04-08 18:00<br />
-									ppt：<a href="http://html5codejam.sinaapp.com/smartchinesefish/doc/index.html">http://html5codejam.sinaapp.com/smartchinesefish/doc/index.html</a><br />
+									ppt：<a href="http://zhangchunsheng.github.io/html5codejam/smartchinesefish/doc/index.html">http://zhangchunsheng.github.io/html5codejam/smartchinesefish/doc/index.html</a><br />
 									源码地址：<a href="https://code.google.com/p/smartchinesefish/">https://code.google.com/p/smartchinesefish/</a>
 								</li>
 							</div>
@@ -309,9 +398,9 @@
 									参加html5 Code Jam北京场-第四期<br />
 									时间：2012-05-26 09:00 - 2012-05-27 18:00<br />
 									地点：欧朋浏览器办公室<br />
-									ppt：<a href="http://html5codejam.sinaapp.com/bigeater/doc/index.html">http://html5codejam.sinaapp.com/bigeater/doc/index.html</a><br />
+									ppt：<a href="http://zhangchunsheng.github.io/html5codejam/bigeater/doc/index.html">http://zhangchunsheng.github.io/html5codejam/bigeater/doc/index.html</a><br />
 									源码地址：<a href="https://code.google.com/p/bigeater/">https://code.google.com/p/bigeater/</a><br />
-									体验地址：<a href="http://html5codejam.sinaapp.com/bigeater/">http://html5codejam.sinaapp.com/bigeater/</a><br />
+									体验地址：<a href="http://zhangchunsheng.github.io/html5codejam/bigeater/index.html">http://zhangchunsheng.github.io/html5codejam/bigeater/index.html</a><br />
 								</li>
 							</div>
 						</div>
