@@ -49,6 +49,16 @@
 					"type": "professional",
 					"date": "2011/05/17 09:00:00",
 					"description": "加入北京掌中浩阅科技有限公司，做服务器开发和架构，使用mysql、redis、hbase等技术，android版iReader网络书城开始使用html5相关技术"
+				},{
+					"title": "创业 - <span>2012</span>",
+					"type": "professional",
+					"date": "2012/10/01 09:00:00",
+					"description": "开始人生第一次创业，坚持了1年半，没有拿工资，算是人生的一次历练，我想坚持，但首先要解决生存问题，游戏历经4次改版，我希望它可以成功"
+				},{
+					"title": "iOS开发 - <span>2014</span>",
+					"type": "personal",
+					"date": "2014/03/24 09:00:00",
+					"description": "提交人生第一个应用《天天爱连接》到appstore，正在等待审核"
 				}]
 			}
 		})';
