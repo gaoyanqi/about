@@ -371,7 +371,7 @@ section {
 	font-size: 50px;
 	font-weight: 900;
 	font-family: "proxima-nova-extra-condensed-1","proxima-nova-extra-condensed-2","Helvetica Neue","Arial";
-	margin: 20px 0 15px 0;
+	margin: 20px 0 26px 0;
 }
 
 #introduction .strapline {
@@ -381,6 +381,7 @@ section {
 	font-size: 18px;
 	font-weight: 300;
 	letter-spacing: 0.2px;
+	line-height: 26px;
 	font-family: "proxima-nova-extra-condensed-1","proxima-nova-extra-condensed-2","Helvetica Neue","Arial";
 	color: #888;
 	text-shadow: 0px 1px 0px white;
