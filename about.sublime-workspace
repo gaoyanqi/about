@@ -7,30 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/Users/zhang/dev/github/frozen/avos/Todo/public/index.html",
-			"settings":
-			{
-				"buffer_size": 3204,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/zhang/dev/github/frozen/index.php",
-			"settings":
-			{
-				"buffer_size": 17,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "aboutMe.html",
-			"settings":
-			{
-				"buffer_size": 24327,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -56,12 +32,38 @@
 	},
 	"file_history":
 	[
+		"/Users/zhang/dev/rpg/rpg/js/cocos2dHtml.js",
+		"/Users/zhang/dev/github/frozen/avos/Todo/public/index.html",
+		"/Users/zhang/dev/github/frozen/index.php",
+		"/Users/zhang/dev/github/about/aboutMe.html",
+		"/Users/zhang/dev/github/about/js/about.js",
+		"/Users/zhang/dev/github/about/js/lifeExperience.js",
+		"/Users/zhang/dev/github/about/js/time-calculator.js",
+		"/Users/zhang/dev/github/about/changelog.txt",
+		"/Users/zhang/dev/github/about/js/timeline.js",
+		"/Users/zhang/dev/github/about/js/init.js",
+		"/Users/zhang/dev/github/about/js/scripts.js",
+		"/Users/zhang/dev/rpg/cocos2d.js",
+		"/Users/zhang/dev/rpg/rpg/demo/rpg/cocos2d.js",
+		"/Users/zhang/dev/rpg/rpg/cocos2d.js",
+		"/Users/zhang/dev/rpg/rpg/js/game/SocketUtil.js",
+		"/Users/zhang/dev/rpg/rpg/index.html",
+		"/Users/zhang/dev/rpg/rpg/project.json",
+		"/Users/zhang/dev/rpg/rpg/main.js",
+		"/Users/zhang/dev/rpg/rpg/index.js",
+		"/Users/zhang/dev/cocos2d/cocos2d-js/samples/js-tests1/src/tests_resources.js",
+		"/Users/zhang/dev/cocos2d/cocos2d-js/samples/js-tests1/src/TileMapTest/TileMapTest.js",
+		"/Users/zhang/dev/cocos2d/cocos2d-js/samples/js-tests1/melonJS-0.9.11/tests/index.html",
+		"/Users/zhang/dev/cocos2d/cocos2d-js/samples/js-tests1/melonJS-0.9.11/examples/tiled_example_loader/index.html",
+		"/Users/zhang/dev/cocos2d/cocos2d-js/samples/js-tests1/melonJS-0.9.11/examples/tiled_example_loader/main.js",
+		"/Users/zhang/dev/cocos2d/cocos2d-js/samples/js-tests1/melonJS-0.9.11/examples/tiled_example_loader/ressources.js",
+		"/Users/zhang/dev/github/about/js/jquery-1.4.2.min.js",
 		"/etc/hosts",
 		"/Users/zhang/dev/github/helloworld/titanium/app/assets/blackberry/Ti.Manifest"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -75,6 +77,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"TMXTest",
+			"TMXOrthoTest",
+			"cocos2d",
+			"'",
+			"‘",
+			"script"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -82,6 +90,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\"",
+			"“"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -92,90 +102,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/Users/zhang/dev/github/frozen/avos/Todo/public/index.html",
-					"settings":
-					{
-						"buffer_size": 3204,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								201,
-								201
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/zhang/dev/github/frozen/index.php",
-					"settings":
-					{
-						"buffer_size": 17,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14,
-								14
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "aboutMe.html",
-					"settings":
-					{
-						"buffer_size": 24327,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6788,
-								6788
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3005.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -185,7 +113,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -212,7 +140,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -235,6 +163,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 222.0,
 	"status_bar_visible": true
 }
