@@ -11,9 +11,10 @@
  */
 var birth = new Date("1986/04/23 04:00:00");
 var present = new Date();
+
 $(document).ready(function() {
 	absoluteTime();
-	loadNotes();
+	loadLifeNotes();
 
 	$("#technology #progress-bar-container").css("display", "block");
 	$("#technology").css("overflow", "visible");
@@ -46,37 +47,51 @@ $(document).ready(function() {
 	});
 });
 
+/**
+ *
+ */
 function absoluteTime() {
 	var dayNumber = $.absoluteTime(birth, present);
 	$("#technology #progress-bar-container .day-number").html("DAY " + dayNumber.days);
+    $("#technology #progress-bar-container .current-date").html(present.getFullYear());
 }
 
-function loadNotes() {
+/**
+ *
+ */
+function loadLifeNotes() {
 	$.ajax({
 		type: "GET",
-		url: "http://luomor.duapp.com/lifeExperience.php",
+		url: "http://localhost/github/about/services/lifeExperience.php",
 		dataType: "jsonp",
 		jsonp: "jsoncallback",
 		error: function(data) {
 			
 		},
-		success: addNotes
+		success: addLifeNotes
 	});
 }
 
-function addNotes(data) {
+/**
+ *
+ * @param data
+ */
+function addLifeNotes(data) {
+    var lifeNodes = data.life_notes.note;
+
 	var notes = '<ul class="notes">';
-	for(var i = 0 ; i < data.notes.note.length; i++) {
-		notes += '<li class="' + data.notes.note[i].type + '">';
+	for(var i = 0 ; i < lifeNodes.length; i++) {
+		notes += '<li class="' + lifeNodes[i].type + '">';
 		notes += '<div class="caption">';
 		notes += '<div class="arrow"></div>';
-		notes += '<h4 class="heading">' + data.notes.note[i].title + '</h4>';
-		notes += '<p class="date">' + data.notes.note[i].date + '</p>';
-		notes += '<p class="description">' + data.notes.note[i].description + '</p>';
+		notes += '<h4 class="heading">' + lifeNodes[i].title + '</h4>';
+		notes += '<p class="date">' + lifeNodes[i].date + '</p>';
+		notes += '<p class="description">' + lifeNodes[i].description + '</p>';
 		notes += '</div>';
 		notes += '</li>';
 	}
 	notes += '</ul>';
+
 	$("#technology .progress-bar .progress").prepend(notes);
 	$("#technology .progress-bar .progress .notes li").each(function() {
 		var eventDate = new Date($(this).find(".date").html());

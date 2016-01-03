@@ -18,6 +18,7 @@ $(document).ready(function () {
 		$('.work-items li .option-overlay').remove()
 	})
 });
+
 $(document).ready(function () {
 	$(".tooltip").tipTip({
 		maxWidth: "auto",
@@ -25,6 +26,7 @@ $(document).ready(function () {
 		delay: 400
 	})
 });
+
 $(document).ready(function () {
 	$('.client-feedback').click(function () {
 		var pagePosition = $(document).scrollTop();
@@ -67,6 +69,7 @@ $(document).ready(function () {
 		})
 	}
 });
+
 $(document).ready(function () {
 	var top = 20;
 	var left = 15;
@@ -80,7 +83,7 @@ $(document).ready(function () {
 		var offset = $(document).scrollTop();
 		if (offset >= headerPosition) {
 			$('#social-icons').animate({
-				top: (top + offset),
+				top: (top + offset)
 			}, {
 				duration: 500,
 				queue: false
@@ -95,6 +98,7 @@ $(document).ready(function () {
 		}
 	})
 });
+
 $(document).ready(function () {
 	$('#to-top-button').hide();
 	var offset = $(document).scrollTop();
@@ -121,45 +125,48 @@ $(document).ready(function () {
 		})
 	})
 });
+
+var hover = false;
 $(document).ready(function () {
-	$(".avatar-wink").hover(function () {
-		hover = true
-	}, function () {
-		hover = false
+	$('.avatar-happy').hover(function() {
+		$('.avatar').css('background-position', '-230px 0px');
+	}, function() {
+		$('.avatar').css('background-position', '0px 0px');
 	});
-	$('.avatar-happy').hover(function () {
-		$('.avatar').css('background-position', '-230px 0px')
-	}, function () {
-		$('.avatar').css('background-position', '0px 0px')
+
+	$('.avatar-surprised').hover(function() {
+		$('.avatar').css('background-position', '-345px 0px');
+	}, function() {
+		$('.avatar').css('background-position', '0px 0px');
 	});
-	$('.avatar-surprised').hover(function () {
-		$('.avatar').css('background-position', '-345px 0px')
-	}, function () {
-		$('.avatar').css('background-position', '0px 0px')
+
+	$('.avatar-wink').hover(function() {
+        hover = true;
+		$('.avatar').css('background-position', '-460px 0px');
+	}, function() {
+        hover = false;
+		$('.avatar').css('background-position', '0px 0px');
 	});
-	$('.avatar-wink').hover(function () {
-		$('.avatar').css('background-position', '-460px 0px')
-	}, function () {
-		$('.avatar').css('background-position', '0px 0px')
+
+	$('.avatar-sad').hover(function() {
+		$('.avatar').css('background-position', '-680px 0px');
+	}, function() {
+		$('.avatar').css('background-position', '0px 0px');
 	});
-	$('.avatar-sad').hover(function () {
-		$('.avatar').css('background-position', '-680px 0px')
-	}, function () {
-		$('.avatar').css('background-position', '0px 0px')
-	});
-	hover = false;
-	closeEyes()
+
+	closeEyes();
 });
 
 function closeEyes() {
-	if (hover == false) {
-		$('.avatar').css('background-position', '-115px 0px')
+	if(hover == false) {
+		$('.avatar').css('background-position', '-115px 0px');
 	}
 	setTimeout('openEyes()', 500)
 }
+
 function openEyes() {
-	if (hover == false) {
-		$('.avatar').css('background-position', '0px 0px')
+	if(hover == false) {
+		$('.avatar').css('background-position', '0px 0px');
 	}
 	setTimeout('closeEyes()', 6000)
 }

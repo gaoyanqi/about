@@ -11,10 +11,10 @@
  */
 var About = {
 
-}
+};
 
 /**
  */
 About.init = function() {
 
-}
+};
