@@ -679,54 +679,45 @@
             <div class="core-skills">
                 技能
             </div>
-            <div class="java-php-skill">
-                <div class="java-php-skill-content">
-                    java/php
+            <% for(var i = 0; i < skills.length; i++) { %>
+            <div class="<%= skills[i].name %>-skill">
+                <div class="<%= skills[i].name %>-skill-content">
+                    <%= skills[i].content %>
                 </div>
             </div>
-            <div class="html5-css3-skill">
-                <div class="html5-css3-skill-content">
-                    HTML5/CSS3
-                </div>
-            </div>
-            <div class="js-jquery-skill">
-                <div class="js-jquery-skill-content">
-                    js/jquery/node
-                </div>
-            </div>
-            <div class="mysql-oracle-skill">
-                <div class="mysql-oracle-skill-content">
-                    mysql/oracle
-                </div>
-            </div>
-            <div class="nosql-skill">
-                <div class="nosql-skill-content">
-                    nosql/redis
-                </div>
-            </div>
-            <div class="hbase-thrift-skill">
-                <div class="hbase-thrift-skill-content">
-                    hbase/thrift
-                </div>
-            </div>
-            <!--<div class="hadoop-skill">
-                <div class="hadoop-skill-content">
-                    hadoop
-                </div>
-            </div>
-            <div class="nodejs-skill">
-                <div class="nodejs-skill-content">
-                    nodejs
-                </div>
-            </div>-->
+            <%}%>
         </script>
 
         <script type="text/javascript" src="js/lib/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="js/lib/underscore-min.js"></script>
         <script type="text/javascript">
-            var data = {};
+            var data = [{
+                name: "java-php",
+                content: "java/php"
+            },{
+                name: "html5-css3",
+                content: "HTML5/CSS3"
+            },{
+                name: "js-jquery",
+                content: "js/jquery/node"
+            },{
+                name: "mysql-oracle",
+                content: "mysql/oracle"
+            },{
+                name: "nosql",
+                content: "nosql/redis"
+            },{
+                name: "hbase-thrift",
+                content: "hbase/thrift"
+            /*},{
+                name: "hadoop",
+                content: "hadoop"
+            },{
+                name: "nodejs",
+                content: "nodejs"*/
+            }];
             var html = $("#skill_template").html();
-            $("#skills").html(_.template(html, data));
+            $("#skills").html(_.template(html)({skills: data}));
         </script>
         <script type="text/javascript" src="js/init.js"></script>
         <script type="text/javascript" src="js/timeline.js"></script>
