@@ -90,50 +90,8 @@
 					<h3>Apple/Google/Google Glass/Google Car</h3>
 					<p>喜欢Apple和Google的产品，觉得他们很酷</p>
 				</div>
-				<div class="left-section">
-					<div class="core-skills">
-						技能
-					</div>
-					<div class="java-php-skill">
-						<div class="java-php-skill-content">
-							java/php
-						</div>
-					</div>
-					<div class="html5-css3-skill">
-						<div class="html5-css3-skill-content">
-							HTML5/CSS3
-						</div>
-					</div>
-					<div class="js-jquery-skill">
-						<div class="js-jquery-skill-content">
-							js/jquery/node
-						</div>
-					</div>
-					<div class="mysql-oracle-skill">
-						<div class="mysql-oracle-skill-content">
-							mysql/oracle
-						</div>
-					</div>
-					<div class="nosql-skill">
-						<div class="nosql-skill-content">
-							nosql/redis
-						</div>
-					</div>
-					<div class="hbase-thrift-skill">
-						<div class="hbase-thrift-skill-content">
-							hbase/thrift
-						</div>
-					</div>
-					<!--<div class="hadoop-skill">
-						<div class="hadoop-skill-content">
-							hadoop
-						</div>
-					</div>
-					<div class="nodejs-skill">
-						<div class="nodejs-skill-content">
-							nodejs
-						</div>
-					</div>-->
+				<div class="left-section" id="skills">
+
 				</div>
 				<div id="progress-bar-container">
 					<span class="day-number"></span>
@@ -717,11 +675,59 @@
 		
 		<a href="#introduction" id="to-top-button" style="">回到顶部</a>
 
-        <script type="application/template">
-
+        <script type="text/template" id="skill_template">
+            <div class="core-skills">
+                技能
+            </div>
+            <div class="java-php-skill">
+                <div class="java-php-skill-content">
+                    java/php
+                </div>
+            </div>
+            <div class="html5-css3-skill">
+                <div class="html5-css3-skill-content">
+                    HTML5/CSS3
+                </div>
+            </div>
+            <div class="js-jquery-skill">
+                <div class="js-jquery-skill-content">
+                    js/jquery/node
+                </div>
+            </div>
+            <div class="mysql-oracle-skill">
+                <div class="mysql-oracle-skill-content">
+                    mysql/oracle
+                </div>
+            </div>
+            <div class="nosql-skill">
+                <div class="nosql-skill-content">
+                    nosql/redis
+                </div>
+            </div>
+            <div class="hbase-thrift-skill">
+                <div class="hbase-thrift-skill-content">
+                    hbase/thrift
+                </div>
+            </div>
+            <!--<div class="hadoop-skill">
+                <div class="hadoop-skill-content">
+                    hadoop
+                </div>
+            </div>
+            <div class="nodejs-skill">
+                <div class="nodejs-skill-content">
+                    nodejs
+                </div>
+            </div>-->
         </script>
 
         <script type="text/javascript" src="js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/lib/underscore-min.js"></script>
+        <script type="text/javascript">
+            var data = {};
+            var html = $("#skill_template").html();
+            $("#skills").html(_.template(html, data));
+        </script>
         <script type="text/javascript" src="js/init.js"></script>
         <script type="text/javascript" src="js/timeline.js"></script>
         <script type="text/javascript" src="js/about.js"></script>
