@@ -62,7 +62,7 @@ function absoluteTime() {
 function loadLifeNotes() {
 	$.ajax({
 		type: "GET",
-		url: "http://localhost/github/about/services/lifeExperience.php",
+		url: "http://about.luomor.com/about/lifeExperience",
 		dataType: "jsonp",
 		jsonp: "jsoncallback",
 		error: function(data) {
@@ -77,7 +77,7 @@ function loadLifeNotes() {
  * @param data
  */
 function addLifeNotes(data) {
-    var lifeNodes = data.life_notes.note;
+    var lifeNodes = data.result.life_notes;
 
 	var notes = '<ul class="notes">';
 	for(var i = 0 ; i < lifeNodes.length; i++) {
