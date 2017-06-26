@@ -22,7 +22,6 @@ body {
 	position: relative;
 	background-color: #ffffff;
 	border: 1px solid #C4CDE0;
-	background: white;
 	min-height: 60px;
 	text-align: justify;
 	word-wrap: break-word;
@@ -428,7 +427,7 @@ section {
 
 #technology .left-section h3,#technology .right-section h3 {
 	font-size: 18px;
-	font-weight: 300px;
+	font-weight: 300;
 }
 
 p {
@@ -465,7 +464,7 @@ p {
 }
 
 #technology .left-section > div {
-	margin: 20px auto 0 auto;
+	margin: 0px auto 0 auto;
 }
 
 #technology .left-section .java-php-skill {
@@ -499,8 +498,8 @@ p {
 	height: 0;
 	width: 90px;
 	position: absolute;
-	top: 40px;
-	left: 62px;
+	top: 50px;
+	left: 55px;
 	text-align: center;
 	line-height: 40px;
 	transform: rotate(120deg);
@@ -523,8 +522,8 @@ p {
 	height: 0;
 	width: 90px;
 	position: absolute;
-	top: 40px;
-	left: 260px;
+	top: 50px;
+	left: 265px;
 	text-align: center;
 	line-height: 40px;
 	transform: rotate(-120deg);
@@ -547,8 +546,8 @@ p {
 	height: 0;
 	width: 90px;
 	position: absolute;
-	top: 140px;
-	left: 62px;
+	top: 170px;
+	left: 55px;
 	text-align: center;
 	line-height: 40px;
 	transform: rotate(60deg);
@@ -571,8 +570,8 @@ p {
 	height: 0;
 	width: 90px;
 	position: absolute;
-	top: 140px;
-	left: 260px;
+	top: 170px;
+	left: 265px;
 	text-align: center;
 	line-height: 40px;
 	transform: rotate(-60deg);
@@ -595,7 +594,7 @@ p {
 	height: 0;
 	width: 90px;
 	position: absolute;
-	top: 190px;
+	top: 230px;
 	left: 160px;
 	text-align: center;
 	line-height: 40px;
@@ -698,7 +697,7 @@ p {
 	100% {transform: rotate(360deg);-webkit-transform: rotate(360deg);-moz-transform: rotate(360deg)}
 }
 
-@-keyframes div_java_php_skill {
+@keyframes div_java_php_skill {
 	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
 	25% {top: 50px;left: 160px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
 	50% {top: 30px;left: 160px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
@@ -714,84 +713,84 @@ p {
 	100% {top: -10px;left: 160px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
 }
 
-@-keyframes div_html5_css3_skill {
+@keyframes div_html5_css3_skill {
 	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-	25% {top: 60px;left: 120px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
-	50% {top: 50px;left: 100px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
-	75% {top: 45px;left: 80px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
-	100% {top: 40px;left: 62px;-webkit-transform: rotate(120deg);transform: rotate(120deg)}
+	25% {top: 65px;left: 134px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+	50% {top: 60px;left: 108px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+	75% {top: 55px;left: 82px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+	100% {top: 50px;left: 55px;-webkit-transform: rotate(120deg);transform: rotate(120deg)}
 }
 
 @-webkit-keyframes div_html5_css3_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-	25% {top: 60px;left: 120px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
-	50% {top: 50px;left: 100px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
-	75% {top: 45px;left: 80px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
-	100% {top: 40px;left: 62px;-webkit-transform: rotate(120deg);transform: rotate(120deg)}
+    0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    25% {top: 65px;left: 134px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+    50% {top: 60px;left: 108px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+    75% {top: 55px;left: 82px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+    100% {top: 50px;left: 55px;-webkit-transform: rotate(120deg);transform: rotate(120deg)}
 }
 
-@-keyframes div_js_jquery_skill {
+@keyframes div_js_jquery_skill {
 	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-	25% {top: 60px;left: 180px;-webkit-transform: rotate(-36deg);transform: rotate(-36deg)}
-	50% {top: 50px;left: 220px;-webkit-transform: rotate(-72deg);transform: rotate(-72deg)}
-	75% {top: 45px;left: 240px;-webkit-transform: rotate(-108deg);transform: rotate(-108deg)}
-	100% {top: 40px;left: 260px;-webkit-transform: rotate(-120deg);transform: rotate(-120deg)}
+	25% {top: 65px;left: 186px;-webkit-transform: rotate(-36deg);transform: rotate(-36deg)}
+	50% {top: 60px;left: 212px;-webkit-transform: rotate(-72deg);transform: rotate(-72deg)}
+	75% {top: 55px;left: 238px;-webkit-transform: rotate(-108deg);transform: rotate(-108deg)}
+	100% {top: 50px;left: 265px;-webkit-transform: rotate(-120deg);transform: rotate(-120deg)}
 }
 
 @-webkit-keyframes div_js_jquery_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-	25% {top: 60px;left: 180px;-webkit-transform: rotate(-36deg);transform: rotate(-36deg)}
-	50% {top: 50px;left: 220px;-webkit-transform: rotate(-72deg);transform: rotate(-72deg)}
-	75% {top: 45px;left: 240px;-webkit-transform: rotate(-108deg);transform: rotate(-108deg)}
-	100% {top: 40px;left: 260px;-webkit-transform: rotate(-120deg);transform: rotate(-120deg)}
+    0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    25% {top: 65px;left: 186px;-webkit-transform: rotate(-36deg);transform: rotate(-36deg)}
+    50% {top: 60px;left: 212px;-webkit-transform: rotate(-72deg);transform: rotate(-72deg)}
+    75% {top: 55px;left: 238px;-webkit-transform: rotate(-108deg);transform: rotate(-108deg)}
+    100% {top: 50px;left: 265px;-webkit-transform: rotate(-120deg);transform: rotate(-120deg)}
 }
 
-@-keyframes div_mysql_oracle_skill {
+@keyframes div_mysql_oracle_skill {
 	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-	25% {top: 80px;left: 120px;-webkit-transform: rotate(20deg);transform: rotate(20deg)}
-	50% {top: 100px;left: 100px;-webkit-transform: rotate(30deg);transform: rotate(30deg)}
-	75% {top: 120px;left: 80px;-webkit-transform: rotate(40deg);transform: rotate(40deg)}
-	100% {top: 140px;left: 62px;-webkit-transform: rotate(60deg);transform: rotate(60deg)}
+	25% {top: 95px;left: 134px;-webkit-transform: rotate(20deg);transform: rotate(20deg)}
+	50% {top: 120px;left: 108px;-webkit-transform: rotate(30deg);transform: rotate(30deg)}
+	75% {top: 145px;left: 82px;-webkit-transform: rotate(40deg);transform: rotate(40deg)}
+	100% {top: 170px;left: 55px;-webkit-transform: rotate(60deg);transform: rotate(60deg)}
 }
 
 @-webkit-keyframes div_mysql_oracle_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-	25% {top: 80px;left: 120px;-webkit-transform: rotate(20deg);transform: rotate(20deg)}
-	50% {top: 100px;left: 100px;-webkit-transform: rotate(30deg);transform: rotate(30deg)}
-	75% {top: 120px;left: 80px;-webkit-transform: rotate(40deg);transform: rotate(40deg)}
-	100% {top: 140px;left: 62px;-webkit-transform: rotate(60deg);transform: rotate(60deg)}
+    0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    25% {top: 95px;left: 134px;-webkit-transform: rotate(20deg);transform: rotate(20deg)}
+    50% {top: 120px;left: 108px;-webkit-transform: rotate(30deg);transform: rotate(30deg)}
+    75% {top: 145px;left: 82px;-webkit-transform: rotate(40deg);transform: rotate(40deg)}
+    100% {top: 170px;left: 55px;-webkit-transform: rotate(60deg);transform: rotate(60deg)}
 }
 
-@-keyframes div_nosql_skill {
+@keyframes div_nosql_skill {
 	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-	25% {top: 80px;left: 180px;-webkit-transform: rotate(-20deg);transform: rotate(-20deg)}
-	50% {top: 100px;left: 200px;-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
-	75% {top: 120px;left: 220px;-webkit-transform: rotate(-40deg);transform: rotate(-40deg)}
-	100% {top: 140px;left: 260px;-webkit-transform: rotate(-60deg);transform: rotate(-60deg)}
+	25% {top: 95px;left: 186px;-webkit-transform: rotate(-20deg);transform: rotate(-20deg)}
+	50% {top: 120px;left: 212px;-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
+	75% {top: 145px;left: 238px;-webkit-transform: rotate(-40deg);transform: rotate(-40deg)}
+	100% {top: 170px;left: 265px;-webkit-transform: rotate(-60deg);transform: rotate(-60deg)}
 }
 
 @-webkit-keyframes div_nosql_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-	25% {top: 80px;left: 180px;-webkit-transform: rotate(-20deg);transform: rotate(-20deg)}
-	50% {top: 100px;left: 200px;-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
-	75% {top: 120px;left: 220px;-webkit-transform: rotate(-40deg);transform: rotate(-40deg)}
-	100% {top: 140px;left: 260px;-webkit-transform: rotate(-60deg);transform: rotate(-60deg)}
+    0% {top: 70px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    25% {top: 95px;left: 186px;-webkit-transform: rotate(-20deg);transform: rotate(-20deg)}
+    50% {top: 120px;left: 212px;-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
+    75% {top: 145px;left: 238px;-webkit-transform: rotate(-40deg);transform: rotate(-40deg)}
+    100% {top: 170px;left: 265px;-webkit-transform: rotate(-60deg);transform: rotate(-60deg)}
 }
 
-@-keyframes div_hbase_thrift_skill {
+@keyframes div_hbase_thrift_skill {
 	0% {top: 70px;left: 160px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
-	25% {top: 120px;left: 160px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
-	50% {top: 140px;left: 160px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
-	75% {top: 170px;left: 160px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
-	100% {top: 190px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 110px;left: 160px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+	50% {top: 150px;left: 160px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+	75% {top: 190px;left: 160px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+	100% {top: 230px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
 }
 
 @-webkit-keyframes div_hbase_thrift_skill {
-	0% {top: 70px;left: 160px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
-	25% {top: 120px;left: 160px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
-	50% {top: 140px;left: 160px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
-	75% {top: 170px;left: 160px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
-	100% {top: 190px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    0% {top: 70px;left: 160px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
+    25% {top: 110px;left: 160px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+    50% {top: 150px;left: 160px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+    75% {top: 190px;left: 160px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+    100% {top: 230px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
 }
 
 #technology #progress-bar-container {
@@ -841,7 +840,7 @@ p {
 	width: 115px;
 	padding: 10px 0;
 	font-size: 13px;
-	font-weight: 600px;
+	font-weight: 600;
 }
 
 #technology .progress-key li.personal {

@@ -19,11 +19,6 @@
 		<![endif]-->
 		<!--[if IE 7]>
 		<![endif]-->
-		<script type="text/javascript" src="js/lib/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="js/init.js"></script>
-		<script type="text/javascript" src="js/timeline.js"></script>
-		<script type="text/javascript" src="js/about.js"></script>
-		<script type="text/javascript" src="js/lifeExperience.js"></script>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-31588662-3']);
@@ -39,7 +34,9 @@
 	<body>
 		<header>
 			<nav id="menu">
-				<h1><bdo dir="RTL">个人简历<bdo></i></h1>
+				<h1>
+                    <bdo dir="RTL">个人简历</bdo>
+                </h1>
 				<ul class="mainMenu">
 					<li>
 						<a href="#" data-href="introduction"><bdo dir="RTL">介绍</bdo></a>
@@ -93,50 +90,8 @@
 					<h3>Apple/Google/Google Glass/Google Car</h3>
 					<p>喜欢Apple和Google的产品，觉得他们很酷</p>
 				</div>
-				<div class="left-section">
-					<div class="core-skills">
-						技能
-					</div>
-					<div class="java-php-skill">
-						<div class="java-php-skill-content">
-							java/php
-						</div>
-					</div>
-					<div class="html5-css3-skill">
-						<div class="html5-css3-skill-content">
-							HTML5/CSS3
-						</div>
-					</div>
-					<div class="js-jquery-skill">
-						<div class="js-jquery-skill-content">
-							js/jquery/node
-						</div>
-					</div>
-					<div class="mysql-oracle-skill">
-						<div class="mysql-oracle-skill-content">
-							mysql/oracle
-						</div>
-					</div>
-					<div class="nosql-skill">
-						<div class="nosql-skill-content">
-							nosql/redis
-						</div>
-					</div>
-					<div class="hbase-thrift-skill">
-						<div class="hbase-thrift-skill-content">
-							hbase/thrift
-						</div>
-					</div>
-					<!--<div class="hadoop-skill">
-						<div class="hadoop-skill-content">
-							hadoop
-						</div>
-					</div>
-					<div class="nodejs-skill">
-						<div class="nodejs-skill-content">
-							nodejs
-						</div>
-					</div>-->
+				<div class="left-section" id="skills">
+
 				</div>
 				<div id="progress-bar-container">
 					<span class="day-number"></span>
@@ -146,7 +101,7 @@
 						<li class="professional">社会活动</li>
 					</ul>
 					<span class="start-date">1986</span>
-					<span class="current-date">2014</span>
+					<span class="current-date">2016</span>
 					<div class="progress-bar">
 						<div class="progress"></div>
 					</div>
@@ -174,7 +129,6 @@
 									开发一款《天天爱连接》的小游戏<br />
 									时间：2014-03-18 09:00 - 2014-03-24 18:00<br />
 									地点：天时名苑<br />
-									下载地址：<a href="http://222.126.242.105:8080/wire/wire.html">http://222.126.242.105:8080/wire/wire.html</a><br />
 									appstore地址：https://itunes.apple.com/us/app/tian-tian-ai-lian-xian/id847524906?ls=1&mt=8
 								</li>
 							</div>
@@ -719,5 +673,54 @@
 		</footer>
 		
 		<a href="#introduction" id="to-top-button" style="">回到顶部</a>
+
+        <script type="text/template" id="skill_template">
+            <div class="core-skills">
+                技能
+            </div>
+            <% for(var i = 0; i < skills.length; i++) { %>
+            <div class="<%= skills[i].name %>-skill">
+                <div class="<%= skills[i].name %>-skill-content">
+                    <%= skills[i].content %>
+                </div>
+            </div>
+            <%}%>
+        </script>
+
+        <script type="text/javascript" src="js/lib/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/lib/underscore-min.js"></script>
+        <script type="text/javascript">
+            var data = [{
+                name: "java-php",
+                content: "java/php"
+            },{
+                name: "html5-css3",
+                content: "HTML5/CSS3"
+            },{
+                name: "js-jquery",
+                content: "js/jquery/node"
+            },{
+                name: "mysql-oracle",
+                content: "mysql/oracle"
+            },{
+                name: "nosql",
+                content: "nosql/redis"
+            },{
+                name: "hbase-thrift",
+                content: "hbase/thrift"
+            /*},{
+                name: "hadoop",
+                content: "hadoop"
+            },{
+                name: "nodejs",
+                content: "nodejs"*/
+            }];
+            var html = $("#skill_template").html();
+            $("#skills").html(_.template(html)({skills: data}));
+        </script>
+        <script type="text/javascript" src="js/init.js"></script>
+        <script type="text/javascript" src="js/timeline.js"></script>
+        <script type="text/javascript" src="js/about.js"></script>
+        <script type="text/javascript" src="js/lifeExperience.js"></script>
 	</body>
 </html>
