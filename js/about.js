@@ -10,8 +10,82 @@
  * 		甲午年（马年）丁卯月丙戌日 农历二月十六
  */
 $(document).ready(function() {
-	var height = $("#work").height();
-	$("#work .TimelineSpine").css("height", height);
+	var workExperiences = [];
+	var workExperiencesWithTag = {
+		tag: {},
+		data: {}
+	};
+
+	function init() {
+		$.ajax({
+			type: "GET",
+			url: "http://about.luomor.com/about/workExperience",
+			dataType: "jsonp",
+			jsonp: "jsoncallback",
+			error: function(data) {
+				
+			},
+			success: initWorkExperiences
+		});
+	}
+
+	init();
+
+	function initWorkExperiences(data) {
+		if(data.code == 200) {
+			workExperiences = data.result.work_experiences;
+
+			var tag = "";
+			var order = 1;
+			var orderTag = "";
+			for(var i in workExperiences) {
+				tag = workExperiences[i].tag;
+				if(!workExperiencesWithTag.tag.hasOwnProperty(tag)) {
+					workExperiencesWithTag.tag[tag] = tag;
+
+					orderTag = order + "_" + tag;
+					workExperiencesWithTag.data[orderTag] = [];
+					order++;
+				}
+				workExperiencesWithTag.data[orderTag].push(workExperiences[i]);
+			}
+
+			console.log(workExperiencesWithTag);
+		}
+	}
+
+	function callback() {
+		var height = $("#work").height();
+		$("#work .TimelineSpine").css("height", height);
+
+		$(".project-button").each(function() {
+			$(this).bind("click", function() {
+				var id = $(this).attr("data-projectId");//dataset[""]
+				var project_content = $("#project_content_" + id);
+				if(project_content.is(":visible")) {//is(:hidden)
+					$(this).html("展开");
+					project_content.hide(1000);
+					var height = $("#work").height();
+					$("#work .TimelineSpine").css("height", height);
+				} else {
+					$(this).html("隐藏");
+					project_content.show(1000);
+					var height = $("#work").height();
+					$("#work .TimelineSpine").css("height", height);
+				}
+			});
+		});
+
+		$("#nav_year li").each(function() {
+			$(this).bind("click", function() {
+				var index = $(this).attr("data-index");
+				var div = $("div h3[tabindex=" + index + "]");
+				$('html, body').animate({scrollTop: div.offset().top - 100}, 2000);
+				return false;
+			})
+		});
+	}
+	
 	$(document).scroll(function() {
 		var offsetTop = $("#rightCol").offset().top;
 		if(scrollY > offsetTop) {
@@ -27,33 +101,6 @@ $(document).ready(function() {
 			var obj = $("#" + id);
 			$('html, body').animate({scrollTop: obj.offset().top}, 2000);
 		});
-	});
-
-	$(".project-button").each(function() {
-		$(this).bind("click", function() {
-			var id = $(this).attr("data-projectId");//dataset[""]
-			var project_content = $("#project_content_" + id);
-			if(project_content.is(":visible")) {//is(:hidden)
-				$(this).html("展开");
-				project_content.hide(1000);
-				var height = $("#work").height();
-				$("#work .TimelineSpine").css("height", height);
-			} else {
-				$(this).html("隐藏");
-				project_content.show(1000);
-				var height = $("#work").height();
-				$("#work .TimelineSpine").css("height", height);
-			}
-		});
-	});
-
-	$("#nav_year li").each(function() {
-		$(this).bind("click", function() {
-			var index = $(this).attr("data-index");
-			var div = $("div h3[tabindex=" + index + "]");
-			$('html, body').animate({scrollTop: div.offset().top - 100}, 2000);
-			return false;
-		})
 	});
 	
 	var top = 40;

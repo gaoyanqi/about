@@ -18,3 +18,14 @@ var About = {
 About.init = function() {
 
 };
+
+About.in_array = function(str, array) {
+	var ele = "";
+	for(var i = 0 ; i < array.length ; i++) {
+		ele = array[i].toString();
+		if(ele == str) {
+			return true;
+		}
+	}
+	return false;
+};
