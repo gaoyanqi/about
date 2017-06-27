@@ -50,11 +50,95 @@ $(document).ready(function() {
 				workExperiencesWithTag.data[orderTag].push(workExperiences[i]);
 			}
 
-			console.log(workExperiencesWithTag);
+			callback();
 		}
 	}
 
 	function callback() {
+		var html = [];
+		var navHtml = [];
+
+		html.push('<div class="TimelineSpine"></div>');
+
+		var key = {};
+		var experience = {};
+		var project = {};
+		var strHtml = "";
+		var strNavHtml = "";
+		var className = "";
+		var navClassName = "";
+		for(var i in workExperiencesWithTag.data) {
+			key = i.split("_");
+
+			if(key[1] == "Now") {
+				className = "";
+				navClassName = "selected";
+			} else {
+				className = " timelineHeader";
+				navClassName = "";
+			}
+
+			strHtml = '<div class="uiHeader fbTimelineContentHeader' + className + '">';
+			strHtml += '<div class="clearfix uiHeaderTop">';
+			strHtml += '<div>';
+			strHtml += '<h3 tabindex="' + key[0] + '" class="uiHeaderTitle">' + key[1] + '</h3>';
+			strHtml += '</div></div></div>';
+
+			for(var j in workExperiencesWithTag.data[i]) {
+				experience = workExperiencesWithTag.data[i][j];
+
+				strHtml += '<div class="TimelineTwoColumn">';
+				strHtml += '<div class="TimelineUnitActor">';
+				strHtml += experience.title;
+				strHtml += '</div>';
+				strHtml += '<div>';
+				strHtml += '<li class="TimelineColumn">';
+				if(experience.desc != "") {
+					strHtml += experience.desc + "<br />";
+				}
+				strHtml += '时间：' + experience.start_time + ' - ' + experience.start_time + '<br />';
+				if(experience.address != "") {
+					strHtml += '地点：' + experience.address + "<br />";
+				}
+				if(experience.job_title != "") {
+					strHtml += '所任职位：' + experience.job_title + "<br />";
+				}
+				if(experience.responsibility != "") {
+					strHtml += '职责描述：' + experience.responsibility + "<br />";
+				}
+				for(var k in experience.ext) {
+					strHtml += experience.ext[k].name + '：' + experience.ext[k].value + "<br />";
+				}
+				strHtml += '</li></div></div>';
+
+				for(var k in experience.projects) {
+					project = experience.projects[k];
+					strHtml += '<div class="TimelineTwoColumn">';
+					strHtml += '<div class="TimelineUnitActor">';
+					strHtml += '项目' + project.project_id + ' ' + project.project_name;
+					strHtml += '</div>';
+					strHtml += '<div data-projectId="' + project.project_id + '" class="project-button">展开</div>';
+					strHtml += '<div id="project_content_' + project.project_id + '" class="project-content">';
+					strHtml += '<li class="TimelineColumn">时间：' + project.start_time + ' - ' + project.end_time + '</li>';
+					for(var ii in project.kv) {
+						strHtml += '<li class="TimelineColumn">' + project.kv[ii].name + '：' + project.kv[ii].value + '</li>';
+					}
+					strHtml += '</div>';
+					strHtml += '</div>';
+				}
+			}
+
+			strNavHtml = '<li data-key="recent" data-index="' + key[0] + '" class="' + navClassName + '">';
+			strNavHtml += '<a href="#" rel="ignore">' + key[1] + '</a>';
+			strNavHtml += '</li>';
+
+			html.unshift(strHtml);
+			navHtml.unshift(strNavHtml);
+		}
+
+		$("#timeline_tab_content").html(html.join(''));
+		$("#nav_year").html(navHtml.join(''));
+
 		var height = $("#work").height();
 		$("#work .TimelineSpine").css("height", height);
 
