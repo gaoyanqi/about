@@ -94,6 +94,8 @@ section {
 #technology .skill-section-one h3,#technology .skill-section-two h3 {
 	font-size: 18px;
 	font-weight: 300;
+	word-break: break-all;
+	word-wrap: break-word;
 }
 
 .navbar-brand bdo, .navbar-custom .nav li a {
