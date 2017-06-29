@@ -58,8 +58,6 @@ $(document).ready(function() {
 		var html = [];
 		var navHtml = [];
 
-		html.push('<div class="TimelineSpine"></div>');
-
 		var key = {};
 		var experience = {};
 		var project = {};
@@ -67,64 +65,82 @@ $(document).ready(function() {
 		var strNavHtml = "";
 		var className = "";
 		var navClassName = "";
+		var count = 1;
 		for(var i in workExperiencesWithTag.data) {
 			key = i.split("_");
 
 			if(key[1] == "Now") {
-				className = "";
 				navClassName = "selected";
 			} else {
-				className = " timelineHeader";
 				navClassName = "";
 			}
 
-			strHtml = '<div class="uiHeader fbTimelineContentHeader' + className + '">';
-			strHtml += '<div class="clearfix uiHeaderTop">';
-			strHtml += '<div>';
-			strHtml += '<h3 tabindex="' + key[0] + '" class="uiHeaderTitle">' + key[1] + '</h3>';
-			strHtml += '</div></div></div>';
+			strHtml = '<dt tabindex="' + key[0] + '">' + key[1] + '</dt>';
 
 			for(var j in workExperiencesWithTag.data[i]) {
 				experience = workExperiencesWithTag.data[i][j];
-
-				strHtml += '<div class="TimelineTwoColumn">';
-				strHtml += '<div class="TimelineUnitActor">';
-				strHtml += experience.title;
-				strHtml += '</div>';
+				
+				if(count % 2 == 0) {
+					className = "pos-left";
+				} else {
+					className = "pos-right";
+				}
+				strHtml += '<dd class="' + className + ' clearfix">';
+				strHtml += '<div class="circ"></div>';
+				strHtml += '<div class="time">' + experience.start_time + '</div>';
+				strHtml += '<div class="timeline-column">';
+				strHtml += '<div class="timeline-column-body">';
+				strHtml += '<h4 class="timeline-column-heading">' + experience.title + '</h4>';
+								
 				strHtml += '<div>';
-				strHtml += '<li class="TimelineColumn">';
 				if(experience.desc != "") {
 					strHtml += experience.desc + "<br />";
 				}
-				strHtml += '时间：' + experience.start_time + ' - ' + experience.start_time + '<br />';
+				strHtml += '<li>时间：' + experience.start_time + ' - ' + experience.start_time + '</li>';
 				if(experience.address != "") {
-					strHtml += '地点：' + experience.address + "<br />";
+					strHtml += '<li>地点：' + experience.address + "</li>";
 				}
 				if(experience.job_title != "") {
-					strHtml += '所任职位：' + experience.job_title + "<br />";
+					strHtml += '<li>所任职位：' + experience.job_title + "</li>";
 				}
 				if(experience.responsibility != "") {
-					strHtml += '职责描述：' + experience.responsibility + "<br />";
+					strHtml += '<li>职责描述：' + experience.responsibility + "</li>";
 				}
 				for(var k in experience.ext) {
-					strHtml += experience.ext[k].name + '：' + experience.ext[k].value + "<br />";
+					strHtml += '<li>' + experience.ext[k].name + '：' + experience.ext[k].value + "</li>";
 				}
-				strHtml += '</li></div></div>';
+				strHtml += '</div></div></div></dd>';
 
 				for(var k in experience.projects) {
 					project = experience.projects[k];
-					strHtml += '<div class="TimelineTwoColumn">';
-					strHtml += '<div class="TimelineUnitActor">';
-					strHtml += '项目' + project.project_id + ' ' + project.project_name;
-					strHtml += '</div>';
+
+					if(count % 2 == 0) {
+						className = "pos-left";
+					} else {
+						className = "pos-right";
+					}
+					strHtml += '<dd class="' + className + ' clearfix">';
+					strHtml += '<div class="circ"></div>';
+					strHtml += '<div class="time">' + project.start_time + '</div>';
+					strHtml += '<div class="timeline-column">';
+					strHtml += '<div class="timeline-column-body">';
+					strHtml += '<h4 class="timeline-column-heading">项目' + project.project_id + ' ' + project.project_name + '</h4>';
+
+					strHtml += '<div>';
 					strHtml += '<div data-projectId="' + project.project_id + '" class="project-button">展开</div>';
 					strHtml += '<div id="project_content_' + project.project_id + '" class="project-content">';
-					strHtml += '<li class="TimelineColumn">时间：' + project.start_time + ' - ' + project.end_time + '</li>';
+					strHtml += '<li>时间：' + project.start_time + ' - ' + project.end_time + '</li>';
 					for(var ii in project.kv) {
-						strHtml += '<li class="TimelineColumn">' + project.kv[ii].name + '：' + project.kv[ii].value + '</li>';
+						strHtml += '<li>' + project.kv[ii].name + '：' + project.kv[ii].value + '</li>';
 					}
 					strHtml += '</div>';
-					strHtml += '</div>';
+
+					strHtml += '</div></div></div></dd>';
+
+					count++;
+				}
+				if(experience.projects.length == 0) {
+					count++;
 				}
 			}
 
@@ -136,11 +152,8 @@ $(document).ready(function() {
 			navHtml.unshift(strNavHtml);
 		}
 
-		$("#timeline_tab_content").html(html.join(''));
-		$("#nav_year").html(navHtml.join(''));
-
-		var height = $("#work").height();
-		$("#work .TimelineSpine").css("height", height);
+		$(".timeline dl").html(html.join(''));
+		//$(".nav_timeline").html(navHtml.join(''));
 
 		$(".project-button").each(function() {
 			$(this).bind("click", function() {
@@ -149,70 +162,20 @@ $(document).ready(function() {
 				if(project_content.is(":visible")) {//is(:hidden)
 					$(this).html("展开");
 					project_content.hide(1000);
-					var height = $("#work").height();
-					$("#work .TimelineSpine").css("height", height);
 				} else {
 					$(this).html("隐藏");
 					project_content.show(1000);
-					var height = $("#work").height();
-					$("#work .TimelineSpine").css("height", height);
 				}
 			});
 		});
-
-		$("#nav_year li").each(function() {
-			$(this).bind("click", function() {
-				var index = $(this).attr("data-index");
-				var div = $("div h3[tabindex=" + index + "]");
-				$('html, body').animate({scrollTop: div.offset().top - 100}, 2000);
-				return false;
-			})
-		});
 	}
-	
-	$(document).scroll(function() {
-		var offsetTop = $("#rightCol").offset().top;
-		if(scrollY > offsetTop) {
-			$("#nav_year").addClass("fixed_elem");
-		} else {
-			$("#nav_year").removeClass("fixed_elem");
-		}
-	});
 
-	$("#menu a").each(function() {
+	$(".menu a").each(function() {
 		$(this).bind("click", function() {
 			var id = $(this).attr("data-href");
 			var obj = $("#" + id);
 			$('html, body').animate({scrollTop: obj.offset().top}, 2000);
 		});
-	});
-	
-	var top = 40;
-	var left = 15;
-	$("#social").css({
-		"left": left,
-		"top": top
-	});
-
-	$(window).scroll(function() {
-		var iconsPosition = parseInt($("social").css("top"));
-		var headerPosition = parseInt($("#menu").css("height"));
-		var offset = $(document).scrollTop();
-		if(offset >= headerPosition) {
-			$("#social").animate({
-				top: (top + offset)
-			}, {
-				duration: 500,
-				queue: false
-			});
-		} else {
-			$("#social").animate({
-				top: (headerPosition + 25)
-			}, {
-				duration: 500,
-				queue: false
-			});
-		}
 	});
 	
 	$("#to-top-button").hide();
