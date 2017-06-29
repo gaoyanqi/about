@@ -68,10 +68,10 @@ section {
 	padding-right: 10px;
 	margin: auto;
 	width: 200px;
-	height: 100px;
+	height: 70px;
 	background: rgba(120, 120, 120, 0.6);
 	color: #FFFFFF;
-	line-height: 100px;
+	line-height: 70px;
 	z-index: 10;
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -497,19 +497,15 @@ strong {
 }
 
 #social {
-	position: absolute;
 	margin: 0px;
-	top: 40px;
-	left: 15px;
-	width: 40px;
-	height: 160px;
 	z-index: 200;
+	text-align: center;
 }
 
 #social-icons li {
-	margin: 0 0 10px 0;
 	list-style: none;
 	border-radius: 100px;
+	display: inline-block;
 }
 
 #social-icons li a {
