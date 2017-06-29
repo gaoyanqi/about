@@ -18,13 +18,13 @@ $(document).ready(function() {
 
 	$("#technology #progress-bar-container").css("display", "block");
 	$("#technology").css("overflow", "visible");
-	$("#technology .progress-bar .progress .notes li.personal").live("mouseenter", function() {
+	$("#technology .progress-bar .progress .notes li.personal").on("mouseenter", function() {
 		$(this).animate({
 			top: 10
 		}, 200, function() {
 			$(this).find(".caption").stop(true, true).fadeIn(200);
 		});
-	}).live("mouseleave", function() {
+	}).on("mouseleave", function() {
 		$(this).stop(true, true).find(".caption").stop(true, true).delay(200).fadeOut(400, function() {
 			$(this).parents("li").animate({
 				top: 15
@@ -32,13 +32,13 @@ $(document).ready(function() {
 		});
 	});
 
-	$("#technology .progress-bar .progress .notes li.professional").live("mouseenter", function() {
+	$("#technology .progress-bar .progress .notes li.professional").on("mouseenter", function() {
 		$(this).animate({
 			top: -32
 		}, 200, function() {
 			$(this).find(".caption").stop(true, true).fadeIn(200);
 		});
-	}).live("mouseleave", function() {
+	}).on("mouseleave", function() {
 		$(this).stop(true, true).find(".caption").stop(true, true).delay(200).fadeOut(400, function() {
 			$(this).parents("li").animate({
 				top: -37

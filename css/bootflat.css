@@ -2427,7 +2427,7 @@ a.list-group-item-danger.active, a.list-group-item-danger:hover, a.list-group-it
   padding: 10px 20px;
   color: #4fc1e9;
 }
-.timeline dl dd .events {
+.timeline dl dd .timeline-column {
   position: relative;
   width: 47%;
   padding: 10px 10px 0;
@@ -2438,7 +2438,7 @@ a.list-group-item-danger.active, a.list-group-item-danger:hover, a.list-group-it
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
 }
-.timeline dl dd .events:before {
+.timeline dl dd .timeline-column:before {
   position: absolute;
   top: 12px;
   width: 0;
@@ -2447,14 +2447,14 @@ a.list-group-item-danger.active, a.list-group-item-danger:hover, a.list-group-it
   border-style: solid;
   border-width: 6px;
 }
-.timeline dl dd .events .events-object {
+.timeline dl dd .timeline-column .timeline-column-object {
   margin-right: 10px;
 }
-.timeline dl dd .events .events-body {
+.timeline dl dd .timeline-column .timeline-column-body {
   overflow: hidden;
   zoom: 1;
 }
-.timeline dl dd .events .events-body .events-heading {
+.timeline dl dd .timeline-column .timeline-column-body .timeline-column-heading {
   margin: 0 0 10px;
   font-size: 14px;
 }
@@ -2462,10 +2462,10 @@ a.list-group-item-danger.active, a.list-group-item-danger:hover, a.list-group-it
   margin-left: -100px;
   text-align: right;
 }
-.timeline dl dd.pos-right .events {
+.timeline dl dd.pos-right .timeline-column {
   float: right;
 }
-.timeline dl dd.pos-right .events:before {
+.timeline dl dd.pos-right .timeline-column:before {
   left: -12px;
   border-color: transparent white transparent transparent;
 }
@@ -2473,10 +2473,10 @@ a.list-group-item-danger.active, a.list-group-item-danger:hover, a.list-group-it
   margin-left: 0;
   text-align: left;
 }
-.timeline dl dd.pos-left .events {
+.timeline dl dd.pos-left .timeline-column {
   float: left;
 }
-.timeline dl dd.pos-left .events:before {
+.timeline dl dd.pos-left .timeline-column:before {
   right: -12px;
   border-color: transparent transparent transparent white;
 }
@@ -2499,11 +2499,11 @@ a.list-group-item-danger.active, a.list-group-item-danger:hover, a.list-group-it
     margin-left: 0;
     text-align: left;
   }
-  .timeline dl dd.pos-left .events {
+  .timeline dl dd.pos-left .timeline-column {
     float: right;
     width: 84%;
   }
-  .timeline dl dd.pos-left .events:before {
+  .timeline dl dd.pos-left .timeline-column:before {
     left: -12px;
     border-color: transparent white transparent transparent;
   }
@@ -2512,7 +2512,7 @@ a.list-group-item-danger.active, a.list-group-item-danger:hover, a.list-group-it
     margin-left: 0;
     text-align: left;
   }
-  .timeline dl dd.pos-right .events {
+  .timeline dl dd.pos-right .timeline-column {
     float: right;
     width: 84%;
   }
