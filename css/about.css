@@ -424,11 +424,11 @@ p {
 }
 
 @-webkit-keyframes div_nosql_skill {
-    0% {top: 95px;left: 160px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-    25% {top: 120px;left: 186px;-webkit-transform: rotate(-20deg);transform: rotate(-20deg)}
-    50% {top: 145px;left: 212px;-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
-    75% {top: 170px;left: 238px;-webkit-transform: rotate(-40deg);transform: rotate(-40deg)}
-    100% {top: 195px;left: 265px;-webkit-transform: rotate(-60deg);transform: rotate(-60deg)}
+    0% {top: 95px;left: 95px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    25% {top: 120px;left: 121px;-webkit-transform: rotate(-20deg);transform: rotate(-20deg)}
+    50% {top: 145px;left: 147px;-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
+    75% {top: 170px;left: 173px;-webkit-transform: rotate(-40deg);transform: rotate(-40deg)}
+    100% {top: 195px;left: 200px;-webkit-transform: rotate(-60deg);transform: rotate(-60deg)}
 }
 
 @keyframes div_hbase_thrift_skill {

@@ -56,28 +56,23 @@ $(document).ready(function() {
 
 	function callback() {
 		var html = [];
-		var navHtml = [];
+		var projectHtml = [];
 
 		var key = {};
 		var experience = {};
 		var project = {};
 		var strHtml = "";
-		var strNavHtml = "";
+		var strProjectHtml = "";
 		var className = "";
-		var navClassName = "";
 		var count = 1;
 		for(var i in workExperiencesWithTag.data) {
 			key = i.split("_");
 
-			if(key[1] == "Now") {
-				navClassName = "selected";
-			} else {
-				navClassName = "";
-			}
-
 			strHtml = '<dt tabindex="' + key[0] + '">' + key[1] + '</dt>';
 
 			for(var j in workExperiencesWithTag.data[i]) {
+				projectHtml = [];
+				
 				experience = workExperiencesWithTag.data[i][j];
 				
 				if(count % 2 == 0) {
@@ -119,37 +114,35 @@ $(document).ready(function() {
 					} else {
 						className = "pos-right";
 					}
-					strHtml += '<dd class="' + className + ' clearfix">';
-					strHtml += '<div class="circ"></div>';
-					strHtml += '<div class="time">' + project.start_time + '</div>';
-					strHtml += '<div class="timeline-column">';
-					strHtml += '<div class="timeline-column-body">';
-					strHtml += '<h4 class="timeline-column-heading">项目' + project.project_id + ' ' + project.project_name + '</h4>';
+					strProjectHtml = '<dd class="' + className + ' clearfix">';
+					strProjectHtml += '<div class="circ"></div>';
+					strProjectHtml += '<div class="time">' + project.start_time + '</div>';
+					strProjectHtml += '<div class="timeline-column">';
+					strProjectHtml += '<div class="timeline-column-body">';
+					strProjectHtml += '<h4 class="timeline-column-heading">项目' + project.project_id + ' ' + project.project_name + '</h4>';
 
-					strHtml += '<div>';
-					strHtml += '<div data-projectId="' + project.project_id + '" class="project-button">展开</div>';
-					strHtml += '<div id="project_content_' + project.project_id + '" class="project-content">';
-					strHtml += '<li>时间：' + project.start_time + ' - ' + project.end_time + '</li>';
+					strProjectHtml += '<div>';
+					strProjectHtml += '<div data-projectId="' + project.project_id + '" class="project-button">展开</div>';
+					strProjectHtml += '<div id="project_content_' + project.project_id + '" class="project-content">';
+					strProjectHtml += '<li>时间：' + project.start_time + ' - ' + project.end_time + '</li>';
 					for(var ii in project.kv) {
-						strHtml += '<li>' + project.kv[ii].name + '：' + project.kv[ii].value + '</li>';
+						strProjectHtml += '<li>' + project.kv[ii].name + '：' + project.kv[ii].value + '</li>';
 					}
-					strHtml += '</div>';
+					strProjectHtml += '</div>';
 
-					strHtml += '</div></div></div></dd>';
+					strProjectHtml += '</div></div></div></dd>';
+
+					projectHtml.unshift(strProjectHtml);
 
 					count++;
 				}
+				strHtml += projectHtml.join('');
 				if(experience.projects.length == 0) {
 					count++;
 				}
 			}
 
-			strNavHtml = '<li data-key="recent" data-index="' + key[0] + '" class="' + navClassName + '">';
-			strNavHtml += '<a href="#" rel="ignore">' + key[1] + '</a>';
-			strNavHtml += '</li>';
-
 			html.unshift(strHtml);
-			navHtml.unshift(strNavHtml);
 		}
 
 		$(".timeline dl").html(html.join(''));
