@@ -65,6 +65,7 @@ $(document).ready(function() {
 		var strProjectHtml = "";
 		var className = "";
 		var count = 1;
+		var hValue = "";
 		for(var i in workExperiencesWithTag.data) {
 			key = i.split("_");
 
@@ -101,8 +102,13 @@ $(document).ready(function() {
 				if(experience.responsibility != "") {
 					strHtml += '<li>职责描述：' + experience.responsibility + "</li>";
 				}
+
 				for(var k in experience.ext) {
-					strHtml += '<li>' + experience.ext[k].name + '：' + experience.ext[k].value + "</li>";
+					hValue = experience.ext[k].value;
+					if(hValue.indexOf("http") == 0) {
+						hValue = '<a href="' + hValue + '">' + hValue + '</a>';
+					}
+					strHtml += '<li>' + experience.ext[k].name + '：' + hValue + "</li>";
 				}
 				strHtml += '</div></div></div></dd>';
 
@@ -126,7 +132,11 @@ $(document).ready(function() {
 					strProjectHtml += '<div id="project_content_' + project.project_id + '" class="project-content">';
 					strProjectHtml += '<li>时间：' + project.start_time + ' - ' + project.end_time + '</li>';
 					for(var ii in project.kv) {
-						strProjectHtml += '<li>' + project.kv[ii].name + '：' + project.kv[ii].value + '</li>';
+						hValue = project.kv[ii].value;
+						if(hValue.indexOf("http") == 0) {
+							hValue = '<a href="' + hValue + '">' + hValue + '</a>';
+						}
+						strProjectHtml += '<li>' + project.kv[ii].name + '：' + hValue + '</li>';
 					}
 					strProjectHtml += '</div>';
 
