@@ -92,7 +92,7 @@ $(document).ready(function() {
 				if(experience.desc != "") {
 					strHtml += experience.desc + "<br />";
 				}
-				strHtml += '<li>时间：' + experience.start_time + ' - ' + experience.start_time + '</li>';
+				strHtml += '<li>时间：' + experience.start_time + ' - ' + experience.end_time + '</li>';
 				if(experience.address != "") {
 					strHtml += '<li>地点：' + experience.address + "</li>";
 				}
