@@ -18,7 +18,7 @@ section {
 	margin-top: 40px;
 }
 
-#introduction, #technology, #work, #statement {
+.section {
 	border-bottom: 2px dashed #999;
 	overflow: hidden;
 	width: 100%;
@@ -59,6 +59,11 @@ section {
 	display: block;
 	height: 100%;
 	margin: 0 auto;
+}
+
+#qrcode {
+	text-align: center;
+	padding-bottom: 20px;
 }
 
 #technology .content .info {
