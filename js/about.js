@@ -16,10 +16,14 @@ $(document).ready(function() {
 		data: {}
 	};
 
+	var url = "http://about.luomor.com/about/workExperience";
+	if(window.location.href.indexOf("aboutMeEn") > 0) {
+		url = "http://about.luomor.com/about/workExperienceEn";
+	}
 	function init() {
 		$.ajax({
 			type: "GET",
-			url: "http://about.luomor.com/about/workExperience",
+			url: url,
 			dataType: "jsonp",
 			jsonp: "jsoncallback",
 			error: function(data) {
