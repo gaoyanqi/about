@@ -184,7 +184,7 @@ $(document).ready(function() {
 					$(this).html(lang.show);
 					project_content.hide(1000);
 				} else {
-					$(this).html(lang.hidden);
+					$(this).html(lang.hide);
 					project_content.show(1000);
 				}
 			});
