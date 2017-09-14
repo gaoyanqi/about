@@ -17,7 +17,7 @@ $(document).ready(function() {
 	};
 
 	var url = "http://about.luomor.com/about/workExperience";
-	if(window.location.href.indexOf("aboutMeEn") > 0) {
+	if(About.lang == About.LANG_EN) {
 		url = "http://about.luomor.com/about/workExperienceEn";
 	}
 	function init() {
@@ -31,9 +31,23 @@ $(document).ready(function() {
 			},
 			success: initWorkExperiences
 		});
+		console.log("%c", "padding:50px 300px;line-height:120px;background:url('http://about.luomor.com/aboutMe/images/technology.png');background-size: 100px 110px");
+		console.log("%c" + lang.name, "font-size: 5em");
+		console.log("%c" + lang.title, "background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent;-webkit-background-clip: text;");
+		console.log(lang.cellphone + ": MTM0MzkxNzQ4MTg=");
 	}
 
-	init();
+	jQuery.i18n.properties({
+	    name: 'About',
+	    path: 'js/i18n/',
+	    mode: 'both',
+	    //debug: true,
+	    language: About.lang,
+	    async: true,
+	    callback: function() {
+	        init();
+	    }
+	});
 
 	function initWorkExperiences(data) {
 		if(data.code == 200) {
@@ -96,15 +110,15 @@ $(document).ready(function() {
 				if(experience.desc != "") {
 					strHtml += experience.desc + "<br />";
 				}
-				strHtml += '<li>时间：' + experience.start_time + ' - ' + experience.end_time + '</li>';
+				strHtml += '<li>' + lang.time + '：' + experience.start_time + ' - ' + experience.end_time + '</li>';
 				if(experience.address != "") {
-					strHtml += '<li>地点：' + experience.address + "</li>";
+					strHtml += '<li>' + lang.address + '：' + experience.address + "</li>";
 				}
 				if(experience.job_title != "") {
-					strHtml += '<li>所任职位：' + experience.job_title + "</li>";
+					strHtml += '<li>' + lang.job_title + '：' + experience.job_title + "</li>";
 				}
 				if(experience.responsibility != "") {
-					strHtml += '<li>职责描述：' + experience.responsibility + "</li>";
+					strHtml += '<li>' + lang.responsibility + '：' + experience.responsibility + "</li>";
 				}
 
 				for(var k in experience.ext) {
@@ -129,12 +143,12 @@ $(document).ready(function() {
 					strProjectHtml += '<div class="time">' + project.start_time + '</div>';
 					strProjectHtml += '<div class="timeline-column">';
 					strProjectHtml += '<div class="timeline-column-body">';
-					strProjectHtml += '<h4 class="timeline-column-heading">项目' + project.project_id + ' ' + project.project_name + '</h4>';
+					strProjectHtml += '<h4 class="timeline-column-heading">' + lang.project + '' + project.project_id + ' ' + project.project_name + '</h4>';
 
 					strProjectHtml += '<div>';
-					strProjectHtml += '<div data-projectId="' + project.project_id + '" class="project-button">展开</div>';
+					strProjectHtml += '<div data-projectId="' + project.project_id + '" class="project-button">' + lang.show + '</div>';
 					strProjectHtml += '<div id="project_content_' + project.project_id + '" class="project-content">';
-					strProjectHtml += '<li>时间：' + project.start_time + ' - ' + project.end_time + '</li>';
+					strProjectHtml += '<li>' + lang.time + '：' + project.start_time + ' - ' + project.end_time + '</li>';
 					for(var ii in project.kv) {
 						hValue = project.kv[ii].value;
 						if(hValue.indexOf("http") == 0) {
@@ -167,10 +181,10 @@ $(document).ready(function() {
 				var id = $(this).attr("data-projectId");//dataset[""]
 				var project_content = $("#project_content_" + id);
 				if(project_content.is(":visible")) {//is(:hidden)
-					$(this).html("展开");
+					$(this).html(lang.show);
 					project_content.hide(1000);
 				} else {
-					$(this).html("隐藏");
+					$(this).html(lang.hidden);
 					project_content.show(1000);
 				}
 			});
