@@ -110,15 +110,15 @@ $(document).ready(function() {
 				if(experience.desc != "") {
 					strHtml += experience.desc + "<br />";
 				}
-				strHtml += '<li>' + lang.time + '：' + experience.start_time + ' - ' + experience.end_time + '</li>';
+				strHtml += '<li>' + lang.time + lang.colon + experience.start_time + ' - ' + experience.end_time + '</li>';
 				if(experience.address != "") {
-					strHtml += '<li>' + lang.address + '：' + experience.address + "</li>";
+					strHtml += '<li>' + lang.address + lang.colon + experience.address + "</li>";
 				}
 				if(experience.job_title != "") {
-					strHtml += '<li>' + lang.job_title + '：' + experience.job_title + "</li>";
+					strHtml += '<li>' + lang.job_title + lang.colon + experience.job_title + "</li>";
 				}
 				if(experience.responsibility != "") {
-					strHtml += '<li>' + lang.responsibility + '：' + experience.responsibility + "</li>";
+					strHtml += '<li>' + lang.responsibility + lang.colon + experience.responsibility + "</li>";
 				}
 
 				for(var k in experience.ext) {
@@ -126,7 +126,7 @@ $(document).ready(function() {
 					if(hValue.indexOf("http") == 0) {
 						hValue = '<a href="' + hValue + '">' + hValue + '</a>';
 					}
-					strHtml += '<li>' + experience.ext[k].name + '：' + hValue + "</li>";
+					strHtml += '<li>' + experience.ext[k].name + lang.colon + hValue + "</li>";
 				}
 				strHtml += '</div></div></div></dd>';
 
@@ -148,13 +148,13 @@ $(document).ready(function() {
 					strProjectHtml += '<div>';
 					strProjectHtml += '<div data-projectId="' + project.project_id + '" class="project-button">' + lang.show + '</div>';
 					strProjectHtml += '<div id="project_content_' + project.project_id + '" class="project-content">';
-					strProjectHtml += '<li>' + lang.time + '：' + project.start_time + ' - ' + project.end_time + '</li>';
+					strProjectHtml += '<li>' + lang.time + lang.colon + project.start_time + ' - ' + project.end_time + '</li>';
 					for(var ii in project.kv) {
 						hValue = project.kv[ii].value;
 						if(hValue.indexOf("http") == 0) {
 							hValue = '<a href="' + hValue + '">' + hValue + '</a>';
 						}
-						strProjectHtml += '<li>' + project.kv[ii].name + '：' + hValue + '</li>';
+						strProjectHtml += '<li>' + project.kv[ii].name + lang.colon + hValue + '</li>';
 					}
 					strProjectHtml += '</div>';
 
