@@ -51,6 +51,13 @@ section {
 	text-shadow: 0px 1px 0px white;
 }
 
+#introduction .green {
+	width: 100%;
+	text-align: center;
+	margin: 10px 0 0 0;
+	color: green;
+}
+
 #technology {
 	overflow: hidden;
 }
