@@ -25,7 +25,7 @@ About.init = function() {
         About.lang = About.LANG_ZH;
     }
 
-    var earth = new Earth($(".earth")[0], 40, 40);
+    //var earth = new Earth($(".earth")[0], 40, 40);
 };
 
 About.in_array = function(str, array) {
