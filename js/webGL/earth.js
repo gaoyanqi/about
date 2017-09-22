@@ -25,7 +25,7 @@ function Earth(container, width, height) {
 
 		// earth
 		var loader = new THREE.TextureLoader();
-		loader.load('images/land_ocean_ice_cloud_2048.jpg', function(texture) {
+		loader.load('images/land_ocean_ice_cloud_600.jpg', function(texture) {
 			var geometry = new THREE.SphereGeometry(200, 20, 20);
 
 			var material = new THREE.MeshBasicMaterial({
