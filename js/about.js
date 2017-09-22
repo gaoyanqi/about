@@ -194,8 +194,10 @@ $(document).ready(function() {
     $(".menu a").each(function() {
         $(this).bind("click", function() {
             var id = $(this).attr("data-href");
-            var obj = $("#" + id);
-            $('html, body').animate({scrollTop: obj.offset().top}, 2000);
+            if(id) {
+	            var obj = $("#" + id);
+	            $('html, body').animate({scrollTop: obj.offset().top}, 2000);	
+            }
         });
     });
     
