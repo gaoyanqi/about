@@ -24,6 +24,21 @@ About.init = function() {
     } else {
         About.lang = About.LANG_ZH;
     }
+
+    var heart = $(".heart").each(function() {
+    	$(this).drawHeart({
+	    	width: 18,
+	        height: 18,
+	        scale: 0.5
+	    });
+    });
+    //var earth = new Earth($(".earth")[0], 40, 40);
+    var earth = $(".earth").each(function() {
+    	$(this).drawEarth({
+	    	width: 40,
+	        height: 40
+	    });
+    });
 };
 
 About.in_array = function(str, array) {
