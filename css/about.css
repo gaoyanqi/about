@@ -169,10 +169,10 @@ p {
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
 	-o-border-radius: 100px;
-	animation: div_rotate 11s linear 2s infinite alternate;
+	/*animation: div_rotate 11s linear 2s infinite alternate;
 	-webkit-animation: div_rotate 11s linear 2s infinite alternate;
 	-moz-animation: div_rotate 11s linear 2s infinite alternate;
-	-o-animation: div_rotate 11s linear 2s infinite alternate;
+	-o-animation: div_rotate 11s linear 2s infinite alternate;*/
 }
 
 .skill-diagram {
