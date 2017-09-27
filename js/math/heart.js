@@ -35,7 +35,7 @@
 
             function drawHeart(dx, dy, scale) {
                 if(t > 3) {
-                    //setTimeout(reDraw, 1000);
+                    setTimeout(reDraw, 1000);
                     return;
                 }
                 x = 16 * Math.pow(Math.sin(t), 3);
