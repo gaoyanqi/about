@@ -16,9 +16,9 @@ $(document).ready(function() {
         data: {}
     };
 
-    var url = "http://about.luomor.com/about/workExperience";
+    var url = "https://about.luomor.com/about/workExperience";
     if(About.lang == About.LANG_EN) {
-        url = "http://about.luomor.com/about/workExperienceEn";
+        url = "https://about.luomor.com/about/workExperienceEn";
     }
     function init() {
         $.ajax({
