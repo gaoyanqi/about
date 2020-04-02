@@ -35,6 +35,7 @@ $(document).ready(function() {
         console.log("%c" + lang.name, "font-size: 5em");
         console.log("%c" + lang.title, "background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent;-webkit-background-clip: text;");
         console.log(lang.cellphone + ": MTM0MzkxNzQ4MTg=");
+        console.log(lang.introduce);
     }
 
     jQuery.i18n.properties({
