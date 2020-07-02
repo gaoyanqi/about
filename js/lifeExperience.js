@@ -62,7 +62,7 @@ function absoluteTime() {
 function loadLifeNotes() {
     $.ajax({
         type: "GET",
-        url: "http://about.luomor.com/about/lifeExperience",
+        url: "https://about.luomor.com/about/lifeExperience",
         dataType: "jsonp",
         jsonp: "jsoncallback",
         error: function(data) {

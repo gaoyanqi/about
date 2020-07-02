@@ -31,7 +31,7 @@ $(document).ready(function() {
             },
             success: initWorkExperiences
         });
-        console.log("%c", "padding:50px 300px;line-height:120px;background:url('http://about.luomor.com/aboutMe/images/technology.png');background-size: 100px 110px");
+        console.log("%c", "padding:50px 300px;line-height:120px;background:url('https://about.luomor.com/aboutMe/images/technology.png');background-size: 100px 110px");
         console.log("%c" + lang.name, "font-size: 5em");
         console.log("%c" + lang.title, "background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent;-webkit-background-clip: text;");
         console.log(lang.cellphone + ": MTM0MzkxNzQ4MTg=");
@@ -85,6 +85,8 @@ $(document).ready(function() {
         var className = "";
         var count = 1;
         var hValue = "";
+        var url = "";
+        var indexBlank = 0;
         for(var i in workExperiencesWithTag.data) {
             key = i.split("_");
 
@@ -152,8 +154,16 @@ $(document).ready(function() {
                     strProjectHtml += '<li>' + lang.time + lang.colon + project.start_time + ' - ' + project.end_time + '</li>';
                     for(var ii in project.kv) {
                         hValue = project.kv[ii].value;
+                        indexBlank = hValue.indexOf(" ");
                         if(hValue.indexOf("http") == 0) {
-                            hValue = '<a href="' + hValue + '">' + hValue + '</a>';
+                            if(indexBlank > 0) {
+                                url = hValue.substring(0, indexBlank);
+                                hValue = '<a href="' + url + '">' + url + '</a>' + ' ' + hValue.substring(indexBlank);
+                            } else {
+                                url = hValue;
+                                hValue = '<a href="' + url + '">' + url + '</a>';
+                            }
+
                         }
                         strProjectHtml += '<li>' + project.kv[ii].name + lang.colon + hValue + '</li>';
                     }
