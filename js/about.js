@@ -126,8 +126,15 @@ $(document).ready(function() {
 
                 for(var k in experience.ext) {
                     hValue = experience.ext[k].value;
+                    indexBlank = hValue.indexOf(" ");
                     if(hValue.indexOf("http") == 0) {
-                        hValue = '<a href="' + hValue + '">' + hValue + '</a>';
+                        if(indexBlank > 0) {
+                            url = hValue.substring(0, indexBlank);
+                            hValue = '<a href="' + url + '">' + url + '</a>' + ' ' + hValue.substring(indexBlank);
+                        } else {
+                            url = hValue;
+                            hValue = '<a href="' + url + '">' + url + '</a>';
+                        }
                     }
                     strHtml += '<li>' + experience.ext[k].name + lang.colon + hValue + "</li>";
                 }
