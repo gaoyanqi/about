@@ -219,7 +219,7 @@ p {
 #technology .skill-section-one .java-php-skill {
 	border-bottom-color: #76C92E;
 	top: 0px;
-    left: 90px;
+    left: 70px;
 	transform: rotate(180deg);
 	animation: div_java_php_skill 5s;
 	-webkit-transform: rotate(180deg);
@@ -234,7 +234,7 @@ p {
 #technology .skill-section-one .html5-css3-skill {
 	border-bottom-color: #2D62DD;
 	top: 65px;
-    left: -20px;
+    left: -40px;
 	transform: rotate(120deg);
 	animation: div_html5_css3_skill 5s;
 	-webkit-transform: rotate(120deg);
@@ -249,7 +249,7 @@ p {
 #technology .skill-section-one .js-jquery-skill {
 	border-bottom-color: #DD2E5A;
 	top: 65px;
-    left: 200px;
+    left: 180px;
 	transform: rotate(-120deg);
 	animation: div_js_jquery_skill 5s;
 	-webkit-transform: rotate(-120deg);
@@ -264,7 +264,7 @@ p {
 #technology .skill-section-one .mysql-oracle-skill {
 	border-bottom-color: #DCBD32;
 	top: 195px;
-    left: -20px;
+    left: -40px;
 	transform: rotate(60deg);
 	animation: div_mysql_oracle_skill 5s;
 	-webkit-transform: rotate(60deg);
@@ -279,7 +279,7 @@ p {
 #technology .skill-section-one .nosql-skill {
 	border-bottom-color: #B423D5;
 	top: 195px;
-    left: 200px;
+    left: 180px;
 	transform: rotate(-60deg);
 	animation: div_nosql_skill 5s;
 	-webkit-transform: rotate(-60deg);
@@ -294,7 +294,7 @@ p {
 #technology .skill-section-one .hbase-thrift-skill {
 	border-bottom-color: #423C43;
 	top: 260px;
-    left: 90px;
+    left: 70px;
 	transform: rotate(0deg);
 	animation: div_hbase_thrift_skill 5s;
 	-webkit-transform: rotate(0deg);
@@ -309,7 +309,7 @@ p {
 #technology .skill-section-one .hadoop-skill {
 	border-bottom-color: #76C92E;
 	top: 0px;
-    left: 90px;
+    left: 70px;
 	-webkit-transform: rotate(180deg);
 }
 
@@ -321,7 +321,7 @@ p {
 #technology .skill-section-one .nodejs-skill {
 	border-bottom-color: #76C92E;
 	top: 0px;
-    left: 90px;
+    left: 70px;
 	-webkit-transform: rotate(180deg);
 }
 
@@ -377,99 +377,99 @@ p {
 }
 
 @keyframes div_java_php_skill {
-	0% {top: 80px;left: 90px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-	25% {top: 60px;left: 90px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
-	50% {top: 40px;left: 90px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
-	75% {top: 20px;left: 90px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
-	100% {top: 0px;left: 90px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
+	0% {top: 80px;left: 70px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 60px;left: 70px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+	50% {top: 40px;left: 70px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+	75% {top: 20px;left: 70px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+	100% {top: 0px;left: 70px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
 }
 
 @-webkit-keyframes div_java_php_skill {
-	0% {top: 80px;left: 90px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-	25% {top: 60px;left: 90px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
-	50% {top: 40px;left: 90px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
-	75% {top: 20px;left: 90px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
-	100% {top: 0px;left: 90px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
+	0% {top: 80px;left: 70px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 60px;left: 70px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+	50% {top: 40px;left: 70px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+	75% {top: 20px;left: 70px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+	100% {top: 0px;left: 70px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
 }
 
 @keyframes div_html5_css3_skill {
-	0% {top: 85px;left: 85px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-	25% {top: 80px;left: 59px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
-	50% {top: 75px;left: 33px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
-	75% {top: 70px;left: 7px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
-	100% {top: 65px;left: -20px;-webkit-transform: rotate(120deg);transform: rotate(120deg)}
+	0% {top: 85px;left: 65px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 80px;left: 39px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+	50% {top: 75px;left: 13px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+	75% {top: 70px;left: -13px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+	100% {top: 65px;left: -40px;-webkit-transform: rotate(120deg);transform: rotate(120deg)}
 }
 
 @-webkit-keyframes div_html5_css3_skill {
-    0% {top: 85px;left: 85px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-    25% {top: 80px;left: 59px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
-    50% {top: 75px;left: 33px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
-    75% {top: 70px;left: 7px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
-    100% {top: 65px;left: -20px;-webkit-transform: rotate(120deg);transform: rotate(120deg)}
+    0% {top: 85px;left: 65px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    25% {top: 80px;left: 39px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+    50% {top: 75px;left: 13px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+    75% {top: 70px;left: -13px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+    100% {top: 65px;left: -40px;-webkit-transform: rotate(120deg);transform: rotate(120deg)}
 }
 
 @keyframes div_js_jquery_skill {
-	0% {top: 85px;left: 95px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-    25% {top: 80px;left: 121px;-webkit-transform: rotate(-36deg);transform: rotate(-36deg)}
-    50% {top: 75px;left: 147px;-webkit-transform: rotate(-72deg);transform: rotate(-72deg)}
-    75% {top: 70px;left: 173px;-webkit-transform: rotate(-108deg);transform: rotate(-108deg)}
-    100% {top: 65px;left: 200px;-webkit-transform: rotate(-120deg);transform: rotate(-120deg)}
+	0% {top: 85px;left: 75px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    25% {top: 80px;left: 101px;-webkit-transform: rotate(-36deg);transform: rotate(-36deg)}
+    50% {top: 75px;left: 127px;-webkit-transform: rotate(-72deg);transform: rotate(-72deg)}
+    75% {top: 70px;left: 153px;-webkit-transform: rotate(-108deg);transform: rotate(-108deg)}
+    100% {top: 65px;left: 180px;-webkit-transform: rotate(-120deg);transform: rotate(-120deg)}
 }
 
 @-webkit-keyframes div_js_jquery_skill {
-    0% {top: 85px;left: 95px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-    25% {top: 80px;left: 121px;-webkit-transform: rotate(-36deg);transform: rotate(-36deg)}
-    50% {top: 75px;left: 147px;-webkit-transform: rotate(-72deg);transform: rotate(-72deg)}
-    75% {top: 70px;left: 173px;-webkit-transform: rotate(-108deg);transform: rotate(-108deg)}
-    100% {top: 65px;left: 200px;-webkit-transform: rotate(-120deg);transform: rotate(-120deg)}
+    0% {top: 85px;left: 75px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    25% {top: 80px;left: 101px;-webkit-transform: rotate(-36deg);transform: rotate(-36deg)}
+    50% {top: 75px;left: 127px;-webkit-transform: rotate(-72deg);transform: rotate(-72deg)}
+    75% {top: 70px;left: 153px;-webkit-transform: rotate(-108deg);transform: rotate(-108deg)}
+    100% {top: 65px;left: 180px;-webkit-transform: rotate(-120deg);transform: rotate(-120deg)}
 }
 
 @keyframes div_mysql_oracle_skill {
-	0% {top: 95px;left: 85px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-	25% {top: 120px;left: 59px;-webkit-transform: rotate(20deg);transform: rotate(20deg)}
-	50% {top: 145px;left: 33px;-webkit-transform: rotate(30deg);transform: rotate(30deg)}
-	75% {top: 170px;left: 7px;-webkit-transform: rotate(40deg);transform: rotate(40deg)}
-	100% {top: 195px;left: -20px;-webkit-transform: rotate(60deg);transform: rotate(60deg)}
+	0% {top: 95px;left: 65px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	25% {top: 120px;left: 39px;-webkit-transform: rotate(20deg);transform: rotate(20deg)}
+	50% {top: 145px;left: 13px;-webkit-transform: rotate(30deg);transform: rotate(30deg)}
+	75% {top: 170px;left: -13px;-webkit-transform: rotate(40deg);transform: rotate(40deg)}
+	100% {top: 195px;left: -40px;-webkit-transform: rotate(60deg);transform: rotate(60deg)}
 }
 
 @-webkit-keyframes div_mysql_oracle_skill {
-    0% {top: 95px;left: 85px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-    25% {top: 120px;left: 59px;-webkit-transform: rotate(20deg);transform: rotate(20deg)}
-    50% {top: 145px;left: 33px;-webkit-transform: rotate(30deg);transform: rotate(30deg)}
-    75% {top: 170px;left: 7px;-webkit-transform: rotate(40deg);transform: rotate(40deg)}
-    100% {top: 195px;left: -20px;-webkit-transform: rotate(60deg);transform: rotate(60deg)}
+    0% {top: 95px;left: 65px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    25% {top: 120px;left: 39px;-webkit-transform: rotate(20deg);transform: rotate(20deg)}
+    50% {top: 145px;left: 13px;-webkit-transform: rotate(30deg);transform: rotate(30deg)}
+    75% {top: 170px;left: -13px;-webkit-transform: rotate(40deg);transform: rotate(40deg)}
+    100% {top: 195px;left: -40px;-webkit-transform: rotate(60deg);transform: rotate(60deg)}
 }
 
 @keyframes div_nosql_skill {
-	0% {top: 95px;left: 95px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-    25% {top: 120px;left: 121px;-webkit-transform: rotate(-20deg);transform: rotate(-20deg)}
-    50% {top: 145px;left: 147px;-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
-    75% {top: 170px;left: 173px;-webkit-transform: rotate(-40deg);transform: rotate(-40deg)}
-    100% {top: 195px;left: 200px;-webkit-transform: rotate(-60deg);transform: rotate(-60deg)}
+	0% {top: 95px;left: 75px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    25% {top: 120px;left: 101px;-webkit-transform: rotate(-20deg);transform: rotate(-20deg)}
+    50% {top: 145px;left: 127px;-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
+    75% {top: 170px;left: 153px;-webkit-transform: rotate(-40deg);transform: rotate(-40deg)}
+    100% {top: 195px;left: 180px;-webkit-transform: rotate(-60deg);transform: rotate(-60deg)}
 }
 
 @-webkit-keyframes div_nosql_skill {
-    0% {top: 95px;left: 95px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
-    25% {top: 120px;left: 121px;-webkit-transform: rotate(-20deg);transform: rotate(-20deg)}
-    50% {top: 145px;left: 147px;-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
-    75% {top: 170px;left: 173px;-webkit-transform: rotate(-40deg);transform: rotate(-40deg)}
-    100% {top: 195px;left: 200px;-webkit-transform: rotate(-60deg);transform: rotate(-60deg)}
+    0% {top: 95px;left: 75px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    25% {top: 120px;left: 101px;-webkit-transform: rotate(-20deg);transform: rotate(-20deg)}
+    50% {top: 145px;left: 127px;-webkit-transform: rotate(-30deg);transform: rotate(-30deg)}
+    75% {top: 170px;left: 153px;-webkit-transform: rotate(-40deg);transform: rotate(-40deg)}
+    100% {top: 195px;left: 180px;-webkit-transform: rotate(-60deg);transform: rotate(-60deg)}
 }
 
 @keyframes div_hbase_thrift_skill {
-	0% {top: 100px;left: 90px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
-	25% {top: 140px;left: 90px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
-	50% {top: 180px;left: 90px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
-	75% {top: 220px;left: 90px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
-	100% {top: 260px;left: 90px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+	0% {top: 100px;left: 70px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
+	25% {top: 140px;left: 70px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+	50% {top: 180px;left: 70px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+	75% {top: 220px;left: 70px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+	100% {top: 260px;left: 70px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
 }
 
 @-webkit-keyframes div_hbase_thrift_skill {
-    0% {top: 100px;left: 90px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
-    25% {top: 140px;left: 90px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
-    50% {top: 180px;left: 90px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
-    75% {top: 220px;left: 90px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
-    100% {top: 260px;left: 90px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    0% {top: 100px;left: 70px;-webkit-transform: rotate(180deg);transform: rotate(180deg)}
+    25% {top: 140px;left: 70px;-webkit-transform: rotate(108deg);transform: rotate(108deg)}
+    50% {top: 180px;left: 70px;-webkit-transform: rotate(72deg);transform: rotate(72deg)}
+    75% {top: 220px;left: 70px;-webkit-transform: rotate(36deg);transform: rotate(36deg)}
+    100% {top: 260px;left: 70px;-webkit-transform: rotate(0deg);transform: rotate(0deg)}
 }
 
 #work {
