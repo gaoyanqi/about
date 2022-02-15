@@ -19,7 +19,7 @@ $(document).ready(function() {
 	function init() {
 		$.ajax({
 			type: "GET",
-			url: "http://about.luomor.com/about/workExperience",
+			url: "https://about.luomor.com/about/workExperience",
 			dataType: "jsonp",
 			jsonp: "jsoncallback",
 			error: function(data) {
