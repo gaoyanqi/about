@@ -4,7 +4,7 @@
 
 ## 在线访问
 
-[https://about.luomor.com](https://about.luomor.com/aboutMe/aboutMe.html)
+[https://about.luomor.com/aboutMe/aboutMe.html](https://about.luomor.com/aboutMe/aboutMe.html)
 
 ## 技术栈
 
