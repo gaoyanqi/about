@@ -16,7 +16,7 @@ export default {
   nav_work: '工作',
   nav_statement: '声明',
   nav_resume: '个人简历',
-  strapline: '籍贯：江苏徐州，架构师，全栈工程师，Java&PHP资深软件工程师，PHP-Wechaty作者，代码洁癖者，开发过Golang，Python，Lua，Nodejs，Objective-C等，喜欢学习和研究新的技术：云原生, K8S, TensorFlow, AI, metaverse, bigdata, Self-Driving Car, Grpc, Protobuf, Spring Cloud, Swoole, Html5, GoLang, WebGL, Nodejs, Nosql, Redis, Hbase, Thriff，技术应该和艺术结合在一起',
+  strapline: '籍贯：江苏徐州，架构师，全栈工程师，Java&PHP资深软件工程师，PHP-Wechaty作者，目前使用Claude code, Workbuddy进行代码开发和协作，代码洁癖者，开发过Golang，Python，Lua，Nodejs，Objective-C等，喜欢学习和研究新的技术：云原生, K8S, TensorFlow, AI, metaverse, bigdata, Self-Driving Car, Grpc, Protobuf, Spring Cloud, Swoole, Html5, GoLang, WebGL, Nodejs, Nosql, Redis, Hbase, Thriff，技术应该和艺术结合在一起',
   env_message: '请爱护环境，节约纸张',
   skill_info: '技术改变未来',
   core_skills: '技能',
