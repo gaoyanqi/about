@@ -37,6 +37,7 @@ timeline使用work_experiences数组从后往前循环，数组中最后一个�
 美化一下aboutMe.html和aboutMeEn.html
 src目录，增加亮色主题，用户可以切换主题
 根据aboutMe.html中的个人简介等，如div class="hero-shell"中的内容优化vue版本
+aboutMe.html和aboutMeEn.html增加暗色主题，用户可以切换主题
 ```
 
 ```shell
