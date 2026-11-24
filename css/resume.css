@@ -703,6 +703,12 @@ html[lang="en"] .resume-page #introduction .introduction {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.8;
+  text-shadow: none;
+}
+
+/* Override the legacy #technology p white shadow in both themes. */
+#technology .section-heading p {
+  text-shadow: none;
 }
 
 /* Technology */
