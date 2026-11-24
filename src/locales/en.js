@@ -16,6 +16,8 @@ export default {
   nav_work: 'work',
   nav_statement: 'statement',
   nav_resume: 'resume',
+  theme_to_light: 'Switch to light theme',
+  theme_to_dark: 'Switch to dark theme',
   strapline: "Hometown: Xuzhou, Jiangsu Province; Architect, Full-Stack Engineer, Senior Java & PHP Software Engineer, Author of PHP-Wechaty, Currently using Claude Code and Workbuddy for code development and collaboration, Code Cleanser; Developed in Golang, Python, Lua, Node.js, Objective-C, etc.; Enjoys learning and researching new technologies: Cloud Native, Kubernetes, TensorFlow, AI, Metaverse, Big Data, Self-Driving Car, Grpc, Protobuf, Spring Cloud, Swoole, HTML5, GoLang, WebGL, Node.js, NoSQL, Redis, HBase, Thriff; Technology should be combined with art",
   env_message: 'Please love the environment, saving paper',
   skill_info: 'technology to change the future',

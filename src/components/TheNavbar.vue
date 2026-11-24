@@ -8,11 +8,14 @@
         </div>
 
         <!-- Desktop Nav -->
-        <ul class="hidden sm:flex items-center gap-8">
+        <ul class="hidden md:flex items-center gap-8">
           <li v-for="link in navLinks" :key="link.id">
             <a :href="`#${link.id}`" @click.prevent="scrollToSection(link.id)" class="font-mono text-xs tracking-wider uppercase text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors duration-300">
               {{ link.label }}
             </a>
+          </li>
+          <li>
+            <ThemeToggle />
           </li>
           <li>
             <router-link :to="currentLocale === 'zh' ? '/en' : '/zh'" class="font-mono text-xs tracking-wider uppercase px-3 py-1.5 rounded border border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-all duration-300">
@@ -21,18 +24,28 @@
           </li>
         </ul>
 
-        <!-- Mobile Hamburger -->
-        <button @click="mobileOpen = !mobileOpen" class="sm:hidden text-[var(--text-secondary)] p-2 focus:outline-none" aria-label="Toggle navigation">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path v-if="!mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
-            <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+        <!-- Mobile Controls -->
+        <div class="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            type="button"
+            @click="mobileOpen = !mobileOpen"
+            class="mobile-menu-toggle text-[var(--text-secondary)] p-2"
+            :aria-label="mobileOpen ? 'Close navigation' : 'Open navigation'"
+            :aria-expanded="mobileOpen"
+            aria-controls="mobile-navigation"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path v-if="!mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+              <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
       </div>
 
       <!-- Mobile Menu -->
       <transition name="mobile-menu">
-        <div v-show="mobileOpen" class="sm:hidden py-4 border-t border-[var(--border)]">
+        <div v-show="mobileOpen" id="mobile-navigation" class="md:hidden py-4 border-t border-[var(--border)]">
           <ul class="flex flex-col gap-3">
             <li v-for="link in navLinks" :key="link.id">
               <a :href="`#${link.id}`" @click.prevent="scrollToSection(link.id); mobileOpen = false" class="font-mono text-xs tracking-wider uppercase text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors block py-2">
@@ -55,6 +68,7 @@
 import { ref, computed } from 'vue'
 import { useLocale } from '../composables/useLocale'
 import { useScroll } from '../composables/useScroll'
+import ThemeToggle from './ThemeToggle.vue'
 
 const { currentLocale, t } = useLocale()
 const { scrollTo } = useScroll()

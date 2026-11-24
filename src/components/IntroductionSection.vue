@@ -46,7 +46,7 @@
       </nav>
 
       <!-- Environmental Message -->
-      <div class="animate-fade-in stagger-6 flex items-center justify-center gap-3 text-[var(--green)] text-sm font-mono">
+      <div class="environment-message animate-fade-in stagger-6 flex items-center justify-center gap-3 text-[var(--green)] text-sm font-mono">
         <canvas ref="heartCanvas" width="18" height="18" class="inline-block"></canvas>
         <span class="opacity-60">{{ t.env_message }}</span>
         <canvas ref="earthCanvas" width="40" height="40" class="inline-block"></canvas>

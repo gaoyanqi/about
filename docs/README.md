@@ -34,6 +34,8 @@ timeline使用work_experiences数组从后往前循环，数组中最后一个�
 更新claude.md和readme.md
 直接访问/zh页面空白，需要支持/zh直接访问
 直接访问/zh不要出现404错误，请更改router配置，使/zh能显示
+美化一下aboutMe.html和aboutMeEn.html
+src目录，增加亮色主题，用户可以切换主题
 ```
 
 ```shell
