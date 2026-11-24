@@ -19,6 +19,16 @@ body.resume-page {
   --text: #334e68;
   --muted: #627d98;
   --line: #d9e2ec;
+  --heading: #102a43;
+  --surface: #ffffff;
+  --link: #2563eb;
+  --subtle: #829ab1;
+  --eco: #52796f;
+  --line-soft: #edf2f7;
+  --tag-bg: #e6f7f5;
+  --tag-border: #9bded6;
+  --tag-text: #0f766e;
+  --tag-hover: #ccf0eb;
   margin: 0;
   background: var(--paper);
   color: var(--text);
@@ -31,6 +41,23 @@ body.resume-page {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html[data-theme='dark'] body.resume-page {
+  --paper: #0d1b2a;
+  --text: #d9e2ec;
+  --muted: #9fb3c8;
+  --line: #2b4359;
+  --heading: #f0f4f8;
+  --surface: #142c42;
+  --link: #7dd3fc;
+  --subtle: #829ab1;
+  --eco: #69dbcf;
+  --line-soft: #243b53;
+  --tag-bg: rgba(105, 219, 207, 0.1);
+  --tag-border: #2f6f6c;
+  --tag-text: #69dbcf;
+  --tag-hover: rgba(105, 219, 207, 0.18);
+}
+
 .resume-page *,
 .resume-page *::before,
 .resume-page *::after {
@@ -38,7 +65,7 @@ body.resume-page {
 }
 
 .resume-page a {
-  color: var(--blue);
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -214,6 +241,54 @@ body.resume-page {
   font-weight: 700;
 }
 
+.mobile-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resume-page .theme-toggle-item {
+  margin-left: 8px;
+}
+
+.resume-page .theme-toggle {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: 1px solid #486581;
+  border-radius: 6px;
+  color: var(--mint);
+  cursor: pointer;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.resume-page .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--mint);
+}
+
+.resume-page .theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.resume-page .theme-icon-sun,
+html[data-theme='dark'] .resume-page .theme-icon-moon {
+  display: none;
+}
+
+html[data-theme='dark'] .resume-page .theme-icon-sun {
+  display: block;
+}
+
+.resume-page .theme-toggle-mobile {
+  display: none;
+}
+
 .resume-page .navbar-toggle {
   display: none;
 }
@@ -238,7 +313,7 @@ body.resume-page {
   width: auto;
   height: auto;
   margin: 0 0 26px;
-  color: var(--navy);
+  color: var(--heading);
   font-family: "Avenir Next", Avenir, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: clamp(52px, 6vw, 80px);
   font-weight: 800;
@@ -268,7 +343,7 @@ html[lang="en"] .resume-page #introduction .introduction {
 
 .hero-role {
   margin: 0 0 20px;
-  color: var(--navy);
+  color: var(--heading);
   font-size: 22px;
   font-weight: 650;
   letter-spacing: -0.02em;
@@ -288,7 +363,7 @@ html[lang="en"] .resume-page #introduction .introduction {
 }
 
 .resume-page #introduction .hero-detail {
-  color: #829ab1;
+  color: var(--subtle);
   font-size: 14px;
   line-height: 1.85;
 }
@@ -302,10 +377,10 @@ html[lang="en"] .resume-page #introduction .introduction {
 
 .hero-keywords span {
   padding: 5px 11px;
-  background: var(--white);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 5px;
-  color: var(--blue);
+  color: var(--link);
   font-size: 12px;
   font-weight: 600;
   line-height: 1.6;
@@ -560,7 +635,7 @@ html[lang="en"] .resume-page #introduction .introduction {
 }
 
 .board-caption small {
-  color: #829ab1;
+  color: var(--subtle);
   font-size: 10px;
 }
 
@@ -580,7 +655,7 @@ html[lang="en"] .resume-page #introduction .introduction {
   align-items: center;
   gap: 8px;
   margin: 0;
-  color: #52796f;
+  color: var(--eco);
   font-size: 12px;
 }
 
@@ -594,7 +669,7 @@ html[lang="en"] .resume-page #introduction .introduction {
 }
 
 .hero-footer-note {
-  color: #829ab1;
+  color: var(--subtle);
   font-family: "SFMono-Regular", Consolas, monospace;
   font-size: 10px;
   letter-spacing: 0.04em;
@@ -614,7 +689,7 @@ html[lang="en"] .resume-page #introduction .introduction {
   padding: 0;
   background: none;
   border-radius: 0;
-  color: var(--navy);
+  color: var(--heading);
   font-family: "Avenir Next", Avenir, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 38px;
   font-weight: 750;
@@ -633,7 +708,7 @@ html[lang="en"] .resume-page #introduction .introduction {
 /* Technology */
 .resume-page #technology {
   padding: 92px 0 96px;
-  background: var(--white);
+  background: var(--surface);
 }
 
 .resume-page #technology .content {
@@ -666,7 +741,7 @@ html[lang="en"] .resume-page #introduction .introduction {
   padding: 26px 24px 26px 0;
   background: none;
   border-radius: 0;
-  color: var(--navy);
+  color: var(--heading);
   font-size: 23px;
   font-weight: 700;
   line-height: 1.4;
@@ -727,7 +802,7 @@ html[lang="en"] .resume-page #introduction .introduction {
 
 .resume-page #technology .skill-section-two h3 {
   margin: 0 0 11px;
-  color: var(--blue);
+  color: var(--link);
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 13px;
   font-weight: 600;
@@ -811,7 +886,7 @@ html[lang="en"] .resume-page #introduction .introduction {
   width: 46%;
   margin-top: 30px;
   padding: 24px;
-  background: var(--white);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(16, 42, 67, 0.05);
@@ -823,7 +898,7 @@ html[lang="en"] .resume-page #introduction .introduction {
 
 .resume-page .timeline dl dd .timeline-column .timeline-column-body .timeline-column-heading {
   margin: 0 0 13px;
-  color: var(--navy);
+  color: var(--heading);
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.015em;
@@ -843,7 +918,7 @@ html[lang="en"] .resume-page #introduction .introduction {
   padding: 9px 0;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid #edf2f7;
+  border-bottom: 1px solid var(--line-soft);
   color: var(--text);
   font-size: 13px;
   line-height: 1.75;
@@ -855,7 +930,7 @@ html[lang="en"] .resume-page #introduction .introduction {
 }
 
 .resume-page .timeline-column-body a {
-  color: var(--blue);
+  color: var(--link);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -867,10 +942,10 @@ html[lang="en"] .resume-page #introduction .introduction {
   justify-content: center;
   margin: 0 0 10px;
   padding: 6px 14px;
-  background: #e6f7f5;
-  border: 1px solid #9bded6;
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
   border-radius: 6px;
-  color: #0f766e;
+  color: var(--tag-text);
   font-family: inherit;
   font-size: 12px;
   font-weight: 650;
@@ -879,7 +954,7 @@ html[lang="en"] .resume-page #introduction .introduction {
 }
 
 .resume-page .timeline-column-body .project-button:hover {
-  background: #ccf0eb;
+  background: var(--tag-hover);
   border-color: var(--cyan);
 }
 
@@ -955,7 +1030,7 @@ html[lang="en"] .resume-page #introduction .introduction {
 /* Reference and footer */
 .resume-page #statement {
   padding: 54px 0;
-  background: var(--white);
+  background: var(--surface);
 }
 
 .resume-page #statement .content {
@@ -964,7 +1039,7 @@ html[lang="en"] .resume-page #introduction .introduction {
 
 .resume-page #statement h2 {
   margin: 0 0 18px;
-  color: var(--navy);
+  color: var(--heading);
   font-size: 25px;
   font-weight: 700;
   letter-spacing: -0.025em;
@@ -982,12 +1057,12 @@ html[lang="en"] .resume-page #introduction .introduction {
 }
 
 .resume-page #statement a:hover {
-  color: var(--blue);
+  color: var(--link);
 }
 
 .resume-page footer {
   background: var(--navy-deep);
-  color: #829ab1;
+  color: var(--subtle);
 }
 
 .footer-inner {
@@ -1140,6 +1215,14 @@ html[lang="en"] .resume-page #introduction .introduction {
     width: 100%;
     min-height: 68px;
     justify-content: space-between;
+  }
+
+  .resume-page .theme-toggle-item {
+    display: none;
+  }
+
+  .resume-page .theme-toggle-mobile {
+    display: inline-flex;
   }
 
   .resume-page .navbar-toggle {
@@ -1469,6 +1552,12 @@ html[lang="en"] .resume-page #introduction .introduction {
 
 @media print {
   .resume-page {
+    --text: #334e68;
+    --muted: #627d98;
+    --heading: #102a43;
+    --surface: #ffffff;
+    --link: #2563eb;
+    --line-soft: #edf2f7;
     background: white !important;
     color: #222 !important;
     font-size: 11pt;

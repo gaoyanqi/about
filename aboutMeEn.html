@@ -7,7 +7,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 		<meta name="description" content="Chunsheng Zhang is an architect and full-stack engineer working across Java, PHP, cloud-native systems, and AI." />
-			<meta name="theme-color" content="#0b1f33" />
+			<meta name="theme-color" content="#f5f7fb" />
+			<script>
+				(function() {
+					var theme = null;
+					try {
+						var savedTheme = localStorage.getItem('resume-theme');
+						if(savedTheme === 'light' || savedTheme === 'dark') theme = savedTheme;
+					} catch(error) {}
+					if(!theme) theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+					document.documentElement.dataset.theme = theme;
+					document.documentElement.style.colorScheme = theme;
+					document.documentElement.style.backgroundColor = theme === 'dark' ? '#0d1b2a' : '#f5f7fb';
+					document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'dark' ? '#0d1b2a' : '#f5f7fb');
+				})();
+			</script>
 		<meta name="keywords" content="张春生, Chunsheng, Zhang, Zhang Chunsheng, Chunsheng Zhang, Software Engineer, TensorFlow, AI, Self-Driving car, HTML5, Node, Nodejs, Webkit, Chrome, Firefox, Safari, Google Glass, Android, Java, Redis, HBase, Hadoop, Mysql, MongoDB, PHP, Python, Golang, C Lang, CLang, javascript, 关于我, 全栈工程师, 软件开发工程师, 人工智能, 自动驾驶, 无人驾驶, 5G, 软件开发, 软件工程师, 江苏, 徐州" />
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link rel="bookmark" href="favicon.ico"/>
@@ -99,12 +113,18 @@ window.__h82AlnkH6D91__("WyJwdWItNjA5NjczMTg0ODg3NzExMyIsW251bGwsbnVsbCxudWxsLCJ
 								<small>FULL-STACK ENGINEER</small>
 							</span>
 						</a>
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#resume-navigation" aria-controls="resume-navigation" aria-expanded="false" aria-label="Open navigation">
-							<span class="sr-only">Open navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
+						<div class="mobile-controls">
+							<button type="button" class="theme-toggle theme-toggle-mobile" aria-label="Switch to dark theme" title="Switch to dark theme">
+								<svg class="theme-icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5" stroke-width="1.5"></circle><path stroke-linecap="round" stroke-width="1.5" d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4"></path></svg>
+								<svg class="theme-icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"></path></svg>
+							</button>
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#resume-navigation" aria-controls="resume-navigation" aria-expanded="false" aria-label="Open navigation">
+								<span class="sr-only">Open navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
 					</div>
 					<div class="collapse navbar-collapse" id="resume-navigation">
 						<ul class="nav navbar-nav navbar-right">
@@ -112,6 +132,7 @@ window.__h82AlnkH6D91__("WyJwdWItNjA5NjczMTg0ODg3NzExMyIsW251bGwsbnVsbCxudWxsLCJ
 							<li><a class="nav-link" href="#technology" data-href="technology">Skills</a></li>
 							<li><a class="nav-link" href="#work" data-href="work">Work</a></li>
 							<li><a class="nav-link" href="#qrcode" data-href="qrcode">Contact</a></li>
+							<li class="theme-toggle-item"><button type="button" class="theme-toggle" aria-label="Switch to dark theme" title="Switch to dark theme"><svg class="theme-icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5" stroke-width="1.5"></circle><path stroke-linecap="round" stroke-width="1.5" d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4"></path></svg><svg class="theme-icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"></path></svg></button></li>
 							<li class="language-switch"><a class="nav-link" href="./aboutMe.html" hreflang="zh-CN" lang="zh-CN" aria-label="切换到中文">中文</a></li>
 						</ul>
 					</div>
@@ -289,6 +310,7 @@ window.__h82AlnkH6D91__("WyJwdWItNjA5NjczMTg0ODg3NzExMyIsW251bGwsbnVsbCxudWxsLCJ
             </div>
         </script>
 
+        <script type="text/javascript" src="js/theme.js"></script>
         <script type="text/javascript" src="js/lib/jquery-1.10.1.min.js"></script>
         <script type="text/javascript" src="js/lib/jquery.i18n.properties.js"></script>
         <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
