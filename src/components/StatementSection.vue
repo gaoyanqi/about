@@ -1,14 +1,10 @@
 <template>
   <section id="statement" class="section-divider py-20">
     <div class="max-w-4xl mx-auto px-6">
-      <div class="text-center mb-10">
-        <p class="font-mono text-xs text-[var(--text-muted)] tracking-widest uppercase mb-3">03 / REFERENCES</p>
-        <h2 class="font-display text-3xl sm:text-4xl font-bold">
-          {{ t.statement_ref }}
-        </h2>
-        <div class="w-12 h-[1px] bg-[var(--accent)] mx-auto opacity-40 mt-4"></div>
+      <div class="section-heading">
+        <h2>{{ t.statement_ref }}</h2>
       </div>
-      <ul class="flex justify-center">
+      <ul class="flex justify-start">
         <li>
           <a href="https://about.luomor.com/aboutMe/aboutMe.html" class="font-mono text-sm text-[var(--accent)] hover:underline break-all">
             Timeline

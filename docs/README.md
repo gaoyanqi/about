@@ -36,6 +36,7 @@ timeline使用work_experiences数组从后往前循环，数组中最后一个�
 直接访问/zh不要出现404错误，请更改router配置，使/zh能显示
 美化一下aboutMe.html和aboutMeEn.html
 src目录，增加亮色主题，用户可以切换主题
+根据aboutMe.html中的个人简介等，如div class="hero-shell"中的内容优化vue版本
 ```
 
 ```shell

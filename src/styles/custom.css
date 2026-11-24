@@ -18,6 +18,7 @@
   --accent: #d4a574;
   --accent-dim: #b8895e;
   --accent-glow: rgba(212, 165, 116, 0.15);
+  --accent-contrast: #171c24;
   --green: #4ade80;
   --blue: #60a5fa;
   --purple: #c084fc;
@@ -44,6 +45,7 @@
   --accent: #96652f;
   --accent-dim: #795023;
   --accent-glow: rgba(150, 101, 47, 0.12);
+  --accent-contrast: #ffffff;
   --green: #218653;
   --blue: #2474c6;
   --purple: #8554b8;
@@ -137,6 +139,78 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .theme-toggle {
+    transition: none;
+  }
+}
+
+.email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 16px;
+  color: var(--accent-contrast);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 7px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.email-link::before {
+  content: '@';
+  font-size: 16px;
+  opacity: 0.75;
+}
+
+.email-link:hover {
+  background: var(--accent-dim);
+  border-color: var(--accent-dim);
+}
+
+.email-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 42px;
+  text-align: left;
+}
+
+.section-heading h2 {
+  margin: 0 0 12px;
+  color: var(--text-primary);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.3;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 767px) {
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2 {
+    font-size: 31px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .email-link {
     transition: none;
   }
 }

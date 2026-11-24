@@ -2,12 +2,9 @@
   <section id="work" class="section-divider py-20">
     <div class="max-w-5xl mx-auto px-6">
       <!-- Section Header -->
-      <div class="text-center mb-16">
-        <p class="font-mono text-xs text-[var(--text-muted)] tracking-widest uppercase mb-3">02 / EXPERIENCE</p>
-        <h2 class="font-display text-4xl sm:text-5xl font-bold mb-4">
-          {{ isZh ? '工作经历' : 'Work Experience' }}
-        </h2>
-        <div class="w-12 h-[1px] bg-[var(--accent)] mx-auto opacity-40"></div>
+      <div class="section-heading">
+        <h2>{{ t.work_title }}</h2>
+        <p>{{ t.work_description }}</p>
       </div>
 
       <!-- Timeline -->
