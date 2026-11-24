@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="en">
 	<head>
-		<title>Chunsheng Zhang | CN Software Engineer</title>
+		<title>Chunsheng Zhang | Architect &amp; Full-Stack Engineer</title>
 		<meta charset="utf-8" />
 		<meta name="author" content="Chunsheng Zhang" />
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-		<meta name="description" content="我的个人简历，使用html5开发" />
+		<meta name="description" content="Chunsheng Zhang is an architect and full-stack engineer working across Java, PHP, cloud-native systems, and AI." />
+			<meta name="theme-color" content="#0b1f33" />
 		<meta name="keywords" content="张春生, Chunsheng, Zhang, Zhang Chunsheng, Chunsheng Zhang, Software Engineer, TensorFlow, AI, Self-Driving car, HTML5, Node, Nodejs, Webkit, Chrome, Firefox, Safari, Google Glass, Android, Java, Redis, HBase, Hadoop, Mysql, MongoDB, PHP, Python, Golang, C Lang, CLang, javascript, 关于我, 全栈工程师, 软件开发工程师, 人工智能, 自动驾驶, 无人驾驶, 5G, 软件开发, 软件工程师, 江苏, 徐州" />
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link rel="bookmark" href="favicon.ico"/>
@@ -17,6 +18,7 @@
 		<link rel="stylesheet" type="text/css" href="css/about_en.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width: 600px) and (min-width: 5px)" />
 		<link rel="stylesheet" type="text/css" href="css/tablet.css" media="screen and (max-width: 880px) and (min-width: 601px)" />
+			<link rel="stylesheet" type="text/css" href="css/resume.css" media="all" />
 		<!-- <link href='css/family_lato.css' rel='stylesheet' type='text/css'> -->
 	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 	    <!--[if lt IE 9]>
@@ -85,38 +87,33 @@ window.__h82AlnkH6D91__("WyJwdWItNjA5NjczMTg0ODg3NzExMyIsW251bGwsbnVsbCxudWxsLCJ
             })();
         </script>
 	</head>
-	<body>
-		<header class="docs-header">
-			<nav class="navbar navbar-default navbar-custom menu" role="navigation">
-				<div class="container">
+	<body class="resume-page">
+		<header class="docs-header site-header">
+			<nav class="navbar navbar-default navbar-custom menu" role="navigation" aria-label="Main navigation">
+				<div class="container nav-container">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
+						<a class="navbar-brand" href="#introduction" aria-label="Chunsheng Zhang's resume">
+							<span class="brand-mark" aria-hidden="true">Z</span>
+							<span class="brand-copy">
+								<strong>Chunsheng Zhang</strong>
+								<small>FULL-STACK ENGINEER</small>
+							</span>
+						</a>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#resume-navigation" aria-controls="resume-navigation" aria-expanded="false" aria-label="Open navigation">
+							<span class="sr-only">Open navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<div class="navbar-brand">
-		                	<bdo dir="RTL">resume</bdo>
-		            	</div>
 					</div>
-					<div class="collapse navbar-collapse">
+					<div class="collapse navbar-collapse" id="resume-navigation">
 						<ul class="nav navbar-nav navbar-right">
-							<li>
-								<a class="nav-link" href="./aboutMe.html"><bdo dir="RTL">中文</bdo></a>
-							</li>
-							<li>
-								<a class="nav-link" href="#" data-href="introduction"><bdo dir="RTL">introduction</bdo></a>
-							</li>
-							<li>
-								<a class="nav-link" href="#" data-href="technology"><bdo dir="RTL">technology</bdo></a>
-							</li>
-							<li>
-								<a class="nav-link" href="#" data-href="work"><bdo dir="RTL">work</bdo></a>
-							</li>
-							<li>
-								<a class="nav-link"  href="#" data-href="statement"><bdo dir="RTL">statement</bdo></a>
-							</li>
+							<li><a class="nav-link" href="#introduction" data-href="introduction">About</a></li>
+							<li><a class="nav-link" href="#technology" data-href="technology">Skills</a></li>
+							<li><a class="nav-link" href="#work" data-href="work">Work</a></li>
+							<li><a class="nav-link" href="#qrcode" data-href="qrcode">Contact</a></li>
+							<li><a class="nav-link" href="#statement" data-href="statement">Reference</a></li>
+							<li class="language-switch"><a class="nav-link" href="./aboutMe.html" hreflang="zh-CN" lang="zh-CN" aria-label="切换到中文">中文</a></li>
 						</ul>
 					</div>
 				</div>
@@ -124,139 +121,170 @@ window.__h82AlnkH6D91__("WyJwdWItNjA5NjczMTg0ODg3NzExMyIsW251bGwsbnVsbCxudWxsLCJ
 		</header>
 		
 		<section id="introduction" class="section">
-			<h1 class="introduction">I am Chunsheng Zhang</h1>
-			<h2 class="strapline">Hometown: Xuzhou, Jiangsu Province; Architect, Full-Stack Engineer, Senior Java & PHP Software Engineer, Author of PHP-Wechaty, Currently using Claude Code and Workbuddy for code development and collaboration, Code Cleanser; Developed in Golang, Python, Lua, Node.js, Objective-C, etc.; Enjoys learning and researching new technologies: Cloud Native, Kubernetes, TensorFlow, AI, Metaverse, Big Data, Self-Driving Car, Grpc, Protobuf, Spring Cloud, Swoole, HTML5, GoLang, WebGL, Node.js, NoSQL, Redis, HBase, Thriff; Technology should be combined with art</h2>
-			<!--<h2 class="introline">In daily work, I strictly demand myself, be diligent and ask questions, and work seriously and responsibly. Mastered the company's main development technology and development framework in a short time,
-					Receptive ability, strong self-learning ability. In case of problems, they can communicate with project members in a timely manner, allocate work tasks reasonably, and help other employees to eliminate program errors during the daily development process.
-					When encountering a bug in the program, the cause of the problem can be found in time, and the problem can be solved in a timely manner with a clear idea. Can actively communicate with users and drivers at work, do demand research and system demonstration,
-					Encountered problems can be handled flexibly. Develop code, proactively perform self-tests, write test cases, and improve code reliability. Actively view the error log to reduce the scope of the error. Actively check the interface response time,
-					Optimize application performance. He often provides suggestions for project development and company development, and introduces some new technologies and frameworks into the project. My motto: "A good start is half the battle."
-			</h2>-->
-			<h4 class="strapline">
-				Email:1097692918@qq.com
-			</h4>
-			<nav id="social">
-				<ul id="social-icons">
-					<li>
-						<a href="http://weibo.com/justwannabewithyou" class="weibo">weibo</a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/in/justwannabewithyou" class="linkedIn">linkedIn</a>
-					</li>
-					<li>
-						<a href="http://www.renren.com/zhangchunsheng423" class="renren">renren</a>
-					</li>
-					<li>
-						<a href="https://www.facebook.com/yiluxiangbeigp" class="facebook">facebook</a>
-					</li>
-					<li>
-						<a href="https://github.com/zhangchunsheng" class="github">github</a>
-					</li>
-				</ul>
-			</nav>
-			<p class="green">
-				<span class="heart"></span>
-				Please love the environment, saving paper
-				<span class="heart"></span>
-			</p>
-			<div class="earth">
-				
-			</div>
-		</section>
+				<div class="hero-shell">
+					<div class="hero-copy">
+						<h1 class="introduction">
+							<span class="greeting">Hello, I am</span>
+							<span class="name">Chunsheng Zhang</span>
+						</h1>
+						<p class="hero-role">Architect / Full-Stack Engineer</p>
+						<p class="strapline">From Xuzhou, Jiangsu. Senior Java &amp; PHP software engineer and author of PHP-Wechaty. I currently use Claude Code and WorkBuddy for development and collaboration, with a strong focus on clean, maintainable code.</p>
+						<p class="strapline hero-detail">I also work with Golang, Python, Lua, Node.js, and Objective-C, and enjoy exploring gRPC, Protobuf, Spring Cloud, Swoole, WebGL, NoSQL, Redis, HBase, and Thrift.</p>
+						<div class="hero-keywords" aria-label="Areas of interest">
+							<span>Cloud Native</span><span>AI</span><span>Big Data</span><span>Self-Driving</span><span>Metaverse</span>
+						</div>
+						<div class="contact-line">
+							<a class="email-link" href="mailto:1097692918@qq.com">1097692918@qq.com</a>
+							<span class="location-note">Xuzhou, Jiangsu</span>
+						</div>
+						<nav id="social" aria-label="Social links">
+							<ul id="social-icons">
+								<li><a href="http://weibo.com/justwannabewithyou" class="weibo" target="_blank" rel="noopener noreferrer" title="Weibo">Weibo</a></li>
+								<li><a href="https://www.linkedin.com/in/justwannabewithyou" class="linkedIn" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a></li>
+								<li><a href="http://www.renren.com/zhangchunsheng423" class="renren" target="_blank" rel="noopener noreferrer" title="Renren">Renren</a></li>
+								<li><a href="https://www.facebook.com/yiluxiangbeigp" class="facebook" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a></li>
+								<li><a href="https://github.com/zhangchunsheng" class="github" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="architecture-board" role="img" aria-label="Full-stack architecture spanning frontend, backend, data, cloud native, and artificial intelligence">
+						<div class="board-heading" aria-hidden="true">
+							<span>From interface to infrastructure</span><small>ZCS / SYSTEM MAP</small>
+						</div>
+						<div class="system-map" aria-hidden="true">
+							<svg viewBox="0 0 400 390" preserveAspectRatio="none">
+								<circle cx="200" cy="195" r="137"></circle>
+								<path d="M200 195L82 88M200 195L318 88M200 195L84 306M200 195L318 306M200 195L344 195"></path>
+							</svg>
+							<div class="map-core"><strong>ZCS</strong><span>Full Stack</span></div>
+							<div class="map-node node-frontend"><span>Frontend</span><small>Vue · WebGL</small></div>
+							<div class="map-node node-backend"><span>Backend</span><small>Java · PHP · Node.js</small></div>
+							<div class="map-node node-data"><span>Data</span><small>MySQL · Redis</small></div>
+							<div class="map-node node-cloud"><span>Cloud Native</span><small>Kubernetes · Docker</small></div>
+							<div class="map-node node-ai"><span>Artificial Intelligence</span><small>TensorFlow · PyTorch</small></div>
+						</div>
+						<div class="board-caption" aria-hidden="true"><span>Technology belongs with art</span><small>CODE × ART</small></div>
+					</div>
+				</div>
+				<div class="hero-footer">
+					<p class="green"><span class="heart"></span><span>Please care for the environment and save paper</span><span class="heart"></span></p>
+					<span class="hero-footer-note">ENGINEERING / CURIOSITY / CRAFT</span>
+					<div class="earth" aria-hidden="true"></div>
+				</div>
+			</section>
 
 		<section id="technology" class="section">
 			<div class="content">
-				<div class="info">
-					technology to change the future
+				<div class="section-heading">
+					<h2 class="info">Technology shapes the future</h2>
+					<p>From applications and data to cloud-native infrastructure and AI, I build reliable systems that can evolve.</p>
 				</div>
 				<div class="skill-section-one" id="skills">
 
 				</div>
 				<div class="skill-section-two">
-					<h3>Java/PHP/Lua/Python/Node.js/Golang/C/C++/Asp.net/C#</h3>
-					<p>Building Enterprise Applications with Java, Use PHP to build website is a good choice; AI you have to learn it now, anaconda and jupyter are good tools; Node.js extends JavaScript application scenarios; Java let me understand the Object-Oriented</p>
+					<article class="skill-group">
+						<h3>Java/PHP/Lua/Python/Node.js/Golang/C/C++/Asp.net/C#</h3>
+						<p>Building Enterprise Applications with Java, Use PHP to build website is a good choice; AI you have to learn it now, anaconda and jupyter are good tools; Node.js extends JavaScript application scenarios; Java let me understand the Object-Oriented</p>
+					</article>
+					<article class="skill-group">
+						<h3>HTML5/CSS3/WebAR/WebGL/Vue/Javascript/JQuery/Bootstrap</h3>
+						<p>I like Chrome, V8, javascript. electron is a nice project, Mobile Internet has changed people's lives, the metaverse is worth looking forward to</p>
+					</article>
+					<article class="skill-group">
+						<h3>Nosql/Mysql/tidb/Percona/mariadb/fastdfs/fastcfs/canal/sqlite/mmap/clickhouse/mongo/cassandra/HBase/Hadoop/Oracle</h3>
+						<p>The world is full of data, search data, add, update, delete, analysis, backup, restore and data safe issues that need to be considered, big data age need nosql and distributed storage, fastcfs is a good choice</p>
+					</article>
+					<article class="skill-group">
+						<h3>RabbitMQ/Kafka/Redis/Yac/Aerospike/canal</h3>
+						<p>The use of queues and caches can greatly improve the amount of concurrency. The architecture based on message subscription / consumption can allow data processing to be carried out in an orderly manner, and time can be used for space.</p>
+					</article>
+					<article class="skill-group">
+						<h3>spring-boot/spring-cloud/MyBatis/druid/netty/Zend/Phalcon/Medoo/Yaf/Yar/express/beego/http/tcp/protobuf/grpc/Thrift</h3>
+						<p>Reasonable use of frameworks and protocols is conducive to faster project development, iteration, upgrade, and maintenance, and building interface services that conform to industry standards</p>
+					</article>
+					<article class="skill-group">
+						<h3>Design Patterns/Singleton/Factory/Adapter/Composite/MVC/UML</h3>
+						<p>Use design patterns and modeling tools to facilitate project development and maintenance, provide clear architecture and documentation</p>
+					</article>
+					<article class="skill-group">
+						<h3>phabricator review/phpunit/XhProf/tsar/ab/JMeter/ELK/Fluentd/filebeat/Kibana/prometheus/Grafana/APM/gdb/curl/netstat/top/tcpdump/tail/cat/zcat/grep/awk</h3>
+						<p>Code review is helpful for mutual learning, mutual supervision, and problem discovery in advance. Unit testing can be found in advance through white box testing. Potential bugs and system bottlenecks can be found through business and system log collection</p>
+					</article>
+					<article class="skill-group">
+						<h3>Nginx/rpm/yum/VZ/LXC/systemd/LVS/haproxy/rsync/Jenkins/k8s/docker/docker-compose/Harbor/nexus/ansible/openldap/etcd/cronsun/openstack</h3>
+						<p>Operation and maintenance is the support of project operation, and the deployment and tuning of related software is essential</p>
+					</article>
+					<article class="skill-group">
+						<h3>Team management/Project management/OKR/redmine/wekan/jira/gitlab/phabricator</h3>
+						<p>Performance appraisal, team management, and project management are also a guarantee to make excellent products. Peter Drucker, the father of modern management, believes that "effective managers should pay attention to the strengths of people, and not mind their shortcomings."</p>
+					</article>
+					<article class="skill-group">
+						<h3>Microservice/register/config/Circuit Breaker/Hystrix/Cloud Native/Kubernetes/Mesos</h3>
+						<p>Service stability and scalability are essential for Internet services. Microservices and cloud-native architecture can solve server downtime and other issues well</p>
+					</article>
+					<article class="skill-group">
+						<h3>Flink/Hadoop/zookeeper/CDH/Spark/Azkaban/Kudu/Hive/Hue/Doris/IoT/TDengine</h3>
+						<p>Big data analysis is the basis for user growth, company operations, and other decisions. It provides personalized recommendations through user behavior analysis and provides visual data to create value for users.</p>
+					</article>
+					<article class="skill-group">
+						<h3>AI/metaverse/DeepLearning/matlab/CV/NLP/CNN/RNN/RCNN/lstm/Sigmoid/Relu/Caffe/pytorch</h3>
+						<p>Through deep learning, computers can recognize pictures, speech, semantics, and synthetic languages, which will be widely used in smart cities, autonomous driving, customer service, medicine, education, and industry.</p>
+					</article>
+					<article class="skill-group">
+						<h3>Apple/Google/Google Lens/Google Glass/Google Car/Tesla/SpaceX/集度/大疆/小米/小鹏</h3>
+						<p>I like Apple and Google's products, they are very cool</p>
+					</article>
 
-					<h3>HTML5/CSS3/WebAR/WebGL/Vue/Javascript/JQuery/Bootstrap</h3>
-					<p>I like Chrome, V8, javascript. electron is a nice project, Mobile Internet has changed people's lives, the metaverse is worth looking forward to</p>
-
-					<h3>Nosql/Mysql/tidb/Percona/mariadb/fastdfs/fastcfs/canal/sqlite/mmap/clickhouse/mongo/cassandra/HBase/Hadoop/Oracle</h3>
-					<p>The world is full of data, search data, add, update, delete, analysis, backup, restore and data safe issues that need to be considered, big data age need nosql and distributed storage, fastcfs is a good choice</p>
-
-					<h3>RabbitMQ/Kafka/Redis/Yac/Aerospike/canal</h3>
-					<p>The use of queues and caches can greatly improve the amount of concurrency. The architecture based on message subscription / consumption can allow data processing to be carried out in an orderly manner, and time can be used for space.</p>
-
-					<h3>spring-boot/spring-cloud/MyBatis/druid/netty/Zend/Phalcon/Medoo/Yaf/Yar/express/beego/http/tcp/protobuf/grpc/Thrift</h3>
-					<p>Reasonable use of frameworks and protocols is conducive to faster project development, iteration, upgrade, and maintenance, and building interface services that conform to industry standards</p>
-
-					<h3>Design Patterns/Singleton/Factory/Adapter/Composite/MVC/UML</h3>
-					<p>Use design patterns and modeling tools to facilitate project development and maintenance, provide clear architecture and documentation</p>
-
-					<h3>phabricator review/phpunit/XhProf/tsar/ab/JMeter/ELK/Fluentd/filebeat/Kibana/prometheus/Grafana/APM/gdb/curl/netstat/top/tcpdump/tail/cat/zcat/grep/awk</h3>
-					<p>Code review is helpful for mutual learning, mutual supervision, and problem discovery in advance. Unit testing can be found in advance through white box testing. Potential bugs and system bottlenecks can be found through business and system log collection</p>
-
-					<h3>Nginx/rpm/yum/VZ/LXC/systemd/LVS/haproxy/rsync/Jenkins/k8s/docker/docker-compose/Harbor/nexus/ansible/openldap/etcd/cronsun/openstack</h3>
-					<p>Operation and maintenance is the support of project operation, and the deployment and tuning of related software is essential</p>
-
-					<h3>Team management/Project management/OKR/redmine/wekan/jira/gitlab/phabricator</h3>
-					<p>Performance appraisal, team management, and project management are also a guarantee to make excellent products. Peter Drucker, the father of modern management, believes that "effective managers should pay attention to the strengths of people, and not mind their shortcomings."</p>
-
-					<h3>Microservice/register/config/Circuit Breaker/Hystrix/Cloud Native/Kubernetes/Mesos</h3>
-					<p>Service stability and scalability are essential for Internet services. Microservices and cloud-native architecture can solve server downtime and other issues well</p>
-
-					<h3>Flink/Hadoop/zookeeper/CDH/Spark/Azkaban/Kudu/Hive/Hue/Doris/IoT/TDengine</h3>
-					<p>Big data analysis is the basis for user growth, company operations, and other decisions. It provides personalized recommendations through user behavior analysis and provides visual data to create value for users.</p>
-
-					<h3>AI/metaverse/DeepLearning/matlab/CV/NLP/CNN/RNN/RCNN/lstm/Sigmoid/Relu/Caffe/pytorch</h3>
-					<p>Through deep learning, computers can recognize pictures, speech, semantics, and synthetic languages, which will be widely used in smart cities, autonomous driving, customer service, medicine, education, and industry.</p>
-
-					<h3>Apple/Google/Google Lens/Google Glass/Google Car/Tesla/SpaceX/集度/大疆/小米/小鹏</h3>
-					<p>I like Apple and Google's products, they are very cool</p>
-				</div>
+					</div>
 			</div>
 		</section>
 
 		<section id="work" class="section">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="timeline">
-						<dl>
-							
-						</dl>
+				<div class="section-shell">
+					<div class="section-heading">
+						<h2>Work experience</h2>
+						<p>Roles, responsibilities, and selected project work in reverse chronological order.</p>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="timeline">
+								<dl><dd class="timeline-loading">Loading work experience…</dd></dl>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section id="qrcode" class="section">
-			<div class="row">
-				<div class="col-md-12">
-					<img src="images/qrcode2_new.png" class="avatar"/>
+			<section id="qrcode" class="section">
+				<div class="section-shell qrcode-layout">
+					<div class="qrcode-copy">
+						<h2>Let’s stay in touch</h2>
+						<p>Scan the QR code or email me to discuss technology, architecture, and project collaboration.</p>
+						<a class="email-link" href="mailto:1097692918@qq.com">1097692918@qq.com</a>
+					</div>
+					<div class="qrcode-frame">
+						<img src="images/qrcode2_new.png" class="avatar" alt="Contact QR code for Chunsheng Zhang" width="190" height="190" loading="lazy" />
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section id="statement" class="section">
-			<div class="content">
-				<h2>reference</h2>
-				<ul>
-					<li>
-						<a href="http://www.facebook.com">
-							http://www.facebook.com
-						</a>
-					</li>
-				</ul>
-			</div>
-		</section>
+			<section id="statement" class="section">
+				<div class="content">
+					<h2>Reference</h2>
+					<ul><li><a href="http://www.facebook.com">http://www.facebook.com</a></li></ul>
+				</div>
+			</section>
+
+			<footer>
+				<div class="footer-inner"><span>© Chunsheng Zhang</span><span>Technology and art belong together.</span></div>
+			</footer>
 		
-		<footer>
-			
-		</footer>
-		
-		<a href="#introduction" id="to-top-button" style="">back to top</a>
+		<a href="#introduction" id="to-top-button" aria-label="Back to top" title="Back to top">back to top</a>
 
         <script type="text/template" id="skill_template">
             <div class="core-skills">
-                tech
+                Core skills
             </div>
             <div class="skill-diagram">
             	<% for(var i = 0; i < skills.length; i++) { %>

@@ -25,6 +25,11 @@ About.init = function() {
         About.lang = About.LANG_ZH;
     }
 
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(reduceMotion) {
+        return;
+    }
+
     var heart = $(".heart").each(function() {
     	$(this).drawHeart({
 	    	width: 18,
