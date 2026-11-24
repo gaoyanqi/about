@@ -1,66 +1,64 @@
 # 个人简历网站
 
-张春生的个人简历网站 - HTML5/CSS3 构建的响应式个人主页
+张春生的个人简历网站 - Vue 3 + Vite + TailwindCSS 构建的响应式个人主页
 
 ## 在线访问
 
-[https://about.luomor.com/aboutMe/aboutMe.html](https://about.luomor.com/aboutMe/aboutMe.html)
+[https://resume.luomor.com](https://resume.luomor.com)
 
 ## 技术栈
 
-- HTML5 / CSS3
-- Bootstrap 3
-- jQuery
-- Bootflat UI
-- jquery.i18n.properties（国际化）
+- Vue 3 (Composition API)
+- Vue Router 4
+- Vite 6
+- TailwindCSS 3
+- Canvas API（地球/心跳动画）
 
 ## 项目结构
 
 ```
 about/
-├── aboutMe.html        # 中文简历
-├── aboutMeEn.html      # 英文简历
-├── css/                # 样式表
-├── js/                 # JavaScript
-│   ├── i18n/           # 国际化文件
-│   └── lib/            # 第三方库
-├── demo/               # 演示项目
-├── docs/               # 文档（PDF 简历）
-├── images/             # 图片资源
-└── fonts/              # 字体
+├── src/
+│   ├── components/         # Vue 组件
+│   ├── composables/        # 组合式函数（数据/滚动/语言）
+│   ├── locales/            # 国际化文件
+│   ├── styles/             # 自定义 CSS（动画/变量）
+│   ├── canvas/             # Canvas 动画（地球/心跳）
+│   ├── App.vue             # 根组件
+│   └── main.js             # 应用入口
+├── public/                 # 静态资源
+├── .github/workflows/      # CI/CD（GitHub Actions）
+└── dist/                   # 构建产物
 ```
 
 ## 本地开发
 
 ```bash
-# 使用 Python 启动本地服务
-python3 -m http.server 8000
+# 安装依赖
+npm install
 
-# 或使用 npx
-npx http-server -p 8000
+# 启动开发服务器（WSL2 环境下自动轮询）
+npm run dev
+
+# 构建生产版本
+npm run build
+
+# 预览生产版本
+npm run preview
 ```
-
-然后访问 http://localhost:8000/aboutMe.html
 
 ## 部署
 
-推送到 `gh-pages` 分支自动部署到 GitHub Pages：
+推送到 `master` 分支后，GitHub Actions 自动构建并部署到 GitHub Pages：
 
 ```bash
-git checkout gh-pages
-git push origin gh-pages
+git push origin master
 ```
 
 ## 浏览器支持
 
-- Chrome / Firefox / Safari
-- IE6+（使用 HTML5 Shiv 和 Respond.js 兼容）
-
-## 响应式断点
-
-- 手机：≤600px
-- 平板：601-880px
-- 桌面：>880px
+- Chrome / Firefox / Safari / Edge（最新）
+- 移动端适配
 
 ## License
 

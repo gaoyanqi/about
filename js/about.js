@@ -26,8 +26,11 @@ $(document).ready(function() {
             url: url,
             dataType: "jsonp",
             jsonp: "jsoncallback",
-            error: function(data) {
-                
+            error: function() {
+                var message = About.lang == About.LANG_EN
+                    ? "Work experience is temporarily unavailable. Please refresh and try again."
+                    : "工作经历暂时无法加载，请刷新页面重试。";
+                $(".timeline-loading").text(message);
             },
             success: initWorkExperiences
         });
@@ -156,7 +159,7 @@ $(document).ready(function() {
                     strProjectHtml += '<h4 class="timeline-column-heading">' + lang.project + '' + project.project_id + ' ' + project.project_name + '</h4>';
 
                     strProjectHtml += '<div>';
-                    strProjectHtml += '<div data-projectId="' + project.project_id + '" class="project-button">' + lang.show + '</div>';
+                    strProjectHtml += '<button type="button" data-projectId="' + project.project_id + '" class="project-button" aria-expanded="false" aria-controls="project_content_' + project.project_id + '">' + lang.show + '</button>';
                     strProjectHtml += '<div id="project_content_' + project.project_id + '" class="project-content">';
                     strProjectHtml += '<li>' + lang.time + lang.colon + project.start_time + ' - ' + project.end_time + '</li>';
                     for(var ii in project.kv) {
@@ -199,50 +202,38 @@ $(document).ready(function() {
                 var id = $(this).attr("data-projectId");//dataset[""]
                 var project_content = $("#project_content_" + id);
                 if(project_content.is(":visible")) {//is(:hidden)
-                    $(this).html(lang.show);
-                    project_content.hide(1000);
+                    $(this).html(lang.show).attr("aria-expanded", "false");
+                    project_content.hide(300);
                 } else {
-                    $(this).html(lang.hide);
-                    project_content.show(1000);
+                    $(this).html(lang.hide).attr("aria-expanded", "true");
+                    project_content.show(300);
                 }
             });
         });
     }
 
     $(".menu a").each(function() {
-        $(this).bind("click", function() {
+        $(this).bind("click", function(event) {
             var id = $(this).attr("data-href");
             if(id) {
+                event.preventDefault();
 	            var obj = $("#" + id);
-	            $('html, body').animate({scrollTop: obj.offset().top}, 2000);	
+	            if(obj.length) {
+                    $('html, body').stop().animate({scrollTop: Math.max(0, obj.offset().top - 88)}, 650);
+                }
+                if($(".navbar-toggle").is(":visible")) {
+                    $(".navbar-collapse").collapse("hide");
+                }
             }
         });
     });
     
     $("#to-top-button").hide();
-    var offset = $(document).scrollTop();
-    var offsetBottom = offset + ($(window).height() - 60);
-    $("#to-top-button").css({
-        "top": offsetBottom
-    });
-
-    if(offset > 10) {
-        $("#to-top-button").fadeIn(900);
-    }
-
-    $(window).scroll(function() {
-        var offset = $(document).scrollTop();
-        offsetBottom = offset + ($(window).height() - 60);
-        if(offset > 1) {
-            $("#to-top-button").fadeIn(900);
+    $(window).on("scroll", function() {
+        if($(document).scrollTop() > 300) {
+            $("#to-top-button").stop(true, true).fadeIn(180);
         } else {
-            $("#to-top-button").fadeOut(900);
+            $("#to-top-button").stop(true, true).fadeOut(180);
         }
-        $("#to-top-button").animate({
-            top: offsetBottom
-        }, {
-            duration: 500,
-            queue: false
-        });
     });
 });

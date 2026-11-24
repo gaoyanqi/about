@@ -1,0 +1,1525 @@
+/*
+ * Shared visual refresh for aboutMe.html and aboutMeEn.html.
+ * Loaded after the legacy styles so the original pages keep working.
+ */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body.resume-page {
+  --navy: #102a43;
+  --navy-deep: #0b1f33;
+  --blue: #2563eb;
+  --cyan: #0e9394;
+  --mint: #69dbcf;
+  --paper: #f5f7fb;
+  --white: #ffffff;
+  --text: #334e68;
+  --muted: #627d98;
+  --line: #d9e2ec;
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font-family: "Avenir Next", Avenir, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: left;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.resume-page *,
+.resume-page *::before,
+.resume-page *::after {
+  box-sizing: border-box;
+}
+
+.resume-page a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.resume-page a:focus-visible,
+.resume-page button:focus-visible {
+  outline: 3px solid #f6ad55;
+  outline-offset: 4px;
+}
+
+.resume-page strong {
+  width: auto;
+  height: auto;
+  padding: 0;
+  color: inherit;
+  cursor: inherit;
+}
+
+.resume-page .container,
+.resume-page .section-shell,
+.resume-page .content,
+.hero-shell,
+.hero-footer,
+.footer-inner {
+  width: 100%;
+  max-width: 1180px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.resume-page .section {
+  width: 100%;
+  margin: 0;
+  overflow: visible;
+  border: 0;
+}
+
+/* Navigation */
+.resume-page .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.resume-page .navbar-custom {
+  min-height: 76px;
+  margin: 0;
+  background: var(--navy-deep);
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.resume-page .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+}
+
+/* Bootstrap's clearfix pseudo-elements otherwise become flex items. */
+.resume-page .nav-container::before,
+.resume-page .nav-container::after,
+.resume-page .navbar-header::before,
+.resume-page .navbar-header::after,
+.resume-page .navbar-nav::before,
+.resume-page .navbar-nav::after {
+  display: none;
+}
+
+.resume-page .navbar > .container .navbar-brand {
+  margin-left: 0;
+}
+
+.resume-page .navbar-header {
+  display: flex;
+  float: none;
+  align-items: center;
+}
+
+.resume-page .navbar-brand {
+  display: flex;
+  float: none;
+  align-items: center;
+  gap: 12px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+}
+
+.resume-page .brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  background: var(--mint);
+  border-radius: 8px;
+  color: var(--navy-deep);
+  font-family: "Avenir Next", Avenir, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.resume-page .brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.resume-page .brand-copy strong {
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.resume-page .brand-copy small {
+  margin-top: 4px;
+  color: #9fb3c8;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.resume-page .navbar-collapse {
+  display: block;
+  float: none;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+.resume-page .navbar-nav {
+  display: flex;
+  float: none;
+  align-items: center;
+  gap: 2px;
+  margin: 0;
+}
+
+.resume-page .navbar-nav > li {
+  float: none;
+}
+
+.resume-page .navbar-custom .nav li a {
+  padding: 10px 13px;
+  background: transparent;
+  color: #bcccdc;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.resume-page .navbar-custom .nav li a:hover,
+.resume-page .navbar-custom .nav li a:focus {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+}
+
+.resume-page .navbar-custom .nav .language-switch {
+  margin-left: 10px;
+}
+
+.resume-page .navbar-custom .nav .language-switch a {
+  padding: 6px 14px;
+  border: 1px solid #486581;
+  border-radius: 6px;
+  color: var(--mint);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.resume-page .navbar-toggle {
+  display: none;
+}
+
+/* Hero */
+.resume-page #introduction {
+  position: relative;
+  padding: 84px 0 32px;
+  background: var(--paper);
+  text-align: left;
+}
+
+.hero-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(370px, 0.88fr);
+  gap: 72px;
+  align-items: center;
+  min-height: 600px;
+}
+
+.resume-page #introduction .introduction {
+  width: auto;
+  height: auto;
+  margin: 0 0 26px;
+  color: var(--navy);
+  font-family: "Avenir Next", Avenir, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(52px, 6vw, 80px);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 1.04;
+  text-shadow: none;
+}
+
+.introduction .greeting {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--cyan);
+  font-size: 20px;
+  font-weight: 550;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.introduction .name {
+  display: block;
+}
+
+html[lang="en"] .resume-page #introduction .introduction {
+  font-size: clamp(46px, 5.2vw, 70px);
+  letter-spacing: -0.06em;
+}
+
+.hero-role {
+  margin: 0 0 20px;
+  color: var(--navy);
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+}
+
+.resume-page #introduction .strapline {
+  max-width: 630px;
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.9;
+  text-shadow: none;
+}
+
+.resume-page #introduction .hero-detail {
+  color: #829ab1;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.hero-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0;
+}
+
+.hero-keywords span {
+  padding: 5px 11px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.contact-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin: 26px 0 22px;
+}
+
+.email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 16px;
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 7px;
+  color: var(--white) !important;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.email-link::before {
+  content: "@";
+  color: #bfd7ff;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 16px;
+}
+
+.email-link:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.location-note {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.resume-page #social {
+  margin: 0;
+  text-align: left;
+}
+
+.resume-page #social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resume-page #social-icons li {
+  display: block;
+  border-radius: 50%;
+}
+
+.resume-page #social-icons li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(16, 42, 67, 0.04);
+  text-indent: -9999px;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.resume-page #social-icons li a:hover {
+  border-color: var(--cyan);
+  transform: translateY(-2px);
+}
+
+/* The architecture map is the one expressive visual on the page. */
+.architecture-board {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--navy);
+  border: 1px solid #243b53;
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(16, 42, 67, 0.17);
+  color: var(--white);
+}
+
+.architecture-board::before {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(159, 179, 200, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(159, 179, 200, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+  content: "";
+  pointer-events: none;
+}
+
+.board-heading,
+.board-caption {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 21px 26px;
+}
+
+.board-heading {
+  border-bottom: 1px solid rgba(159, 179, 200, 0.18);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.board-heading small {
+  color: var(--mint);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+}
+
+.system-map {
+  position: relative;
+  z-index: 1;
+  height: 390px;
+  margin: 0 8px;
+}
+
+.system-map svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.system-map svg path,
+.system-map svg circle {
+  fill: none;
+  stroke: var(--mint);
+  stroke-width: 1.25;
+  vector-effect: non-scaling-stroke;
+}
+
+.system-map svg path {
+  opacity: 0.42;
+}
+
+.system-map svg circle {
+  opacity: 0.2;
+  stroke-dasharray: 4 7;
+}
+
+.map-core,
+.map-node {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+}
+
+.map-core {
+  top: 50%;
+  left: 50%;
+  display: flex;
+  width: 124px;
+  height: 124px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--mint);
+  border: 7px solid rgba(105, 219, 207, 0.15);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--mint), 0 12px 30px rgba(0, 0, 0, 0.18);
+  color: var(--navy-deep);
+  transform: translate(-50%, -50%);
+}
+
+.map-core strong {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.map-core span {
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.map-node {
+  min-width: 132px;
+  padding: 11px 13px;
+  background: rgba(11, 31, 51, 0.92);
+  border: 1px solid #486581;
+  border-radius: 7px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.map-node span,
+.map-node small {
+  display: block;
+}
+
+.map-node span {
+  color: #f0f4f8;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.map-node small {
+  margin-top: 2px;
+  color: #9fb3c8;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.node-frontend {
+  top: 28px;
+  left: 0;
+}
+
+.node-backend {
+  top: 28px;
+  right: 0;
+}
+
+.node-data {
+  bottom: 24px;
+  left: 0;
+}
+
+.node-cloud {
+  right: 0;
+  bottom: 24px;
+}
+
+.node-ai {
+  top: 50%;
+  right: -4px;
+  transform: translateY(-50%);
+}
+
+.board-caption {
+  border-top: 1px solid rgba(159, 179, 200, 0.18);
+  color: #d9e2ec;
+  font-size: 13px;
+}
+
+.board-caption small {
+  color: #829ab1;
+  font-size: 10px;
+}
+
+.hero-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 62px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.resume-page #introduction .green {
+  display: flex;
+  width: auto;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #52796f;
+  font-size: 12px;
+}
+
+.resume-page #introduction .heart {
+  display: inline-flex;
+}
+
+.resume-page #introduction .earth {
+  width: 40px;
+  height: 40px;
+}
+
+.hero-footer-note {
+  color: #829ab1;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+/* Section headings */
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 42px;
+}
+
+.section-heading h2,
+.resume-page #technology .content .info {
+  width: auto;
+  height: auto;
+  margin: 0 0 12px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  color: var(--navy);
+  font-family: "Avenir Next", Avenir, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 38px;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Technology */
+.resume-page #technology {
+  padding: 92px 0 96px;
+  background: var(--white);
+}
+
+.resume-page #technology .content {
+  display: block;
+  height: auto;
+}
+
+.resume-page #technology .skill-section-one {
+  height: auto;
+  margin: 0 0 50px;
+  padding: 0;
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.resume-page #technology .skill-section-one > div {
+  margin: 0;
+}
+
+.resume-page #technology .skill-section-one .core-skills {
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: center;
+  padding: 26px 24px 26px 0;
+  background: none;
+  border-radius: 0;
+  color: var(--navy);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
+  animation: none;
+}
+
+.resume-page #technology .skill-diagram {
+  position: static;
+  display: grid;
+  width: auto;
+  height: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.resume-page #technology .skill-diagram > div {
+  position: static;
+  display: flex;
+  width: auto;
+  height: auto;
+  min-height: 78px;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 12px;
+  background: transparent;
+  border: 0;
+  border-left: 1px solid var(--line);
+  border-radius: 0;
+  color: var(--text);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+  transform: none;
+  animation: none;
+}
+
+.resume-page #technology .skill-diagram > div:nth-child(n + 4) {
+  border-top: 1px solid var(--line);
+}
+
+.resume-page #technology .skill-diagram > div > div {
+  transform: none;
+}
+
+.resume-page #technology .skill-section-two {
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 56px;
+  text-align: left;
+}
+
+.skill-group {
+  padding: 25px 0 28px;
+  border-top: 1px solid var(--line);
+}
+
+.resume-page #technology .skill-section-two h3 {
+  margin: 0 0 11px;
+  color: var(--blue);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+  text-align: left;
+  word-break: normal;
+}
+
+.resume-page #technology .skill-section-two p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+  text-align: left;
+  text-shadow: none;
+}
+
+/* Work timeline */
+.resume-page #work {
+  padding: 92px 0 82px;
+  background: var(--paper);
+}
+
+.resume-page .timeline dl {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 0 0;
+}
+
+.resume-page .timeline dl::before {
+  width: 2px;
+  margin-left: -1px;
+  background: #bcccdc;
+}
+
+.resume-page .timeline dl dt {
+  top: 24px;
+  display: table;
+  width: auto;
+  min-width: 120px;
+  margin: 0 auto 46px;
+  padding: 7px 18px;
+  background: var(--navy);
+  border-radius: 999px;
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.6;
+}
+
+.resume-page .timeline dl dd {
+  margin-bottom: 30px;
+}
+
+.resume-page .timeline dl dd .circ {
+  top: 44px;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  background: var(--cyan);
+  border: 4px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--cyan);
+}
+
+.resume-page .timeline dl dd .time {
+  top: 30px;
+  width: 126px;
+  padding: 10px 20px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.resume-page .timeline dl dd.pos-right .time {
+  margin-left: -126px;
+}
+
+.resume-page .timeline dl dd .timeline-column {
+  width: 46%;
+  margin-top: 30px;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.05);
+}
+
+.resume-page .timeline dl dd .timeline-column::before {
+  display: none;
+}
+
+.resume-page .timeline dl dd .timeline-column .timeline-column-body .timeline-column-heading {
+  margin: 0 0 13px;
+  color: var(--navy);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.55;
+}
+
+.resume-page .timeline-column-body {
+  overflow: visible;
+}
+
+.resume-page .timeline-column-body div {
+  padding: 0;
+}
+
+.resume-page .timeline-column-body li {
+  margin: 0;
+  padding: 9px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #edf2f7;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.resume-page .timeline-column-body li:last-child {
+  border-bottom: 0;
+}
+
+.resume-page .timeline-column-body a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.resume-page .timeline-column-body .project-button {
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 10px;
+  padding: 6px 14px;
+  background: #e6f7f5;
+  border: 1px solid #9bded6;
+  border-radius: 6px;
+  color: #0f766e;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.resume-page .timeline-column-body .project-button:hover {
+  background: #ccf0eb;
+  border-color: var(--cyan);
+}
+
+.resume-page .timeline-column-body .project-content {
+  padding-top: 5px;
+}
+
+.resume-page .timeline dl dd.timeline-loading {
+  min-height: 0;
+  margin: 0;
+  padding: 50px 20px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Contact */
+.resume-page #qrcode {
+  padding: 76px 0;
+  background: var(--navy);
+  color: var(--white);
+  text-align: left;
+}
+
+.qrcode-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 72px;
+  align-items: center;
+}
+
+.qrcode-copy h2 {
+  margin: 0 0 14px;
+  color: var(--white);
+  font-size: 36px;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1.3;
+}
+
+.qrcode-copy p {
+  max-width: 520px;
+  margin: 0 0 24px;
+  color: #bcccdc;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.qrcode-copy .email-link {
+  background: transparent;
+  border-color: #627d98;
+}
+
+.qrcode-copy .email-link:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--mint);
+}
+
+.qrcode-frame {
+  padding: 14px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.2);
+}
+
+.resume-page #qrcode .avatar {
+  display: block;
+  width: 190px;
+  height: 190px;
+  max-width: none;
+  object-fit: contain;
+}
+
+/* Reference and footer */
+.resume-page #statement {
+  padding: 54px 0;
+  background: var(--white);
+}
+
+.resume-page #statement .content {
+  max-width: 1180px;
+}
+
+.resume-page #statement h2 {
+  margin: 0 0 18px;
+  color: var(--navy);
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.resume-page #statement .content li {
+  margin: 0;
+}
+
+.resume-page #statement a {
+  color: var(--muted);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.resume-page #statement a:hover {
+  color: var(--blue);
+}
+
+.resume-page footer {
+  background: var(--navy-deep);
+  color: #829ab1;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-size: 12px;
+}
+
+.resume-page #to-top-button {
+  position: fixed;
+  top: auto !important;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1020;
+  width: 44px;
+  height: 44px;
+  background: var(--blue);
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.22);
+  color: var(--white);
+  font-size: 0;
+  line-height: 44px;
+  text-align: center;
+  text-indent: 0;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.resume-page #to-top-button::after {
+  content: "↑";
+  font-size: 21px;
+}
+
+.resume-page #to-top-button:hover {
+  background: #1d4ed8;
+  background-position: 0 0;
+  transform: translateY(-2px);
+}
+
+/* Tablet */
+@media (max-width: 1020px) {
+  .hero-shell {
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.82fr);
+    gap: 38px;
+  }
+
+  .resume-page #introduction .introduction {
+    font-size: 58px;
+  }
+
+  html[lang="en"] .resume-page #introduction .introduction {
+    font-size: 49px;
+  }
+
+  .resume-page .navbar-custom .nav li a {
+    padding-right: 9px;
+    padding-left: 9px;
+    font-size: 13px;
+  }
+
+  .map-node {
+    min-width: 116px;
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+
+  .resume-page .timeline dl dd .timeline-column {
+    width: 45%;
+  }
+}
+
+@media (max-width: 880px) {
+  .resume-page #introduction {
+    padding-top: 64px;
+  }
+
+  .hero-shell {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+    min-height: 0;
+  }
+
+  .hero-copy,
+  .architecture-board {
+    min-width: 0;
+  }
+
+  .hero-copy {
+    max-width: 700px;
+  }
+
+  .architecture-board {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .resume-page #introduction .introduction,
+  html[lang="en"] .resume-page #introduction .introduction {
+    font-size: clamp(48px, 9vw, 70px);
+  }
+
+  .resume-page .timeline dl dd .time {
+    width: 108px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .resume-page .timeline dl dd.pos-right .time {
+    margin-left: -108px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 78px;
+  }
+
+  .resume-page .container,
+  .resume-page .section-shell,
+  .resume-page .content,
+  .hero-shell,
+  .hero-footer,
+  .footer-inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .resume-page .navbar-custom,
+  .resume-page .nav-container {
+    min-height: 68px;
+  }
+
+  .resume-page .nav-container {
+    flex-wrap: wrap;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .resume-page .container > .navbar-header,
+  .resume-page .container > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .resume-page .navbar-header {
+    width: 100%;
+    min-height: 68px;
+    justify-content: space-between;
+  }
+
+  .resume-page .navbar-toggle {
+    position: relative;
+    display: block;
+    float: none;
+    margin: 0;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #486581;
+    border-radius: 6px;
+  }
+
+  .resume-page .navbar-toggle .icon-bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #d9e2ec;
+  }
+
+  .resume-page .navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 4px;
+  }
+
+  .resume-page .navbar-collapse,
+  .resume-page .navbar-collapse.collapse {
+    display: none;
+    width: 100%;
+    flex-basis: 100%;
+    padding: 0 0 16px;
+  }
+
+  .resume-page .navbar-collapse.in,
+  .resume-page .navbar-collapse.collapsing {
+    display: block;
+  }
+
+  .resume-page .navbar-nav {
+    display: block;
+    width: 100%;
+  }
+
+  .resume-page .navbar-custom .nav li a {
+    display: block;
+    padding: 11px 12px;
+    font-size: 14px;
+  }
+
+  .resume-page .navbar-custom .nav .language-switch {
+    margin: 8px 0 0;
+  }
+
+  .resume-page .navbar-custom .nav .language-switch a {
+    display: inline-block;
+  }
+
+  .resume-page #introduction {
+    padding: 52px 0 26px;
+  }
+
+  .resume-page #introduction .introduction,
+  html[lang="en"] .resume-page #introduction .introduction {
+    font-size: clamp(43px, 12vw, 62px);
+  }
+
+  .introduction .greeting {
+    margin-bottom: 12px;
+    font-size: 17px;
+  }
+
+  .hero-role {
+    font-size: 19px;
+  }
+
+  .resume-page #introduction .strapline {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .hero-keywords {
+    margin: 22px 0;
+  }
+
+  .architecture-board {
+    border-radius: 12px;
+  }
+
+  .board-heading,
+  .board-caption {
+    padding: 18px 20px;
+  }
+
+  .board-caption small {
+    display: none;
+  }
+
+  .system-map {
+    height: 350px;
+  }
+
+  .map-node {
+    min-width: 112px;
+    padding: 9px;
+  }
+
+  .map-node span {
+    font-size: 12px;
+  }
+
+  .map-core {
+    width: 108px;
+    height: 108px;
+  }
+
+  .hero-footer {
+    margin-top: 40px;
+  }
+
+  .hero-footer-note {
+    display: none;
+  }
+
+  .resume-page #technology,
+  .resume-page #work {
+    padding: 64px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2,
+  .resume-page #technology .content .info {
+    font-size: 31px;
+  }
+
+  #skills {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-page #technology .skill-section-one .core-skills {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 20px;
+  }
+
+  .resume-page #technology .skill-diagram {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resume-page #technology .skill-diagram > div {
+    min-height: 70px;
+    border: 0;
+    font-size: 11px;
+  }
+
+  .resume-page #technology .skill-diagram > div:nth-child(even) {
+    border-left: 1px solid var(--line);
+  }
+
+  .resume-page #technology .skill-diagram > div:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
+  .resume-page #technology .skill-section-two {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-page #technology .skill-section-one {
+    margin-bottom: 36px;
+  }
+
+  .skill-group {
+    padding: 22px 0 24px;
+  }
+
+  .resume-page .timeline dl {
+    padding-top: 8px;
+  }
+
+  .resume-page .timeline dl::before {
+    left: 20px;
+  }
+
+  .resume-page .timeline dl dt {
+    top: 16px;
+    margin: 0 0 36px 34px;
+  }
+
+  .resume-page .timeline dl dd {
+    min-height: 0;
+    margin-bottom: 32px;
+  }
+
+  .resume-page .timeline dl dd .circ {
+    top: 3px;
+    left: 20px;
+  }
+
+  .resume-page .timeline dl dd .time,
+  .resume-page .timeline dl dd.pos-left .time,
+  .resume-page .timeline dl dd.pos-right .time {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    width: auto;
+    margin: 0 0 9px 44px;
+    padding: 0;
+    text-align: left;
+  }
+
+  .resume-page .timeline dl dd .timeline-column,
+  .resume-page .timeline dl dd.pos-left .timeline-column,
+  .resume-page .timeline dl dd.pos-right .timeline-column {
+    float: none;
+    width: calc(100% - 44px);
+    margin: 0 0 0 44px;
+    padding: 20px;
+  }
+
+  .resume-page .timeline dl dd .timeline-column .timeline-column-body .timeline-column-heading {
+    font-size: 16px;
+  }
+
+  .resume-page .timeline dl dd.timeline-loading {
+    margin-left: 0;
+    padding: 32px 0 32px 44px;
+    text-align: left;
+  }
+
+  .resume-page #qrcode {
+    padding: 60px 0;
+  }
+
+  .qrcode-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .qrcode-copy h2 {
+    font-size: 31px;
+  }
+
+  .qrcode-frame {
+    width: max-content;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .resume-page #to-top-button {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 390px) {
+  .resume-page .brand-copy small {
+    display: none;
+  }
+
+  .system-map {
+    height: 320px;
+  }
+
+  .map-node {
+    min-width: 98px;
+    padding: 8px 6px;
+  }
+
+  .map-node small {
+    font-size: 8px;
+  }
+
+  .map-core {
+    width: 94px;
+    height: 94px;
+    border-width: 5px;
+  }
+
+  .map-core strong {
+    font-size: 23px;
+  }
+
+  .map-core span {
+    font-size: 9px;
+  }
+
+  .email-link {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .resume-page *,
+  .resume-page *::before,
+  .resume-page *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .resume-page .heart canvas,
+  .resume-page .earth canvas {
+    display: none;
+  }
+
+  .resume-page .heart::before {
+    content: "♥";
+    font-size: 15px;
+  }
+
+  .resume-page .earth::before {
+    content: "🌏";
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
+
+@media print {
+  .resume-page {
+    background: white !important;
+    color: #222 !important;
+    font-size: 11pt;
+  }
+
+  .site-header,
+  .architecture-board,
+  #social,
+  #to-top-button,
+  .hero-footer-note,
+  footer {
+    display: none !important;
+  }
+
+  .resume-page #introduction,
+  .resume-page #technology,
+  .resume-page #work,
+  .resume-page #qrcode,
+  .resume-page #statement {
+    padding: 24px 0 !important;
+    background: white !important;
+    color: #222 !important;
+  }
+
+  .hero-shell,
+  .qrcode-layout {
+    display: block;
+    min-height: 0;
+  }
+
+  .hero-copy,
+  .resume-page #introduction .strapline,
+  .qrcode-copy p,
+  .qrcode-copy h2 {
+    max-width: none;
+    color: #222 !important;
+  }
+
+  .resume-page #introduction .introduction,
+  .section-heading h2,
+  .resume-page #technology .content .info {
+    color: #111 !important;
+  }
+
+  .skill-group,
+  .timeline-column {
+    break-inside: avoid;
+  }
+
+  .qrcode-frame {
+    margin-top: 20px;
+    box-shadow: none;
+  }
+}

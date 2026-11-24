@@ -4,84 +4,84 @@
 
 ## 项目概述
 
-张春生的个人简历网站，全栈软件工程师。使用 HTML5、CSS3、Bootstrap 和 jQuery 构建，托管于 GitHub Pages。
+张春生的个人简历网站，全栈软件工程师。使用 Vue 3 + Vite + TailwindCSS 构建，通过 GitHub Actions 自动部署到 GitHub Pages。
 
-**网站**: https://about.luomor.com  
-**技术栈**: HTML5, CSS3, Bootstrap 3, jQuery, Bootflat UI
+**网站**: https://resume.luomor.com
+**技术栈**: Vue 3, Vue Router 4, Vite 6, TailwindCSS 3
 
 ## 项目结构
 
 ```
 about/
-├── aboutMe.html        # 中文简历（主页）
-├── aboutMeEn.html      # 英文简历
-├── index.md            # GitHub Pages 索引
-├── _config.yml         # Jekyll 配置
-├── css/                # 样式表（Bootstrap、Bootflat、自定义）
-├── js/                 # JavaScript（i18n、时间线、动画）
-│   ├── i18n/           # 国际化文件
-│   └── lib/            # 第三方库（jQuery、Backbone、Underscore）
-├── demo/               # 演示项目和 UI 组件
-├── dist/               # 分发生成文件
-├── docs/               # 简历 PDF 文档
-├── fonts/              # Web 字体
-├── images/             # 资源和图片
-└── stylesheets/        # 附加样式
+├── src/
+│   ├── main.js                       # Vue 应用入口
+│   ├── App.vue                       # 根组件
+│   ├── router/
+│   │   └── index.js                  # Vue Router: /zh, /en
+│   ├── composables/
+│   │   ├── useLocale.js              # 语言切换
+│   │   ├── useWorkExperience.js      # 工作经历数据（fetch）
+│   │   └── useScroll.js              # 滚动动画/回到顶部
+│   ├── components/
+│   │   ├── ResumePage.vue            # 页面容器
+│   │   ├── TheNavbar.vue             # 导航栏（语言切换）
+│   │   ├── IntroductionSection.vue   # 个人介绍（Canvas 地球/心跳）
+│   │   ├── SkillDiagram.vue          # 技能图
+│   │   ├── TechnologySection.vue     # 技术栈
+│   │   ├── WorkSection.vue           # 工作经历时间线
+│   │   ├── TimelineItem.vue          # 公司经历卡片
+│   │   ├── ProjectItem.vue           # 项目卡片（可折叠）
+│   │   ├── QrCodeSection.vue         # 二维码
+│   │   └── StatementSection.vue      # 声明/参考
+│   ├── locales/
+│   │   ├── zh.js                     # 中文
+│   │   └── en.js                     # 英文
+│   ├── canvas/
+│   │   ├── useEarth.js               # 地球旋转动画
+│   │   └── useHeart.js               # 心跳曲线动画
+│   └── styles/
+│       └── custom.css                # CSS 变量/动画/时间线样式
+├── public/
+│   ├── images/                       # 图片资源
+│   └── .nojekyll                     # 跳过 Jekyll 处理
+├── .github/workflows/
+│   └── deploy.yml                    # CI/CD 自动部署
+├── docs/                             # PDF 简历
+└── demo/                             # 历史演示项目
 ```
-
-## 关键文件
-
-- `aboutMe.html` - 中文简历主页，包含导航（介绍/技能/工作/声明）
-- `aboutMeEn.html` - 英文版简历
-- `js/about.js` - 主应用逻辑，通过 JSONP 加载工作经历
-- `js/lifeExperience.js` - 人生时间线数据和渲染
-- `css/about.css` / `css/about_en.css` - 自定义简历样式
-- `css/mobile.css` / `css/tablet.css` - 响应式断点
 
 ## 开发命令
 
-这是一个静态网站，无需构建步骤。开发工作流：
-
 ```bash
-# 本地服务（任意静态服务器）
-python3 -m http.server 8000
-# 或
-npx http-server -p 8000
-```
+# 开发服务器
+npm run dev
 
-在浏览器中打开 `http://localhost:8000/aboutMe.html` 或 `aboutMeEn.html`。
+# 生产构建
+npm run build
+
+# 预览构建产物
+npm run preview
+```
 
 ## 架构说明
 
-- **国际化**: 使用 `jquery.i18n.properties` 支持中英文切换
-- **数据加载**: 工作经历通过 JSONP 动态加载，地址为 `https://about.luomor.com/about/workExperience`
-- **响应式设计**: 媒体查询支持手机（≤600px）和平板（601-880px）
-- **UI 框架**: Bootflat 2.0.4（基于 Bootstrap 3.3.0 的扁平化设计）
-- **浏览器支持**: 包含 HTML5 Shiv 和 Respond.js 以支持 IE6-8
+- **国际化**: 使用 Vue Router 的 `/zh` 和 `/en` 路由，`useLocale.js` 提供响应式 locale
+- **数据加载**: 工作经历通过 fetch 从 `https://about.luomor.com/about/workExperience` 获取
+- **排序**: `work_experiences` 数组从后往前遍历，最后一个元素为最新经历
+- **响应式**: TailwindCSS 工具类 + 自定义媒体查询
+- **Canvas 动画**: `useEarth.js`（球体投影）和 `useHeart.js`（参数方程心形曲线）使用 ref 绑定 canvas
+- **滚动动画**: IntersectionObserver 实现淡入效果
+- **CSS 变量**: `src/styles/custom.css` 定义主题色、字体、动画
+
+## CI/CD
+
+`.github/workflows/deploy.yml` 推送到 master 自动构建部署：
+1. `npm ci` 安装依赖
+2. `npm run build` 输出到 `dist/`
+3. 上传 artifacts 并通过 `actions/deploy-pages` 部署
+
+首次使用需在仓库 Settings → Pages → Source 选择 `GitHub Actions`。
 
 ## 演示项目
 
-`demo/` 文件夹包含实验性 UI 组件：
-- `vue-timeline/` - Vue 2 时间线组件（npm 包）
-- `bootflat.github.io-master/` - Bootflat UI 模板源码
-- `wheel-menu/` - 圆形导航菜单
-- `css3-circle-menu-app/` - CSS3 动画菜单
-- `html5-css3-3d-menu/` - 3D 菜单效果
-
-## 部署
-
-推送到 `gh-pages` 分支后自动部署到 GitHub Pages：
-
-```bash
-git checkout gh-pages
-git push origin gh-pages
-```
-
-## 版本历史
-
-见 `changelog.txt`，提交历史可追溯至 2014 年。使用中文传统提交格式：
-- 新功能（New feature）
-- Bug（Bug fix）
-- 需求变更（Requirement change）
-- 重构（Refactor）
-- merge（Merge）
+`demo/` 文件夹包含历史实验性 UI 组件（vue-timeline、bootflat 模板等），不影响主站构建。
